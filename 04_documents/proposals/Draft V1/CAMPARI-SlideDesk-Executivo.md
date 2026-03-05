@@ -58,11 +58,11 @@
 │  • Revisão de processos     • Coaching sênior       │
 │  • Marca empregadora        • Segurança psicológica │
 │                                                     │
-│           ↓         ↓         ↓                      │
-│   CULTURA ORGANIZACIONAL INCLUSIVA                 │
-│   • ERGs fortalecidas                              │
-│   • Comunicação inclusiva                          │
-│   • Políticas revisadas                            │
+│           ↓         ↓         ↓                     │
+│   CULTURA ORGANIZACIONAL INCLUSIVA                  │
+│   • ERGs fortalecidas                               │
+│   • Comunicação inclusiva                           │
+│   • Políticas revisadas                             │
 │                                                     │
 └─────────────────────────────────────────────────────┘
 ```
@@ -75,13 +75,13 @@
 
 ### R$ 642.5k em Impacto Y1
 
-| Vetor | Impacto | Payback |
-|-------|---------|---------|
-| **Retenção de Talentos** | R$ 195k | 8-10 meses |
-| **Qualidade de Recrutamento** | R$ 102.5k | 15-18 meses |
-| **Produtividade & Engagement** | R$ 120k | 13-16 meses |
-| **Marca Empregadora** | R$ 225k | 6-8 meses |
-| **TOTAL** | **R$ 642.5k** | **3-4 meses (média)** |
+| Vetor                          | Impacto       | Payback               |
+|--------------------------------|---------------|-----------------------|
+| **Retenção de Talentos**       | R$ 195k       | 8-10 meses            |
+| **Qualidade de Recrutamento**  | R$ 102.5k     | 15-18 meses           |
+| **Produtividade & Engagement** | R$ 120k       | 13-16 meses           |
+| **Marca Empregadora**          | R$ 225k       | 6-8 meses             |
+| **TOTAL**                      | **R$ 642.5k** | **3-4 meses (média)** |
 
 ---
 
@@ -109,11 +109,11 @@ Payback Period:                   1-2 meses
 - Desconto por volume: **Não** (tarifa única)
 
 **SERVIÇOS FIXOS:**
-| Serviço | Preço |
-|---------|-------|
-| Diagnóstico de maturidade | R$ 7.500 |
-| Relatório mensal | R$ 1.500/mês |
-| Documentação final | R$ 2.500 |
+| Serviço                   | Preço        |
+|---------------------------|--------------|
+| Diagnóstico de maturidade | R$ 7.500     |
+| Relatório mensal          | R$ 1.500/mês |
+| Documentação final        | R$ 2.500     |
 
 ---
 
@@ -136,25 +136,25 @@ TOTAL:                       R$ 88.000
 
 ### Análise Comparativa Rápida
 
-| Critério | Big 4 | RH Interno | Boutique D&I | **DiverCidade** |
-|----------|-------|-----------|------------|-----------------|
-| **Expertise D&I** | ⭐⭐⭐ | ⭐ | ⭐⭐⭐⭐⭐ | ⭐⭐⭐⭐⭐ |
-| **Integração Negócio** | ⭐⭐⭐ | ⭐⭐⭐ | ⭐ | ⭐⭐⭐⭐⭐ |
-| **Velocidade** | ⭐ | ⭐⭐⭐ | ⭐⭐⭐⭐ | ⭐⭐⭐⭐⭐ |
-| **Custo-Benefício** | ⭐ | ⭐⭐⭐⭐ | ⭐⭐⭐⭐ | ⭐⭐⭐⭐⭐ |
-| **Flexibilidade** | ⭐ | ⭐⭐ | ⭐⭐⭐ | ⭐⭐⭐⭐⭐ |
+| Critério               | Big 4  | RH Interno | Boutique D&I | **DiverCidade** |
+|------------------------|--------|------------|--------------|-----------------|
+| **Expertise D&I**      | ⭐⭐⭐ | ⭐         | ⭐⭐⭐⭐⭐  | ⭐⭐⭐⭐⭐      |
+| **Integração Negócio** | ⭐⭐⭐ | ⭐⭐⭐     | ⭐          | ⭐⭐⭐⭐⭐      |
+| **Velocidade**         | ⭐     | ⭐⭐⭐     | ⭐⭐⭐⭐    | ⭐⭐⭐⭐⭐      |
+| **Custo-Benefício**    | ⭐     | ⭐⭐⭐⭐   | ⭐⭐⭐⭐    | ⭐⭐⭐⭐⭐      |
+| **Flexibilidade**      | ⭐     | ⭐⭐       | ⭐⭐⭐      | ⭐⭐⭐⭐⭐      |
 
 ---
 
 ### COMPARAÇÃO RÁPIDA DE CUSTO
 
-| Aspecto | Big 4 | DiverCidade |
-|---------|-------|-------------|
-| **Custo Y1** | R$ 600k+ | R$ 88k |
-| **Payback** | 12+ meses | 1-2 meses |
-| **Timeline de Execução** | 6+ meses | 4-5 semanas |
-| **Retainer?** | Sim, fixo | **Não** |
-| **Flexibilidade?** | Baixa | **Alta** |
+| Aspecto                  | Big 4     | DiverCidade |
+|--------------------------|-----------|-------------|
+| **Custo Y1**             | R$ 600k+  | R$ 88k      |
+| **Payback**              | 12+ meses | 1-2 meses   |
+| **Timeline de Execução** | 6+ meses  | 4-5 semanas |
+| **Retainer?**            | Sim, fixo | **Não**     |
+| **Flexibilidade?**       | Baixa     | **Alta**    |
 
 ---
 
@@ -188,13 +188,13 @@ TOTAL:                       R$ 88.000
 
 ### AGENDA DO ENCONTRO (60 min)
 
-| Tempo | Tópico | Detalhe |
-|-------|--------|---------|
-| 0-10 min | Abertura | Contexto da parceria |
-| 10-20 min | Números | Validar R$ 642.5k, 7.3x ROI |
-| 20-30 min | Customização | Dados de Campari, ajustar ROI |
-| 30-45 min | Timeline | Horas estimadas, sequência de frentes |
-| 45-60 min | Q&A | Dúvidas abertas |
+| Tempo     | Tópico       | Detalhe                               |
+|-----------|--------------|---------------------------------------|
+| 0-10 min  | Abertura     | Contexto da parceria                  |
+| 10-20 min | Números      | Validar R$ 642.5k, 7.3x ROI           |
+| 20-30 min | Customização | Dados de Campari, ajustar ROI         |
+| 30-45 min | Timeline     | Horas estimadas, sequência de frentes |
+| 45-60 min | Q&A          | Dúvidas abertas                       |
 
 ---
 

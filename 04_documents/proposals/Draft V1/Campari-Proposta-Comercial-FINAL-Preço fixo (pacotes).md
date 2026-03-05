@@ -154,14 +154,14 @@ No mercado de consultoria em diversidade, existem múltiplas abordagens. A escol
 
 #### **DiverCidade Hub: Melhor Custo-Benefício**
 
-| Critério | Big 4 | RH Interno | Boutique D&I | **DiverCidade** |
-|----------|-------|-----------|------------|-----------------|
-| **Expertise em D&I** | ⭐⭐⭐ | ⭐ | ⭐⭐⭐⭐⭐ | ⭐⭐⭐⭐⭐ |
-| **Integração com Negócio** | ⭐⭐⭐ | ⭐⭐⭐ | ⭐ | ⭐⭐⭐⭐⭐ |
-| **Continuidade de Relacionamento** | ⭐ | ⭐⭐⭐⭐⭐ | ⭐⭐⭐ | ⭐⭐⭐⭐⭐ |
-| **Velocidade de Execução** | ⭐ | ⭐⭐⭐ | ⭐⭐⭐⭐ | ⭐⭐⭐⭐⭐ |
-| **Custo-Benefício** | ⭐ | ⭐⭐⭐⭐ | ⭐⭐⭐⭐ | ⭐⭐⭐⭐⭐ |
-| **Accountability Mensal** | ⭐⭐ | ⭐⭐ | ⭐⭐⭐ | ⭐⭐⭐⭐⭐ |
+| Critério                           | Big 4.   | RH Interno | Boutique D&I | **DiverCidade**.     |
+|------------------------------------|----------|------------|--------------|----------------------|
+| **Expertise em D&I**               | ⭐⭐⭐   | ⭐         | ⭐⭐⭐⭐⭐  | ⭐⭐⭐⭐⭐           |
+| **Integração com Negócio**         | ⭐⭐⭐   | ⭐⭐⭐     | ⭐          | ⭐⭐⭐⭐⭐           |
+| **Continuidade de Relacionamento** | ⭐       | ⭐⭐⭐⭐⭐ | ⭐⭐⭐      | ⭐⭐⭐⭐⭐           |
+| **Velocidade de Execução**         | ⭐       | ⭐⭐⭐     | ⭐⭐⭐⭐    | ⭐⭐⭐⭐⭐           |
+| **Custo-Benefício**                | ⭐       | ⭐⭐⭐⭐   | ⭐⭐⭐⭐    | ⭐⭐⭐⭐⭐           |
+| **Accountability Mensal**          | ⭐⭐     | ⭐⭐       | ⭐⭐⭐      | ⭐⭐⭐⭐⭐           |
 
 ---
 
@@ -235,13 +235,13 @@ A parceria com DiverCidade Hub gera impacto financeiro mensurável através de 4
 
 ### **Resumo: Impacto Financeiro Total**
 
-| Vetor | Y1 Impact | Payback |
-|-------|-----------|---------|
-| Retenção (rotatividade reduzida) | R$ 195k | 8-10 meses |
-| Qualidade de recrutamento | R$ 102.5k | 15-18 meses |
-| Produtividade & engagement | R$ 120k | 13-16 meses |
-| Marca empregadora | R$ 225k | 6-8 meses |
-| **TOTAL IMPACTO Y1** | **R$ 642.5k** | **3-4 meses (média)** |
+| Vetor                            | Y1 Impact     | Payback               |
+|----------------------------------|---------------|-----------------------|
+| Retenção (rotatividade reduzida) | R$ 195k       | 8-10 meses            |
+| Qualidade de recrutamento        | R$ 102.5k     | 15-18 meses           |
+| Produtividade & engagement       | R$ 120k       | 13-16 meses           |
+| Marca empregadora                | R$ 225k       | 6-8 meses             |
+| **TOTAL IMPACTO Y1**             | **R$ 642.5k** | **3-4 meses (média)** |
 
 ---
 
@@ -384,15 +384,15 @@ Antes de assinar qualquer pacote, propomos um **encontro sem compromisso** onde:
 
 **Se escolher Pacote Estratégico:**
 
-| Fase | Timeline | Detalhe |
-|------|----------|---------|
-| **Alinhamento & Assinatura** | Semanas 1-2 | Encontro 1h + contratação |
-| **Diagnóstico & Planejamento** | Semanas 3-6 | Avaliação de maturidade, roadmap detalhado |
-| **Execução - Fase 1** | Semanas 7-14 | Lançamento de 1ª frente (Recrutamento ou Liderança) |
-| **Execução - Fase 2** | Semanas 15-26 | Lançamento de 2ª frente em paralelo |
-| **Execução - Fase 3** | Semanas 27-48 | Consolidação, ajustes, aprendizados |
-| **Resultados Iniciais** | Mês 4-5 | Primeiros impactos visíveis em métricas |
-| **ROI Realizado** | Mês 12+ | Impacto financeiro total materializado |
+| Fase                           | Timeline      | Detalhe                                             |
+|--------------------------------|---------------|-----------------------------------------------------|
+| **Alinhamento & Assinatura**   | Semanas 1-2   | Encontro 1h + contratação                           |
+| **Diagnóstico & Planejamento** | Semanas 3-6   | Avaliação de maturidade, roadmap detalhado          |
+| **Execução - Fase 1**          | Semanas 7-14  | Lançamento de 1ª frente (Recrutamento ou Liderança) |
+| **Execução - Fase 2**          | Semanas 15-26 | Lançamento de 2ª frente em paralelo                 |
+| **Execução - Fase 3**          | Semanas 27-48 | Consolidação, ajustes, aprendizados                 |
+| **Resultados Iniciais**        | Mês 4-5       | Primeiros impactos visíveis em métricas             |
+| **ROI Realizado**              | Mês 12+       | Impacto financeiro total materializado              |
 
 ---
 

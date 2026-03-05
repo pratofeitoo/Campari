@@ -27,13 +27,13 @@ Campari enfrenta três pressões simultâneas:
 
 ## **IMPACTO FINANCEIRO (Y1)**
 
-| Vetor | Impacto |
-|-------|---------|
-| Retenção de talentos | R$ 195k |
-| Qualidade de recrutamento | R$ 102.5k |
-| Produtividade & engagement | R$ 120k |
-| Marca empregadora | R$ 225k |
-| **TOTAL** | **R$ 642.5k** |
+| Vetor                      | Impacto       |
+|----------------------------|---------------|
+| Retenção de talentos       | R$ 195k       |
+| Qualidade de recrutamento  | R$ 102.5k     |
+| Produtividade & engagement | R$ 120k       |
+| Marca empregadora          | R$ 225k       |
+| **TOTAL**                  | **R$ 642.5k** |
 
 **ROI:** 7.3x | **Payback:** 1-2 meses | **Timeline:** 12 meses
 
@@ -43,12 +43,12 @@ Campari enfrenta três pressões simultâneas:
 
 **Modelo:** Horas à la carte + serviços fixos (sem retainer mínimo)
 
-| Item | Custo |
-|------|-------|
-| Diagnóstico de maturidade | R$ 7.500 |
-| Horas de consultoria | R$ 300/hora |
-| Relatórios mensais | R$ 1.500/mês |
-| Documentação final | R$ 2.500 |
+| Item                      | Custo        |
+|---------------------------|--------------|
+| Diagnóstico de maturidade | R$ 7.500     |
+| Horas de consultoria      | R$ 300/hora  |
+| Relatórios mensais        | R$ 1.500/mês |
+| Documentação final        | R$ 2.500     |
 
 **Projeto típico (12 meses, 200h):**
 - Diagnóstico: R$ 7.500
@@ -84,12 +84,12 @@ Objetivo: Validar números, customizar proposta, definir timeline
 
 ## **RISCOS DE NÃO AGIR**
 
-| Risco | Impacto |
-|-------|---------|
-| **Competidores avançam** | Gap crescente em brand empregadora |
-| **Rotatividade continua** | R$ 1M+ custos não-evitados/ano |
+| Risco                        | Impacto                                      |
+|------------------------------|----------------------------------------------|
+| **Competidores avançam**     | Gap crescente em brand empregadora           |
+| **Rotatividade continua**    | R$ 1M+ custos não-evitados/ano               |
 | **Atração de talento fraca** | Perda de candidatos top em posições críticas |
-| **Regulatory gaps** | Falta de compliance com novas regulações |
+| **Regulatory gaps**          | Falta de compliance com novas regulações     |
 
 ---
 
