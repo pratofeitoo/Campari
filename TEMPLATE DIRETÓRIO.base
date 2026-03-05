@@ -1,0 +1,15 @@
+views:
+  - type: table
+    name: Table
+    filters:
+      and:
+        - file.folder.startsWith("tech/TEMPLATE_DIRETÓRIO")
+    groupBy:
+      property: file.folder
+      direction: ASC
+    order:
+      - file.name
+      - type
+    columnSize:
+      file.name: 587
+      note.type: 306

@@ -1,0 +1,112 @@
+MODELO DE BRIEFING DE ENTRADA - ONBOARDING DE PARCEIROS ESGX
+
+(Preenchimento obrigatório pela empresa parceira)
+
+------------------------------------------------------------------------
+
+1. DADOS CADASTRAIS
+
+Nome Oficial da Empresa:
+[___________________________________________]
+
+CNPJ:
+[._._/__-__]
+
+Setor de Atuação:
+[ ] Tecnologia [ ] Varejo [ ] Serviços [ ] Indústria [ ] Outro:
+_________
+
+Ano de Fundação:
+[________]
+
+------------------------------------------------------------------------
+
+2. IDENTIDADE VISUAL
+
+Logo:
+- [ ] Anexado (PNG, fundo transparente, mínimo 500x500px)
+- [ ] Solicitar suporte do time ESGX para desenvolvimento
+
+Paleta de Cores Corporativa (opcional):
+- Código Cor Primária: #________
+- Código Cor Secundária: #________
+
+------------------------------------------------------------------------
+
+3. INFORMAÇÕES INSTITUCIONAIS
+
+Bio (máx. 300 caracteres):
+[___________________________________________
+___________________________________________
+___________________________________________]
+
+Links Relevantes:
+- Site: [___________________________]
+- Instagram: [@____________________]
+- LinkedIn: [______________________]
+
+Contato Institucional:
+- E-mail: [________________________]
+- Telefone: () _-__
+
+------------------------------------------------------------------------
+
+4. BENEFÍCIOS PARA USUÁRIOS ESGX
+
+(Descreva cada benefício a ser oferecido)
+
+Benefício 1:
+- Nome: [__________________________]
+- Descrição: [_____________________
+_________________________________]
+- Validade: [//__ a //__]
+- Regras de Uso: [________________
+_________________________________]
+
+Benefício 2:
+[…]
+
+(Adicionar mais linhas conforme necessário)
+
+------------------------------------------------------------------------
+
+5. CAMPANHA DE LANÇAMENTO
+
+[ ] SIM, desejo campanha de lançamento
+[ ] NÃO, apenas cadastro básico
+
+Se SIM:
+- Objetivo Principal:
+[ ] Branding [ ] Geração de Leads [ ] Vendas [ ] Outro: _________
+- Público-Alvo:
+[ ] B2C [ ] B2B [ ] Ambos
+- Tom de Comunicação:
+[ ] Formal [ ] Descontraído [ ] Inspiracional
+
+------------------------------------------------------------------------
+
+6. OBSERVAÇÕES
+
+[___________________________________________
+___________________________________________
+___________________________________________]
+
+------------------------------------------------------------------------
+
+Anexos Obrigatórios:
+- [ ] Logo em alta resolução
+- [ ] Documento com diretrizes de marca (se disponível)
+
+Aprovado por:
+Nome: ___________________________
+Cargo: ___________________________
+Data: //__
+Assinatura: _______________________
+
+  Este documento está sujeito aos Termos de Parceria ESGX (DOC-2024-03).
+  Dúvidas? contato@esgx.com.br
+
+------------------------------------------------------------------------
+
+VERSÃO DO DOCUMENTO: 1.0
+ÚLTIMA ATUALIZAÇÃO: DD/MM/AAAA
