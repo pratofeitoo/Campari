@@ -25,13 +25,13 @@ Realizamos auditoria completa de todos os números financeiros em V1 (Preço Fix
 
 ### 1.1 Soma dos Vetores
 
-| Vetor | Valor Declarado | Status |
-|-------|-----------------|--------|
-| Retenção (rotatividade reduzida) | R$ 195.000 | ⚠️ SUB-DECLARADO |
-| Qualidade de recrutamento | R$ 102.500 | ✅ CONSISTENTE |
-| Produtividade & engagement | R$ 120.000 | ✅ CONSISTENTE |
-| Marca empregadora | R$ 225.000 | ✅ CONSISTENTE |
-| **TOTAL** | **R$ 642.500** | **✅ SOMA CORRETA** |
+| Vetor                            | Valor Declarado | Status              |
+|----------------------------------|-----------------|---------------------|
+| Retenção (rotatividade reduzida) | R$ 195.000      | ⚠️ SUB-DECLARADO    |
+| Qualidade de recrutamento        | R$ 102.500      | ✅ CONSISTENTE      |
+| Produtividade & engagement       | R$ 120.000      | ✅ CONSISTENTE      |
+| Marca empregadora                | R$ 225.000      | ✅ CONSISTENTE      |
+| **TOTAL**                        | **R$ 642.500**  | **✅ SOMA CORRETA** |
 
 ✅ **Validação**: 195 + 102.5 + 120 + 225 = 642.5k ✓
 
@@ -102,11 +102,11 @@ Se for mesmo R$ 780k (não R$ 195k), o impacto total é **R$ 1.227.500** (não R
 
 ### Pacotes Declarados
 
-| Pacote | Taxa Mensal | Duração | Total |
-|--------|------------|---------|-------|
-| Essencial | R$ 8.500 | 6 meses | R$ 51.000 |
-| Estratégico | R$ 11.000 | 12 meses | R$ 132.000 |
-| Transformação | R$ 15.000 | 12-18 meses | R$ 180.000 - R$ 270.000 |
+| Pacote        | Taxa Mensal | Duração     | Total                   |
+|---------------|-------------|-------------|-------------------------|
+| Essencial     | R$ 8.500    | 6 meses     | R$ 51.000               |
+| Estratégico   | R$ 11.000   | 12 meses    | R$ 132.000              |
+| Transformação | R$ 15.000   | 12-18 meses | R$ 180.000 - R$ 270.000 |
 
 **Status:** ✅ Números corretos em V1
 
@@ -118,12 +118,12 @@ Se for mesmo R$ 780k (não R$ 195k), o impacto total é **R$ 1.227.500** (não R
 
 ### 3.1 Estrutura de Preços
 
-| Serviço | Valor |
-|---------|-------|
-| Taxa horária | R$ 300/hora |
-| Diagnóstico (incluído, 3-4 semanas) | R$ 7.500 |
-| Documentação final | R$ 2.500 |
-| Relatórios mensais | R$ 1.500/mês |
+| Serviço                             | Valor        |
+|-------------------------------------|--------------|
+| Taxa horária                        | R$ 300/hora  |
+| Diagnóstico (incluído, 3-4 semanas) | R$ 7.500     |
+| Documentação final                  | R$ 2.500     |
+| Relatórios mensais                  | R$ 1.500/mês |
 
 ### 3.2 Cenários de Projeto
 
@@ -367,14 +367,14 @@ Risco: Médio (precisa clarificação)
 
 ### Tabela Comparativa
 
-| Métrica | V1 (Pacotes) | V2 (Horas) | Status |
-|---------|--------------|-----------|--------|
-| **Investimento** | R$ 132.000 | R$ 88.000 | ✅ V2 é 33% mais barato |
-| **Impacto Y1** | R$ 642.500 | R$ 642.500 | ✅ Mesmo |
-| **ROI** | 3.5x | 7.3x | ⚠️ V1 subdeclarado (4.87x?) |
-| **Payback** | 3-4 meses | 1-2 meses | ✅ V2 é melhor |
-| **Rigidez** | Pacotes fixos | Horas flexíveis | ✅ V2 mais flexível |
-| **Transparência** | Black box ($ apenas) | White box ($/hora) | ✅ V2 mais transparente |
+| Métrica           | V1 (Pacotes)         | V2 (Horas)         | Status                      |
+|-------------------|----------------------|--------------------|-----------------------------|
+| **Investimento**  | R$ 132.000           | R$ 88.000          | ✅ V2 é 33% mais barato     |
+| **Impacto Y1**    | R$ 642.500           | R$ 642.500         | ✅ Mesmo                    |
+| **ROI**           | 3.5x                 | 7.3x               | ⚠️ V1 subdeclarado (4.87x?) |
+| **Payback**       | 3-4 meses            | 1-2 meses          | ✅ V2 é melhor              |
+| **Rigidez**       | Pacotes fixos        | Horas flexíveis    | ✅ V2 mais flexível         |
+| **Transparência** | Black box ($ apenas) | White box ($/hora) | ✅ V2 mais transparente     |
 
 ### Recomendação de Abordagem
 
