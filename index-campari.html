@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proposta Comercial Campari | Brand Dedicated | DiverCidade HUB</title>
+    <meta name="description" content="Parceria Estratégica em Diversidade, Equidade e Inclusão - Versão Institucional Campari">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        :root {
+            /* Campari Signature Identity */
+            --divercidade-primary: #B8141B; /* Campari Red */
+            --divercidade-secondary: #13294B; /* Campari Blue (Blue Zodiac) */
+            --divercidade-orange: #AD841F;  /* Campari Gold (Mandalay) */
+            --divercidade-yellow: #AD841F;
+            --divercidade-green: #008450;   /* Subtle Italian Emerald */
+            --divercidade-blue: #13294B;
+            --divercidade-purple: #4A154B;
+
+            /* Mappings */
+            --color-primary-dark: #8E0F15;
+            --color-danger: #B8141B;
+
+            /* Light Theme Context */
+            --color-text-primary: #1C1917;
+            --color-text-secondary: #44403C;
+            --color-text-light: #FFFFFF;
+            
+            /* Glassmorphism - Campari Luxury Style */
+            --glass-bg: rgba(255, 255, 255, 0.7);
+            --glass-border: rgba(173, 132, 31, 0.2);
+            --glass-shadow: 0 8px 32px 0 rgba(184, 20, 27, 0.05);
+            --glass-hover-bg: rgba(255, 255, 255, 0.85);
+
+            --color-bg-primary: #FAFAF9;
+            --color-bg-secondary: #F5F5F4;
+            --color-bg-tertiary: rgba(184, 20, 27, 0.05);
+            --color-border: rgba(28, 25, 23, 0.1);
+
+            /* UI Tokens */
+            --radius-lg: 12px;
+            --spacing-md: 16px;
+            --spacing-xl: 32px;
+            --spacing-xxl: 48px;
+            --transition-normal: 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        /* Dark Mode - Campari Lounge Night */
+        body.dark {
+            --color-bg-primary: #0C0A09;
+            --color-bg-secondary: #000000;
+            --color-bg-tertiary: rgba(184, 20, 27, 0.15);
+            --color-text-primary: #FAFAF9;
+            --color-text-secondary: #A8A29E;
+            --color-border: rgba(255, 255, 255, 0.1);
+            --glass-bg: rgba(12, 10, 9, 0.75);
+            --glass-border: rgba(173, 132, 31, 0.25);
+            --glass-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.6);
+            --glass-hover-bg: rgba(12, 10, 9, 0.9);
+        }
+
+        /* Global Reset */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        :focus-visible { outline: 2px solid var(--divercidade-orange); outline-offset: 4px; }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            font-size: 16px;
+            line-height: 1.6;
+            color: var(--color-text-primary);
+            background-color: var(--color-bg-primary);
+            background-image: 
+                radial-gradient(at 0% 0%, rgba(184, 20, 27, 0.06) 0px, transparent 50%),
+                radial-gradient(at 100% 0%, rgba(173, 132, 31, 0.06) 0px, transparent 50%),
+                radial-gradient(at 100% 100%, rgba(19, 41, 75, 0.06) 0px, transparent 50%);
+            background-attachment: fixed;
+            transition: background-color var(--transition-normal), color var(--transition-normal);
+        }
+        
+        body.dark {
+            background-image: 
+                radial-gradient(at 0% 0%, rgba(184, 20, 27, 0.15) 0px, transparent 50%),
+                radial-gradient(at 100% 0%, rgba(173, 132, 31, 0.12) 0px, transparent 50%),
+                radial-gradient(at 50% 50%, rgba(19, 41, 75, 0.1) 0px, transparent 60%);
+        }
+
+        h1, h2, h3, h4, .hero-title, .section-title, .nav-logo {
+            font-family: 'Playfair Display', serif;
+            letter-spacing: -0.01em;
+        }
+
+        /* Navigation */
+        .nav {
+            position: fixed; top: 16px; left: 16px; right: 16px;
+            background: var(--glass-bg);
+            backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
+            box-shadow: var(--glass-shadow);
+            z-index: 1000; transition: var(--transition-normal);
+            border-radius: 12px; border: 1px solid var(--glass-border);
+            max-width: 1400px; margin: 0 auto;
+        }
+
+        .nav-container {
+            max-width: 1400px; margin: 0 auto;
+            padding: 12px var(--spacing-xl);
+            display: flex; justify-content: space-between; align-items: center;
+        }
+
+        .nav-logo {
+            font-weight: 700; font-size: 20px;
+            color: var(--color-text-primary);
+            text-decoration: none; display: flex; align-items: center; gap: 12px;
+        }
+
+        .nav-menu { display: flex; gap: var(--spacing-lg); list-style: none; }
+        .nav-link {
+            text-decoration: none; color: var(--color-text-secondary);
+            font-weight: 500; font-size: 14px; padding: 8px 12px;
+            border-radius: 4px; transition: 0.3s;
+            position: relative;
+        }
+
+        .nav-link:hover, .nav-link.scroll-active {
+            color: var(--color-text-primary);
+            background: rgba(184, 20, 27, 0.06);
+        }
+        
+        .nav-link::after {
+            content: ''; position: absolute; bottom: 0; left: 50%; width: 0; height: 2px;
+            background: var(--divercidade-primary); transition: 0.3s; transform: translateX(-50%);
+        }
+        .nav-link:hover::after, .nav-link.scroll-active::after { width: 60%; }
+
+        .theme-toggle {
+            background: transparent; border: 1px solid var(--color-border);
+            padding: 8px; border-radius: 8px; cursor: pointer;
+            color: var(--color-text-primary); margin-left: 16px;
+        }
+        .theme-toggle .fa-moon { display: none; }
+        body.dark .theme-toggle .fa-moon { display: inline-block; }
+        body.dark .theme-toggle .fa-sun { display: none; }
+
+        /* Hero - Deep Red/Black Luxury */
+        .hero {
+            background: linear-gradient(165deg, #000000 0%, #0C0A09 45%, var(--divercidade-primary) 100%);
+            color: white; padding: 180px var(--spacing-xl) var(--spacing-xxl);
+            position: relative; overflow: hidden;
+            border-bottom: 3px solid var(--divercidade-primary);
+        }
+        
+        .hero-orb {
+            position: absolute; border-radius: 50%; filter: blur(70px);
+            opacity: 0.3; pointer-events: none;
+        }
+        .hero-orb-1 { width: 500px; height: 500px; background: var(--divercidade-primary); top: -150px; right: -100px; }
+        .hero-orb-2 { width: 300px; height: 300px; background: var(--divercidade-orange); bottom: -80px; left: -50px; }
+
+        .hero-content { max-width: 1400px; margin: 0 auto; position: relative; z-index: 1; }
+        .hero-badge {
+            background: rgba(184, 20, 27, 0.2); color: #FFFFFF;
+            border: 1px solid var(--divercidade-primary);
+            padding: 6px 16px; border-radius: 50px; font-size: 13px; font-weight: 700;
+            display: inline-block; margin-bottom: 24px; text-transform: uppercase;
+        }
+
+        .hero-title { font-size: 58px; font-weight: 700; margin-bottom: 24px; line-height: 1.1; max-width: 1000px; }
+        .hero-subtitle { font-size: 22px; opacity: 0.9; max-width: 800px; margin-bottom: 48px; font-weight: 300; }
+
+        .hero-stats { display: flex; gap: 70px; margin-top: 60px; flex-wrap: wrap; }
+        .hero-stat-value { font-size: 42px; font-weight: 700; color: #FFFFFF; }
+        .hero-stat-label { font-size: 14px; opacity: 0.7; text-transform: uppercase; letter-spacing: 1px; }
+
+        /* Sections */
+        .section { padding: 120px var(--spacing-xl); max-width: 1400px; margin: 0 auto; }
+        .section-header { margin-bottom: 60px; }
+        .section-number { color: var(--color-text-primary); font-weight: 800; font-size: 16px; display: block; margin-bottom: 12px; border-left: 3px solid var(--divercidade-primary); padding-left: 12px; }
+        .section-title { font-size: 42px; font-weight: 700; color: var(--color-text-primary); position: relative; padding-bottom: 16px; }
+        .section-title::after {
+            content: ''; position: absolute; bottom: 0; left: 0; width: 0; height: 3px;
+            background: linear-gradient(90deg, var(--divercidade-primary), var(--divercidade-secondary));
+            transition: width 1.4s cubic-bezier(0.16, 1, 0.3, 1) 0.4s;
+        }
+        .section-header.visible .section-title::after { width: 100px; }
+
+        /* Universal Components */
+        .grid { display: grid; gap: 32px; }
+        .grid-2 { grid-template-columns: repeat(2, 1fr); }
+        .grid-3 { grid-template-columns: repeat(3, 1fr); }
+        @media (max-width: 900px) { .grid-2, .grid-3 { grid-template-columns: 1fr; } }
+
+        .card {
+            background: var(--glass-bg); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
+            border-radius: 12px; padding: 40px; box-shadow: var(--glass-shadow);
+            border: 1px solid var(--glass-border); transition: var(--transition-normal); cursor: pointer;
+        }
+        .card:hover { transform: translateY(-8px); border-color: var(--divercidade-primary); background: var(--glass-hover-bg); }
+
+        .kpi-card { text-align: center; }
+        .kpi-icon { width: 64px; height: 64px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; color: white; font-size: 24px; }
+        .kpi-value { font-size: 32px; font-weight: 700; color: var(--color-text-primary); margin-bottom: 8px; }
+
+        /* Tables & Tabs */
+        .table-container { overflow-x: auto; border-radius: 8px; border: 1px solid var(--color-border); }
+        table { width: 100%; border-collapse: collapse; font-size: 14px; }
+        th { background: var(--color-bg-tertiary); padding: 18px; text-align: left; color: #FFFFFF; font-weight: 700; text-transform: uppercase; font-size: 12px; letter-spacing: 0.5px; border-bottom: 2px solid var(--divercidade-primary); }
+        td { padding: 18px; border-bottom: 1px solid var(--color-border); color: var(--color-text-secondary); }
+
+        .tabs { display: flex; gap: 12px; margin-bottom: 32px; }
+        .tab { padding: 10px 24px; cursor: pointer; border-bottom: 2px solid transparent; font-weight: 600; font-size: 13px; color: var(--color-text-secondary); text-transform: uppercase; transition: 0.3s; }
+        .tab.active { border-color: var(--divercidade-primary); color: #FFFFFF; }
+        .tab-content { display: none; }
+        .tab-content.active { display: block; }
+
+        /* Timeline */
+        .timeline { position: relative; padding-left: 32px; border-left: 1px solid var(--divercidade-primary); }
+        .timeline-item { position: relative; padding-bottom: 48px; }
+        .timeline-item::before { content: ''; position: absolute; left: -37.5px; top: 0; width: 10px; height: 10px; background: var(--divercidade-primary); border-radius: 50%; }
+
+        /* Buttons */
+        .btn {
+            display: inline-flex; align-items: center; justify-content: center; gap: 10px; padding: 14px 28px; border-radius: 6px; font-weight: 700; text-decoration: none; cursor: pointer; text-transform: uppercase; font-size: 13px; letter-spacing: 1px; transition: 0.3s;
+        }
+        .btn-primary { background: var(--divercidade-primary); color: white; border: none; }
+        .btn-primary:hover { background: #FFFFFF; color: var(--divercidade-primary); box-shadow: 0 0 0 1px var(--divercidade-primary); transform: translateY(-2px); }
+        .btn-outline { border: 1px solid rgba(255,255,255,0.4); color: white; background: transparent; }
+        .btn-outline:hover { background: rgba(255,255,255,0.1); border-color: white; }
+
+        /* Highlight box */
+        .highlight-box { background: rgba(184, 20, 27, 0.04); border-left: 4px solid var(--divercidade-primary); padding: 24px; border-radius: 6px; }
+
+        /* Animation */
+        .animate-on-scroll { opacity: 0; transform: translateY(30px); transition: opacity 1.1s cubic-bezier(0.16, 1, 0.3, 1), transform 1.1s cubic-bezier(0.16, 1, 0.3, 1); }
+        .animate-on-scroll.visible { opacity: 1; transform: translateY(0); }
+
+        /* Progress Bar */
+        #scroll-progress { position: fixed; top: 0; left: 0; height: 4px; width: 0%; background: linear-gradient(90deg, var(--divercidade-primary), #000); z-index: 2000; }
+
+        /* Footer */
+        footer { background: #000; padding: 80px 5% 40px; color: #A8A29E; border-top: 5px solid var(--divercidade-primary); }
+        footer a { color: inherit; text-decoration: none; transition: 0.2s; }
+        footer a:hover { color: var(--divercidade-primary); }
+
+        /* Progress Dots */
+        .timeline-date { color: #FFFFFF; font-weight: 700; font-size: 13px; margin-bottom: 4px; text-transform: uppercase; }
+        .timeline-title { font-size: 18px; font-weight: 600; color: var(--color-text-primary); }
+
+        /* Ripple */
+        .ripple-container { position: relative; overflow: hidden; }
+        .ripple-wave { position: absolute; border-radius: 50%; transform: scale(0); background: rgba(173, 132, 31, 0.3); animation: rippleAnim 1.0s cubic-bezier(0.2, 0, 0.2, 1); pointer-events: none; }
+        @keyframes rippleAnim { to { transform: scale(4); opacity: 0; } }
+
+        /* Simulator UI */
+        .summary-total { background: #000; border: 1px solid var(--divercidade-primary); padding: 32px; border-radius: 12px; text-align: center; color: #FFFFFF; }
+        .total-value { font-size: 38px; font-weight: 800; margin-top: 10px; color: #FFFFFF; }
+        .module-card.selected { border-color: var(--divercidade-primary); background: rgba(184, 20, 27, 0.1); box-shadow: 0 0 0 1px var(--divercidade-primary); }
+
+    </style>
+</head>
+
+<body class="dark">
+    <div id="scroll-progress"></div>
+
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav-container">
+            <a href="#" class="nav-logo">
+                <img src="../../../../../assets/images/logo-header.png" alt="Logo" style="height: 50px;">
+                <span>DiverCidade</span>
+            </a>
+
+            <div style="display: flex; align-items: center;">
+                <ul class="nav-menu">
+                    <li><a href="#objetivos" class="nav-link">Objetivos</a></li>
+                    <li><a href="#contexto" class="nav-link">Contexto</a></li>
+                    <li><a href="#frentes" class="nav-link">Frentes</a></li>
+                    <li><a href="#roi" class="nav-link">Impacto</a></li>
+                    <li><a href="#simulador" class="nav-link">Simulador</a></li>
+                </ul>
+
+                <button id="themeToggle" class="theme-toggle">
+                    <i class="fas fa-sun"></i>
+                    <i class="fas fa-moon"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <header class="hero" id="hero">
+        <div class="hero-orb hero-orb-1" id="heroOrb1"></div>
+        <div class="hero-orb hero-orb-2" id="heroOrb2"></div>
+        <div class="hero-content">
+            <div class="hero-badge">Proposta Institucional Customizada</div>
+            <h1 class="hero-title">CAMPARI: Excelência em Diversidade & Cultura</h1>
+            <p class="hero-subtitle">
+                Uma parceria estratégica para transformar a jornada de DE&I em um motor de inovação e retenção de talentos de classe mundial.
+            </p>
+            <div style="display: flex; gap: 20px;">
+                <a href="#simulador" class="btn btn-primary">Simular Investimento</a>
+                <a href="#roi" class="btn btn-outline">Ver Impacto ROI (7.3x)</a>
+            </div>
+
+            <div class="hero-stats">
+                <div class="hero-stat">
+                    <div class="hero-stat-value">12 Meses</div>
+                    <div class="hero-stat-label">Planejamento Y1</div>
+                </div>
+                <div class="hero-stat">
+                    <div class="hero-stat-value">R$ 642k</div>
+                    <div class="hero-stat-label">Valor Projetado</div>
+                </div>
+                <div class="hero-stat">
+                    <div class="hero-stat-value">200h</div>
+                    <div class="hero-stat-label">Advisory High-Level</div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Section 1: Objectives -->
+    <section class="section" id="objetivos">
+        <div class="section-header">
+            <span class="section-number">01 / ESTRATÉGIA SMART</span>
+            <h2 class="section-title">Objetivos & Metas</h2>
+            <p class="section-subtitle">Garantindo clareza e rastreabilidade para o sucesso da parceria com a Campari.</p>
+        </div>
+
+        <div class="card animate-on-scroll">
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Objetivo Estratégico</th>
+                            <th>Baseline</th>
+                            <th>Meta (Mês 12)</th>
+                            <th>Principal KPI</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Retenção de Talentos</strong></td>
+                            <td>20,0%</td>
+                            <td><strong>≤ 14,0%</strong></td>
+                            <td>Turnover Sub-representado</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Contratação Inclusiva</strong></td>
+                            <td>85,0%</td>
+                            <td><strong>≥ 92,0%</strong></td>
+                            <td>Qualidade (Score QA)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Pertença & Engajamento</strong></td>
+                            <td>3.2 / 5.0</td>
+                            <td><strong>≥ 3.8 / 5.0</strong></td>
+                            <td>Score de Clima DE&I</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 2: Context -->
+    <section class="section" id="contexto" style="background: var(--color-bg-secondary);">
+        <div class="section-header">
+            <span class="section-number">02 / POSICIONAMENTO</span>
+            <h2 class="section-title">Contexto & Proposta</h2>
+        </div>
+
+        <div class="grid grid-2">
+            <div class="card animate-on-scroll">
+                <h3 style="color: #FFFFFF; margin-bottom: 24px;">Diagnóstico Campari</h3>
+                <p style="margin-bottom: 20px;">Oportunidade de elevar a maturidade do recrutamento e fortalecer a marca empregadora através de capacitação de liderança em viés inconsciente e estruturação de ERGs.</p>
+                <div class="highlight-box">
+                    <p style="font-size: 14px; font-weight: 700;">Diferencial DiverCidade:</p>
+                    <p style="font-size: 14px;">Combinamos <strong>Advisory Estratégico</strong> com <strong>Implementação Prática</strong>, atuando como um "Hub" de conhecimento conectado ao time Campari.</p>
+                </div>
+            </div>
+            <div class="card animate-on-scroll" style="background: var(--divercidade-blue); color: white; border-color: rgba(255,255,255,0.1);">
+                <h3 style="color: #FFFFFF; margin-bottom: 24px;">Princípio Fundador</h3>
+                <p style="font-size: 15px; line-height: 1.8;">Diversidade e inclusão sustentáveis requerem o alinhamento simultâneo entre objetivos de negócio, sistemas organizacionais, capacidades de liderança e cultura vivida. Nosso método não impõe pacotes fechados; cocriamos soluções que respeitam a identidade única da Campari.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 3: Frentes -->
+    <section class="section" id="frentes">
+        <div class="section-header">
+            <span class="section-number">03 / PILARES OPERACIONAIS</span>
+            <h2 class="section-title">Frentes Estratégicas</h2>
+        </div>
+
+        <div class="grid grid-3">
+            <div class="card kpi-card animate-on-scroll" style="border-top: 4px solid var(--divercidade-primary);">
+                <div class="kpi-icon" style="background: var(--divercidade-primary);"><i class="fas fa-bullseye"></i></div>
+                <div class="kpi-value">Atração</div>
+                <p style="font-size: 14px; color: var(--color-text-secondary);">Revisão de JDs, sourcing em redes diversas e construção de pipelines afirmativos.</p>
+            </div>
+            <div class="card kpi-card animate-on-scroll" style="border-top: 4px solid #FFFFFF;">
+                <div class="kpi-icon" style="background: #333;"><i class="fas fa-user-friends"></i></div>
+                <div class="kpi-value">Liderança</div>
+                <p style="font-size: 14px; color: var(--color-text-secondary);">Workshops de sensibilização, mentorias individuais e coaching para gestores.</p>
+            </div>
+            <div class="card kpi-card animate-on-scroll" style="border-top: 4px solid var(--divercidade-secondary);">
+                <div class="kpi-icon" style="background: var(--divercidade-secondary);"><i class="fas fa-layer-group"></i></div>
+                <div class="kpi-value">Cultura</div>
+                <p style="font-size: 14px; color: var(--color-text-secondary);">Governança para grupos de afinidade, ritos de inclusão e comunicação institucional.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 5: ROI -->
+    <section class="section" id="roi" style="background: #000; color: white; border-radius: 24px; margin-top: 40px;">
+        <div class="section-header">
+            <span class="section-number" style="color: #FFFFFF;">04 / VALUE CREATION</span>
+            <h2 class="section-title" style="color: white;">Impacto Financeiro & ROI</h2>
+            <p class="section-subtitle">Estimativa de Retorno no Primeiro Ano (Y1)</p>
+        </div>
+
+        <div class="grid grid-2">
+            <div style="height: 380px;">
+                <canvas id="roiChart"></canvas>
+            </div>
+            <div class="grid grid-2">
+                <div class="kpi-card" style="background: rgba(255,255,255,0.04); border-color: rgba(255,255,255,0.1);">
+                    <div class="kpi-value" style="color: #FFFFFF;">R$ 195k</div>
+                    <div class="kpi-label" style="color: #A8A29E;">Retenção (Turnover)</div>
+                </div>
+                <div class="kpi-card" style="background: rgba(255,255,255,0.04); border-color: rgba(255,255,255,0.1);">
+                    <div class="kpi-value" style="color: #FFFFFF;">R$ 102k</div>
+                    <div class="kpi-label" style="color: #A8A29E;">Custo Seleção</div>
+                </div>
+                <div class="kpi-card" style="background: rgba(255,255,255,0.04); border-color: rgba(255,255,255,0.1);">
+                    <div class="kpi-value" style="color: #FFFFFF;">R$ 120k</div>
+                    <div class="kpi-label" style="color: #A8A29E;">Produtividade</div>
+                </div>
+                <div class="kpi-card" style="background: rgba(255,255,255,0.04); border-color: rgba(255,255,255,0.1);">
+                    <div class="kpi-value" style="color: #FFFFFF;">R$ 225k</div>
+                    <div class="kpi-label" style="color: #A8A29E;">Valor de Marca</div>
+                </div>
+            </div>
+        </div>
+
+        <div style="margin-top: 60px; text-align: center; border: 1px dashed var(--divercidade-primary); padding: 40px; border-radius: 12px;">
+            <p style="font-size: 20px; color: #FFFFFF; font-weight: 800; text-transform: uppercase; letter-spacing: 2px;">ROI Projetado: 7.3x</p>
+            <p style="margin-top: 10px; opacity: 0.7;">Impacto Total Consolidado Y1: <strong>R$ 642.500</strong>. Payback period estimado em 45 dias.</p>
+        </div>
+    </section>
+
+    <!-- Section 6: Simulator -->
+    <section class="section" id="simulador">
+        <div class="section-header">
+            <span class="section-number">05 / TRANSAÇÃO & INVESTIMENTO</span>
+            <h2 class="section-title">Simulador de Projeto</h2>
+            <p class="section-subtitle">Monte seu escopo e visualize o investimento necessário em tempo real.</p>
+        </div>
+
+        <div class="grid grid-2">
+            <div class="card animate-on-scroll">
+                <h4 style="margin-bottom: 24px;"><i class="fas fa-sliders-h" style="color: var(--divercidade-primary); margin-right: 12px;"></i>Customização de Escopo</h4>
+                
+                <div style="display: flex; flex-direction: column; gap: 24px;">
+                    <div>
+                        <label style="display: block; font-weight: 700; margin-bottom: 8px; font-size: 14px;">Alocação de Advisory (Horas)</label>
+                        <select id="sim-consultoria" onchange="calcularSimulador()" style="width: 100%; padding: 12px; background: var(--color-bg-secondary); border: 1px solid var(--color-border); border-radius: 6px; color: var(--color-text-primary);">
+                            <option value="0">Selecionar horas...</option>
+                            <option value="40">40 horas (Projeto Focado)</option>
+                            <option value="80">80 horas (Plano Anual)</option>
+                            <option value="120">120 horas (Transformação Deep)</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label style="display: block; font-weight: 700; margin-bottom: 8px; font-size: 14px;">Treinamentos Estratégicos</label>
+                        <select id="sim-treinamentos" onchange="calcularSimulador()" style="width: 100%; padding: 12px; background: var(--color-bg-secondary); border: 1px solid var(--color-border); border-radius: 6px; color: var(--color-text-primary);">
+                            <option value="0">0 sessões</option>
+                            <option value="1">1 Workshop Intensivo</option>
+                            <option value="2">2 Ciclos de Formação</option>
+                            <option value="4">4 Trilhas Completas</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label style="display: block; font-weight: 700; margin-bottom: 8px; font-size: 14px;">Workshops & Facilitação</label>
+                        <select id="sim-workshops" onchange="calcularSimulador()" style="width: 100%; padding: 12px; background: var(--color-bg-secondary); border: 1px solid var(--color-border); border-radius: 6px; color: var(--color-text-primary);">
+                            <option value="0">0</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <div class="summary-total animate-on-scroll">
+                <p style="text-transform: uppercase; font-size: 12px; font-weight: 700; letter-spacing: 2px; opacity: 0.7;">Investimento Total Projetado</p>
+                <div class="total-value" id="sim-total">R$ 0</div>
+                <div style="margin-top: 30px; display: flex; flex-direction: column; gap: 12px;">
+                    <button class="btn btn-primary" style="width: 100%;" onclick="window.print()">Gerar PDF da Simulação</button>
+                    <a href="mailto:contato@divercidade.net" class="btn btn-outline" style="border-color: var(--divercidade-primary); color: var(--divercidade-primary);">Validar com Consultor</a>
+                </div>
+                <p style="font-size: 12px; opacity: 0.5; margin-top: 24px;">*Simulação baseada em taxas institucionais 2026.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 7 -->
+    <section class="section" id="proximos-passos">
+        <div class="section-header">
+            <span class="section-number">06 / EXECUÇÃO</span>
+            <h2 class="section-title">Cronograma & Contrato</h2>
+        </div>
+
+        <div class="grid grid-2">
+            <div class="card animate-on-scroll">
+                <h3 style="margin-bottom: 32px;">Timeline de Implementação</h3>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-date">Semana 1-2</div>
+                        <div class="timeline-title">Kickoff & Alinhamento</div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">Semana 3-6</div>
+                        <div class="timeline-title">Audit Processos & JDs</div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">Semanas 8-20</div>
+                        <div class="timeline-title">Execução & Workshops</div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">Mês 12</div>
+                        <div class="timeline-title">Avaliação Final ROI</div>
+                    </div>
+                </div>
+            </div>
+            <div class="card animate-on-scroll">
+                <h3 style="margin-bottom: 24px;">Termos & Conformidade</h3>
+                <ul style="list-style: none; display: flex; flex-direction: column; gap: 20px;">
+                    <li><strong style="color: #FFFFFF;">LGPD:</strong> Anonimização total de dados brutos e conformidade com políticas globais Campari.</li>
+                    <li><strong style="color: #FFFFFF;">Propriedade:</strong> Playbooks customizados tornam-se propriedade intelectual da Campari.</li>
+                    <li><strong style="color: #FFFFFF;">Rescisão:</strong> Aviso prévio flexível de 30 dias.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 40px; max-width: 1400px; margin: 0 auto;">
+            <div>
+                <img src="../../../../../assets/images/logo-short-white.png" alt="Logo" style="height: 48px; margin-bottom: 24px;">
+                <p style="font-size: 14px; max-width: 300px; line-height: 1.8;">Transformando ambientes corporativos em espaços potentes para pessoas de verdade.</p>
+            </div>
+            <div style="display: flex; gap: 60px;">
+                <div>
+                    <h5 style="color: white; margin-bottom: 20px; font-size: 13px; text-transform: uppercase;">Links</h5>
+                    <ul style="list-style: none; font-size: 13px; display: flex; flex-direction: column; gap: 10px;">
+                        <li><a href="#objetivos">Objetivos</a></li>
+                        <li><a href="#roi">Impacto Financeiro</a></li>
+                        <li><a href="#simulador">Simulador</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h5 style="color: white; margin-bottom: 20px; font-size: 13px; text-transform: uppercase;">Contato</h5>
+                    <ul style="list-style: none; font-size: 13px; display: flex; flex-direction: column; gap: 10px;">
+                        <li>contato@divercidade.net</li>
+                        <li>LinkedIn /divercidade</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div style="border-top: 1px solid rgba(255,255,255,0.05); margin-top: 60px; padding-top: 30px; display: flex; justify-content: space-between; font-size: 12px;">
+            <p>&copy; 2026 DiverCidade HUB. Confidential for Campari Group.</p>
+            <p>Validade da Proposta: 05/04/2026</p>
+        </div>
+    </footer>
+
+    <script>
+        // JS Essentials
+        const body = document.body;
+        const themeBtn = document.getElementById('themeToggle');
+        
+        // Initial Theme
+        if (localStorage.getItem('theme') === 'light') {
+            body.classList.remove('dark');
+        } else {
+            body.classList.add('dark');
+        }
+
+        themeBtn.addEventListener('click', () => {
+            body.classList.toggle('dark');
+            localStorage.setItem('theme', body.classList.contains('dark') ? 'dark' : 'light');
+            updateChartsTheme();
+        });
+
+        // ROI Chart
+        const chartColor = () => body.classList.contains('dark') ? '#A8A29E' : '#44403C';
+        const ctx = document.getElementById('roiChart').getContext('2d');
+        const roiChart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: ['Retenção', 'Recrutamento', 'Produtividade', 'Branding'],
+                datasets: [{
+                    data: [195000, 102500, 120000, 225000],
+                    backgroundColor: ['#AD841F', '#B8141B', '#13294B', '#FAFAF9'],
+                    borderRadius: 4
+                }]
+            },
+            options: {
+                responsive: true, maintainAspectRatio: false,
+                animation: { duration: 2500, easing: 'easeOutQuint' },
+                plugins: { legend: { display: false } },
+                scales: { 
+                    y: { grid: { color: 'rgba(255,255,255,0.05)' }, ticks: { color: chartColor, callback: (v) => 'R$ ' + (v/1000) + 'k' } },
+                    x: { grid: { display: false }, ticks: { color: chartColor } }
+                }
+            }
+        });
+
+        function updateChartsTheme() {
+            roiChart.options.scales.x.ticks.color = chartColor();
+            roiChart.options.scales.y.ticks.color = chartColor();
+            roiChart.update();
+        }
+
+        // Intersection Observer
+        const sectionsObs = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if(entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.animate-on-scroll, .section-header').forEach(el => sectionsObs.observe(el));
+
+        // Simulator Logic
+        function calcularSimulador() {
+            const h = Number(document.getElementById('sim-consultoria').value) || 0;
+            const t = Number(document.getElementById('sim-treinamentos').value) || 0;
+            const w = Number(document.getElementById('sim-workshops').value) || 0;
+            const total = (h * 350) + (t * 10600) + (w * 12000);
+            document.getElementById('sim-total').textContent = 'R$ ' + total.toLocaleString('pt-BR');
+        }
+
+        // Progress Bar
+        window.addEventListener('scroll', () => {
+            const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            const scrolled = (winScroll / height) * 100;
+            document.getElementById("scroll-progress").style.width = scrolled + "%";
+        }, {passive: true});
+
+        // Parallax Hero
+        const orb1 = document.getElementById('heroOrb1');
+        const orb2 = document.getElementById('heroOrb2');
+        window.addEventListener('scroll', () => {
+            const y = window.scrollY;
+            if (orb1) orb1.style.transform = `translateY(${y * 0.1}px)`;
+            if (orb2) orb2.style.transform = `translateY(${y * -0.05}px)`;
+        }, {passive: true});
+
+        // Ripple
+        function addRipple(el) {
+            el.classList.add('ripple-container');
+            el.addEventListener('click', function(e) {
+                const ripple = document.createElement('span');
+                ripple.className = 'ripple-wave';
+                const rect = this.getBoundingClientRect();
+                const size = Math.max(rect.width, rect.height);
+                ripple.style.width = ripple.style.height = size + 'px';
+                ripple.style.left = (e.clientX - rect.left - size / 2) + 'px';
+                ripple.style.top  = (e.clientY - rect.top  - size / 2) + 'px';
+                this.appendChild(ripple);
+                ripple.addEventListener('animationend', () => ripple.remove());
+            });
+        }
+        document.querySelectorAll('.btn, .card').forEach(addRipple);
+
+        // Initial Calc
+        calcularSimulador();
+
+    </script>
+</body>
+</html>
