@@ -15,8 +15,6 @@
     <!-- Chart.js -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <style>
         :root {
@@ -182,15 +180,15 @@
             margin-left: 16px;
         }
 
-        .theme-toggle .fa-moon {
+        .theme-toggle svg:last-child {
             display: none;
         }
 
-        body.dark .theme-toggle .fa-moon {
+        body.dark .theme-toggle svg:last-child {
             display: inline-block;
         }
 
-        body.dark .theme-toggle .fa-sun {
+        body.dark .theme-toggle svg:first-child {
             display: none;
         }
 
@@ -626,8 +624,8 @@
             </a>
 
             <button id="themeToggle" class="theme-toggle" aria-label="Alternar tema">
-                <i class="fas fa-sun"></i>
-                <i class="fas fa-moon"></i>
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
             </button>
 
             <div class="nav-toggle" id="navToggle">
@@ -723,25 +721,25 @@
 
         <div class="grid grid-2">
             <div class="card animate-on-scroll">
-                <h3 style="color: var(--divercidade-orange); margin-bottom: 16px;"><i class="fas fa-search-location"></i> Onde Campari Está Hoje</h3>
+                <h3 style="color: var(--divercidade-orange); margin-bottom: 16px;"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg> Onde Campari Está Hoje</h3>
                 <ul style="list-style: none; color: var(--color-text-secondary); font-size: 14px;">
                     <li style="margin-bottom: 12px; display: flex; gap: 8px;">
-                        <i class="fas fa-angle-right" style="color: var(--divercidade-orange); margin-top: 4px;"></i>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: var(--divercidade-orange); margin-top: 4px;"><path d="m9 18 6-6-6-6"/></svg>
                         <span><strong>Recrutamento:</strong> Necessidade de framework formal e sourcing estratégico.</span>
                     </li>
                     <li style="margin-bottom: 12px; display: flex; gap: 8px;">
-                        <i class="fas fa-angle-right" style="color: var(--divercidade-orange); margin-top: 4px;"></i>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: var(--divercidade-orange); margin-top: 4px;"><path d="m9 18 6-6-6-6"/></svg>
                         <span><strong>Liderança:</strong> Desenvolver consciência sobre viés e segurança psicológica.</span>
                     </li>
                     <li style="margin-bottom: 0; display: flex; gap: 8px;">
-                        <i class="fas fa-angle-right" style="color: var(--divercidade-orange); margin-top: 4px;"></i>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: var(--divercidade-orange); margin-top: 4px;"><path d="m9 18 6-6-6-6"/></svg>
                         <span><strong>Iniciativas:</strong> Migrar de ações isoladas para pilotos que testam e constroem evidências.</span>
                     </li>
                 </ul>
             </div>
 
             <div class="card animate-on-scroll" style="background: linear-gradient(135deg, var(--color-bg-tertiary), var(--color-bg-primary));">
-                <h3 style="color: var(--divercidade-primary); margin-bottom: 16px;"><i class="fas fa-hand-holding-heart"></i> Abordagem DiverCidade Hub</h3>
+                <h3 style="color: var(--divercidade-primary); margin-bottom: 16px;"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/><path d="M12 5 9.04 7.96a2.17 2.17 0 0 0 0 3.08v0c.82.82 2.13.85 3 .07l2.07-1.9a2.82 2.82 0 0 1 3.79 0l2.96 2.66"/><path d="m18 15-2-2"/><path d="m15 18-2-2"/></svg> Abordagem DiverCidade Hub</h3>
                 <p style="color: var(--color-text-secondary); font-size: 14px; margin-bottom: 12px;">
                     Combinamos <strong>advisory estratégico</strong> com <strong>implementação prática</strong>.
                 </p>
@@ -763,46 +761,46 @@
         <div class="grid grid-3">
             <div class="card animate-on-scroll" style="border-top: 4px solid var(--divercidade-blue);">
                 <div class="kpi-icon" style="background: var(--divercidade-blue);">
-                    <i class="fas fa-bullhorn"></i>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 11 18-5v12L3 14v-3z"/><path d="M11.6 16.8a3 3 0 1 1-5.8-1.6"/></svg>
                 </div>
                 <h3 style="text-align: center; margin-bottom: 16px; font-size: 18px;">Atração & Marca</h3>
                 <p style="font-size: 13px; color: var(--color-text-secondary); margin-bottom: 16px;">
                     Expandir alcance em comunidades historicamente sub-representadas.
                 </p>
                 <ul style="font-size: 13px; color: var(--color-text-secondary); list-style: none;">
-                    <li style="margin-bottom: 8px;"><i class="fas fa-check" style="color: var(--divercidade-blue); margin-right: 6px;"></i>Revisão de JD</li>
-                    <li style="margin-bottom: 8px;"><i class="fas fa-check" style="color: var(--divercidade-blue); margin-right: 6px;"></i>Sourcing Inclusivo</li>
-                    <li><i class="fas fa-check" style="color: var(--divercidade-blue); margin-right: 6px;"></i>Marca Empregadora</li>
+                    <li style="margin-bottom: 8px;"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="color: var(--divercidade-blue); margin-right: 6px; display: inline-block; vertical-align: middle; margin-top: -2px;"><path d="M20 6 9 17l-5-5"/></svg>Revisão de JD</li>
+                    <li style="margin-bottom: 8px;"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="color: var(--divercidade-blue); margin-right: 6px; display: inline-block; vertical-align: middle; margin-top: -2px;"><path d="M20 6 9 17l-5-5"/></svg>Sourcing Inclusivo</li>
+                    <li><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="color: var(--divercidade-blue); margin-right: 6px; display: inline-block; vertical-align: middle; margin-top: -2px;"><path d="M20 6 9 17l-5-5"/></svg>Marca Empregadora</li>
                 </ul>
             </div>
 
             <div class="card animate-on-scroll" style="border-top: 4px solid var(--divercidade-primary);">
                 <div class="kpi-icon" style="background: var(--divercidade-primary);">
-                    <i class="fas fa-user-tie"></i>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 21a8 8 0 0 1 13.292-6"/><circle cx="10" cy="8" r="5"/><path d="m16 19 2 2 4-4"/></svg>
                 </div>
                 <h3 style="text-align: center; margin-bottom: 16px; font-size: 18px;">Liderança Inclusiva</h3>
                 <p style="font-size: 13px; color: var(--color-text-secondary); margin-bottom: 16px;">
                     Líderes que identificam preconceitos e constroem equipes seguras.
                 </p>
                 <ul style="font-size: 13px; color: var(--color-text-secondary); list-style: none;">
-                    <li style="margin-bottom: 8px;"><i class="fas fa-check" style="color: var(--divercidade-primary); margin-right: 6px;"></i>Workshops & Coaching</li>
-                    <li style="margin-bottom: 8px;"><i class="fas fa-check" style="color: var(--divercidade-primary); margin-right: 6px;"></i>Dinâmicas de Equipe</li>
-                    <li><i class="fas fa-check" style="color: var(--divercidade-primary); margin-right: 6px;"></i>Mentoria</li>
+                    <li style="margin-bottom: 8px;"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="color: var(--divercidade-primary); margin-right: 6px; display: inline-block; vertical-align: middle; margin-top: -2px;"><path d="M20 6 9 17l-5-5"/></svg>Workshops & Coaching</li>
+                    <li style="margin-bottom: 8px;"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="color: var(--divercidade-primary); margin-right: 6px; display: inline-block; vertical-align: middle; margin-top: -2px;"><path d="M20 6 9 17l-5-5"/></svg>Dinâmicas de Equipe</li>
+                    <li><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="color: var(--divercidade-primary); margin-right: 6px; display: inline-block; vertical-align: middle; margin-top: -2px;"><path d="M20 6 9 17l-5-5"/></svg>Mentoria</li>
                 </ul>
             </div>
 
             <div class="card animate-on-scroll" style="border-top: 4px solid var(--divercidade-purple);">
                 <div class="kpi-icon" style="background: var(--divercidade-purple);">
-                    <i class="fas fa-users"></i>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
                 </div>
                 <h3 style="text-align: center; margin-bottom: 16px; font-size: 18px;">Cultura Organizacional</h3>
                 <p style="font-size: 13px; color: var(--color-text-secondary); margin-bottom: 16px;">
                     Cultura onde inclusão é inerente, com equidade de oportunidades.
                 </p>
                 <ul style="font-size: 13px; color: var(--color-text-secondary); list-style: none;">
-                    <li style="margin-bottom: 8px;"><i class="fas fa-check" style="color: var(--divercidade-purple); margin-right: 6px;"></i>Facilitação de Conversas</li>
-                    <li style="margin-bottom: 8px;"><i class="fas fa-check" style="color: var(--divercidade-purple); margin-right: 6px;"></i>Fortalecimento de ERGs</li>
-                    <li><i class="fas fa-check" style="color: var(--divercidade-purple); margin-right: 6px;"></i>Rituais de Pertencimento</li>
+                    <li style="margin-bottom: 8px;"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="color: var(--divercidade-purple); margin-right: 6px; display: inline-block; vertical-align: middle; margin-top: -2px;"><path d="M20 6 9 17l-5-5"/></svg>Facilitação de Conversas</li>
+                    <li style="margin-bottom: 8px;"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="color: var(--divercidade-purple); margin-right: 6px; display: inline-block; vertical-align: middle; margin-top: -2px;"><path d="M20 6 9 17l-5-5"/></svg>Fortalecimento de ERGs</li>
+                    <li><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="color: var(--divercidade-purple); margin-right: 6px; display: inline-block; vertical-align: middle; margin-top: -2px;"><path d="M20 6 9 17l-5-5"/></svg>Rituais de Pertencimento</li>
                 </ul>
             </div>
         </div>
@@ -1007,7 +1005,7 @@
 
         <div class="highlight-box animate-on-scroll" style="background: rgba(0, 201, 167, 0.08); border-color: var(--divercidade-green);">
             <div class="highlight-title" style="color: var(--divercidade-green);">
-                <i class="fas fa-chart-line"></i> ROI Projetado: 7.3x
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg> ROI Projetado: 7.3x
             </div>
             <p style="font-size: 14px;">
                 Expectativa de resultado total anual de <strong>~R$ 642.500</strong>. O ciclo se liquida organicamente em 2 a 4 meses.
@@ -1097,7 +1095,7 @@
                     
                     <div style="margin-top: 24px;">
                         <button class="btn btn-primary" style="width: 100%; margin-bottom: 8px;" onclick="window.print()">
-                            <i class="fas fa-file-pdf"></i> Salvar Proposta
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M10 9H8"/><path d="M16 13H8"/><path d="M16 17H8"/></svg> Salvar Proposta
                         </button>
                         <a href="mailto:contato@divercidade.com.br" class="btn btn-outline" style="width: 100%; color: var(--divercidade-primary); border-color: var(--divercidade-primary);">
                             Agendar Reunião
@@ -1111,7 +1109,7 @@
     <!-- Contract Terms Section -->
     <section class="section" style="padding-top: 0;">
         <div class="card">
-            <h4 style="margin-bottom: 16px;"><i class="fas fa-file-contract"></i> Termos Regulatórios & LGPD</h4>
+            <h4 style="margin-bottom: 16px;"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 19.5c0 .8-.4 1.5-1 1.5H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5.586a1 1 0 0 1 .707.293l5.414 5.414a1 1 0 0 1 .293.707V19.5Z"/><path d="M15.354 17.646a.5.5 0 0 1-.708 0l-6.354-6.354a.5.5 0 0 1 0-.708l.708-.708a.5.5 0 0 1 .708 0l6.354 6.354a.5.5 0 0 1 0 .708l-.708.708Z"/></svg> Termos Regulatórios & LGPD</h4>
             <div class="grid grid-2" style="font-size: 13px; color: var(--color-text-secondary);">
                 <ul>
                     <li style="margin-bottom: 8px;"><strong>Compensações:</strong> Faturamento postecipado (D+30), sem cobrança adiantada.</li>
@@ -1147,10 +1145,10 @@
                     <!-- Social Media Links -->
                     <div style="display: flex; gap: 16px; margin-bottom: 24px;">
                         <a href="https://instagram.com/divercidade_hub" target="_blank" title="Instagram" style="display: flex; align-items: center; justify-content: center; width: 40px; height: 40px; background: rgba(233,30,140,0.15); border: 1px solid rgba(233,30,140,0.3); border-radius: 8px; color: var(--divercidade-primary); transition: all 0.3s ease; text-decoration: none;">
-                            <i class="fab fa-instagram"></i>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
                         </a>
                         <a href="https://linkedin.com/company/divercidade" target="_blank" title="LinkedIn" style="display: flex; align-items: center; justify-content: center; width: 40px; height: 40px; background: rgba(255,107,53,0.15); border: 1px solid rgba(255,107,53,0.3); border-radius: 8px; color: var(--divercidade-orange); transition: all 0.3s ease; text-decoration: none;">
-                            <i class="fab fa-linkedin-in"></i>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
                         </a>
                     </div>
                 </div>
@@ -1158,7 +1156,7 @@
                 <!-- Contact Section -->
                 <div>
                     <h4 style="color: white; font-size: 16px; font-weight: 700; margin-bottom: 28px; display: flex; align-items: center; gap: 8px;">
-                        <i class="fas fa-envelope" style="color: var(--divercidade-primary);"></i> Contato
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: var(--divercidade-primary);"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg> Contato
                     </h4>
                     <div style="display: flex; flex-direction: column; gap: 12px; font-size: 14px;">
                         <a href="mailto:contato@divercidade.com.br" style="text-decoration: none; color: #d0d0d0; transition: color 0.3s ease; display: flex; align-items: center; gap: 8px;">
