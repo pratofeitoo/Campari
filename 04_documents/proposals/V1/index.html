@@ -1,0 +1,1286 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proposta Comercial Consolidada | Campari + DiverCidade HUB</title>
+    <meta name="description" content="Parceria Estratégica em Diversidade, Equidade e Inclusão - Campari">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+
+    <style>
+        :root {
+            /* DiverCidade Brand Colors */
+            --divercidade-primary: #E91E8C; /* Pink */
+            --divercidade-orange: #FF6B35; /* Orange */
+            --divercidade-yellow: #FFD23F;
+            --divercidade-green: #00C9A7;
+            --divercidade-blue: #4361EE;
+            --divercidade-purple: #7B2CBF;
+
+            /* Mappings */
+            --color-primary-dark: #c31575;
+            --color-danger: #EA4335;
+
+            /* Light Theme Defaults */
+            --color-text-primary: #212121;
+            --color-text-secondary: #5F6368;
+            --color-text-light: #FFFFFF;
+            --color-bg-primary: #FFFFFF;
+            --color-bg-secondary: #F5F5F5;
+            --color-bg-tertiary: #FFEFF6;
+            --color-border: #E0E0E0;
+
+            /* Spacing & UI */
+            --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.06);
+            --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.08);
+            --shadow-lg: 0 10px 20px rgba(0, 0, 0, 0.12);
+            --radius-md: 8px;
+            --radius-lg: 12px;
+            --spacing-sm: 8px;
+            --spacing-md: 16px;
+            --spacing-lg: 24px;
+            --spacing-xl: 32px;
+            --spacing-xxl: 48px;
+
+            --transition-normal: 0.28s ease;
+        }
+
+        /* Dark Mode Overrides */
+        body.dark {
+            --color-bg-primary: #121212;
+            --color-bg-secondary: #1E1E1E;
+            --color-bg-tertiary: #2A2A3E;
+            --color-text-primary: #FFFFFF;
+            --color-text-secondary: #E8E8E8;
+            --color-border: rgba(255, 255, 255, 0.2);
+            --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.6);
+            --shadow-md: 0 6px 18px rgba(0, 0, 0, 0.6);
+        }
+
+        /* Global Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            font-size: 16px;
+            line-height: 1.6;
+            color: var(--color-text-primary);
+            background: var(--color-bg-secondary);
+            transition: background-color var(--transition-normal), color var(--transition-normal);
+        }
+
+        h1, h2, h3, h4, h5, h6, .hero-title, .section-title, .nav-logo {
+            font-family: 'Poppins', sans-serif;
+        }
+
+        /* Navigation */
+        .nav {
+            position: fixed;
+            top: 16px;
+            left: 16px;
+            right: 16px;
+            background: var(--color-bg-primary);
+            box-shadow: var(--shadow-lg);
+            z-index: 1000;
+            transition: var(--transition-normal);
+            border-radius: 16px;
+            border: 1px solid var(--color-border);
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .nav-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: var(--spacing-md) var(--spacing-xl);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-logo {
+            font-weight: 700;
+            font-size: 20px;
+            color: var(--divercidade-primary);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .nav-menu {
+            display: flex;
+            gap: var(--spacing-lg);
+            list-style: none;
+        }
+
+        .nav-link {
+            text-decoration: none;
+            color: var(--color-text-secondary);
+            font-weight: 500;
+            font-size: 14px;
+            padding: 8px 12px;
+            border-radius: 6px;
+            transition: 0.2s;
+        }
+
+        .nav-link:hover,
+        .nav-link.active {
+            color: var(--divercidade-primary);
+            background: rgba(233, 30, 140, 0.06);
+        }
+
+        /* Mobile Nav */
+        .nav-toggle {
+            display: none;
+            flex-direction: column;
+            gap: 4px;
+            cursor: pointer;
+        }
+
+        .nav-toggle span {
+            width: 24px;
+            height: 2px;
+            background: var(--color-text-primary);
+        }
+
+        body.dark .nav-link {
+            color: #E0E0E0;
+        }
+
+        body.dark .nav-link:hover {
+            color: #FF80AB;
+        }
+
+        /* Theme Toggle */
+        .theme-toggle {
+            background: transparent;
+            border: 1px solid var(--color-border);
+            padding: 8px;
+            border-radius: 8px;
+            cursor: pointer;
+            color: var(--color-text-primary);
+            margin-left: 16px;
+        }
+
+        .theme-toggle svg:last-child {
+            display: none;
+        }
+
+        body.dark .theme-toggle svg:last-child {
+            display: inline-block;
+        }
+
+        body.dark .theme-toggle svg:first-child {
+            display: none;
+        }
+
+        /* Hero */
+        .hero {
+            background: linear-gradient(135deg, var(--divercidade-primary) 0%, var(--divercidade-orange) 100%);
+            color: white;
+            padding: 160px var(--spacing-xl) var(--spacing-xxl);
+            position: relative;
+            overflow: hidden;
+        }
+
+        body.dark .hero {
+            background: linear-gradient(135deg, rgba(233, 30, 140, 0.2), rgba(255, 107, 53, 0.15));
+        }
+
+        .hero-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-badge {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 4px 12px;
+            border-radius: 50px;
+            font-size: 14px;
+            font-weight: 600;
+            display: inline-block;
+            margin-bottom: 24px;
+        }
+
+        .hero-title {
+            font-size: 48px;
+            font-weight: 700;
+            margin-bottom: 16px;
+            line-height: 1.2;
+        }
+
+        .hero-subtitle {
+            font-size: 20px;
+            opacity: 0.95;
+            max-width: 800px;
+            margin-bottom: 32px;
+        }
+
+        .hero-stats {
+            display: flex;
+            gap: 40px;
+            margin-top: 48px;
+            flex-wrap: wrap;
+        }
+
+        .hero-stat-value {
+            font-size: 36px;
+            font-weight: 700;
+        }
+
+        .hero-stat-label {
+            font-size: 14px;
+            opacity: 0.9;
+        }
+
+        /* Sections & Grid */
+        .section {
+            padding: 80px var(--spacing-xl);
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .section-header {
+            margin-bottom: 40px;
+        }
+
+        .section-number {
+            background: var(--divercidade-primary);
+            color: white;
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 14px;
+            margin-right: 12px;
+        }
+
+        .section-title {
+            font-size: 32px;
+            font-weight: 700;
+            color: var(--color-text-primary);
+        }
+
+        .section-subtitle {
+            font-size: 18px;
+            color: var(--color-text-secondary);
+            margin-top: 8px;
+        }
+
+        .grid {
+            display: grid;
+            gap: 24px;
+        }
+
+        .grid-2 {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        .grid-3 {
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        .grid-4 {
+            grid-template-columns: repeat(4, 1fr);
+        }
+
+        /* Cards */
+        .card {
+            background: var(--color-bg-primary);
+            border-radius: var(--radius-lg);
+            padding: 32px;
+            box-shadow: var(--shadow-sm);
+            border: 1px solid var(--color-border);
+            transition: var(--transition-normal);
+            cursor: pointer;
+        }
+
+        .card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-md);
+        }
+
+        /* KPI Cards */
+        .kpi-card {
+            background: var(--color-bg-primary);
+            border-radius: var(--radius-lg);
+            padding: 24px;
+            border: 1px solid var(--color-border);
+            text-align: center;
+        }
+
+        .kpi-icon {
+            width: 56px;
+            height: 56px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 16px;
+            color: white;
+            font-size: 24px;
+        }
+
+        .kpi-value {
+            font-size: 28px;
+            font-weight: 700;
+            color: var(--color-text-primary);
+            margin-bottom: 4px;
+        }
+
+        .kpi-label {
+            font-size: 14px;
+            color: var(--color-text-secondary);
+        }
+
+        /* Tables & Tabs */
+        .table-container {
+            overflow-x: auto;
+            background: var(--color-bg-primary);
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-sm);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 14px;
+            min-width: 600px;
+        }
+
+        th {
+            background: var(--color-bg-tertiary);
+            padding: 16px;
+            text-align: left;
+            color: var(--color-text-primary);
+        }
+
+        td {
+            padding: 16px;
+            border-bottom: 1px solid var(--color-border);
+            color: var(--color-text-secondary);
+        }
+
+        body.dark th {
+            background: #2A2A3E;
+            color: white;
+        }
+
+        .tab-container {
+            margin-top: 24px;
+        }
+
+        .tabs {
+            display: flex;
+            gap: 8px;
+            border-bottom: 1px solid var(--color-border);
+            margin-bottom: 24px;
+            flex-wrap: wrap;
+        }
+
+        .tab {
+            padding: 12px 24px;
+            cursor: pointer;
+            border-bottom: 2px solid transparent;
+            font-weight: 500;
+            color: var(--color-text-secondary);
+        }
+
+        .tab.active {
+            border-color: var(--divercidade-primary);
+            color: var(--divercidade-primary);
+        }
+
+        .tab-content {
+            display: none;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        /* Timeline */
+        .timeline {
+            position: relative;
+            padding-left: 40px;
+            border-left: 2px solid var(--color-border);
+            margin-left: 16px;
+        }
+
+        .timeline-item {
+            position: relative;
+            padding-bottom: 40px;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -49px;
+            top: 0;
+            width: 16px;
+            height: 16px;
+            background: var(--divercidade-primary);
+            border-radius: 50%;
+            border: 4px solid var(--color-bg-secondary);
+        }
+
+        .timeline-date {
+            color: var(--divercidade-primary);
+            font-weight: 700;
+            font-size: 14px;
+            margin-bottom: 4px;
+        }
+
+        .timeline-title {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: var(--color-text-primary);
+        }
+
+        /* Calculator/Pricing Styles */
+        .calculator-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 32px;
+        }
+
+        .module-card {
+            background: var(--color-bg-primary);
+            border: 1px solid var(--color-border);
+            border-radius: 12px;
+            padding: 16px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 16px;
+            transition: 0.2s;
+        }
+        
+        .module-card.selected {
+            border-color: var(--divercidade-primary);
+            background: rgba(233, 30, 140, 0.03);
+        }
+
+        .module-info h4 {
+            font-size: 16px;
+            margin-bottom: 4px;
+            color: var(--color-text-primary);
+        }
+
+        .summary-card {
+            position: sticky;
+            top: 100px;
+        }
+
+        .summary-total {
+            background: linear-gradient(90deg, var(--divercidade-primary), var(--divercidade-orange));
+            color: white;
+            padding: 24px;
+            border-radius: 12px;
+            text-align: center;
+            margin: 24px 0;
+        }
+
+        .summary-total span {
+            display: block;
+        }
+
+        .total-value {
+            font-size: 32px;
+            font-weight: 900;
+            margin-top: 8px;
+        }
+
+        /* Buttons */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-weight: 600;
+            text-decoration: none;
+            border: none;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+
+        .btn-primary {
+            background: var(--divercidade-primary);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: var(--color-primary-dark);
+        }
+
+        .btn-outline {
+            border: 1px solid white;
+            color: white;
+        }
+
+        .btn-outline:hover {
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        /* Highlight Box (LGPD/Risk) */
+        .highlight-box {
+            background: rgba(255, 107, 53, 0.08);
+            border-left: 4px solid var(--divercidade-orange);
+            padding: 24px;
+            border-radius: 8px;
+            margin-top: 24px;
+        }
+
+        .highlight-title {
+            color: var(--divercidade-orange);
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 12px;
+        }
+
+        /* Responsive */
+        @media (max-width: 900px) {
+            .grid-2,
+            .grid-3,
+            .grid-4,
+            .calculator-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-title {
+                font-size: 32px;
+            }
+
+            .nav-menu {
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: var(--color-bg-primary);
+                flex-direction: column;
+                padding: 16px;
+                box-shadow: var(--shadow-md);
+                display: none;
+            }
+
+            .nav-menu.active {
+                display: flex;
+            }
+
+            .nav-toggle {
+                display: flex;
+            }
+        }
+
+        /* Animation Classes */
+        .animate-on-scroll {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: 0.6s ease;
+        }
+
+        .animate-on-scroll.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav-container">
+            <a href="#" class="nav-logo">
+                <img src="./assets/images/logo-header.png" alt="DiverCidade HUB Logo" style="height: 60px; width: auto; object-fit: contain;">
+            </a>
+
+            <button id="themeToggle" class="theme-toggle" aria-label="Alternar tema">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
+            </button>
+
+            <div class="nav-toggle" id="navToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <ul class="nav-menu">
+                <li><a href="#contexto" class="nav-link">Contexto</a></li>
+                <li><a href="#frentes" class="nav-link">Frentes</a></li>
+                <li><a href="#comparativo" class="nav-link">Diferenciais</a></li>
+                <li><a href="#roi" class="nav-link">Impacto & ROI</a></li>
+                <li><a href="#orcamento" class="nav-link">Investimento</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="hero-content">
+            <div class="hero-badge">Proposta Comercial Consolidada</div>
+            <h1 class="hero-title">Parceria Estratégica em Diversidade, Equidade e Inclusão</h1>
+            <p class="hero-subtitle">
+                Uma agenda coesiva conectada aos objetivos de negócio da <strong>Campari</strong>, maximizando atração e retenção de talentos diversos.
+            </p>
+            <div style="display: flex; gap: 16px;">
+                <a href="#orcamento" class="btn btn-primary">Ver Proposta</a>
+                <a href="#roi" class="btn btn-outline">Ver ROI (7.3x)</a>
+            </div>
+
+            <div class="hero-stats">
+                <div class="hero-stat">
+                    <div class="hero-stat-value">12 Meses</div>
+                    <div class="hero-stat-label">Duração Sugerida</div>
+                </div>
+                <div class="hero-stat">
+                    <div class="hero-stat-value">3</div>
+                    <div class="hero-stat-label">Objetivos SMART</div>
+                </div>
+                <div class="hero-stat">
+                    <div class="hero-stat-value">R$ 642k</div>
+                    <div class="hero-stat-label">Impacto Estimado</div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Section 1: Objectives & Context -->
+    <section class="section" id="contexto">
+        <div class="section-header">
+            <span class="section-number">1</span>
+            <h2 class="section-title">Contexto & Objetivos</h2>
+            <p class="section-subtitle">Alinhamento simultâneo de objetivos de negócio, liderança e cultura</p>
+        </div>
+
+        <!-- Objectives Table -->
+        <div class="card animate-on-scroll" style="margin-bottom: 48px;">
+            <h3 style="margin-bottom: 24px; font-size: 20px;">Objetivos SMART</h3>
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Dimensão</th>
+                            <th>Meta</th>
+                            <th>Baseline Estimado</th>
+                            <th>Prazo</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Atração e Retenção</strong></td>
+                            <td>Reduzir turnover (grupos sub-representados) a <strong>14%</strong></td>
+                            <td>~20%</td>
+                            <td>12 Meses</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Recrutamento</strong></td>
+                            <td>Reduzir reprovação antecipada (probation) a <strong>4%</strong></td>
+                            <td>~7-15%</td>
+                            <td>12 Meses</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Cultura</strong></td>
+                            <td>Elevar score de aprovação e pertencimento em <strong>10-15%</strong></td>
+                            <td><em>Aferição Inicial</em></td>
+                            <td>Pesquisas Internas</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="grid grid-2">
+            <div class="card animate-on-scroll">
+                <h3 style="color: var(--divercidade-orange); margin-bottom: 16px;"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg> Onde Campari Está Hoje</h3>
+                <ul style="list-style: none; color: var(--color-text-secondary); font-size: 14px;">
+                    <li style="margin-bottom: 12px; display: flex; gap: 8px;">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: var(--divercidade-orange); margin-top: 4px;"><path d="m9 18 6-6-6-6"/></svg>
+                        <span><strong>Recrutamento:</strong> Necessidade de framework formal e sourcing estratégico.</span>
+                    </li>
+                    <li style="margin-bottom: 12px; display: flex; gap: 8px;">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: var(--divercidade-orange); margin-top: 4px;"><path d="m9 18 6-6-6-6"/></svg>
+                        <span><strong>Liderança:</strong> Desenvolver consciência sobre viés e segurança psicológica.</span>
+                    </li>
+                    <li style="margin-bottom: 0; display: flex; gap: 8px;">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: var(--divercidade-orange); margin-top: 4px;"><path d="m9 18 6-6-6-6"/></svg>
+                        <span><strong>Iniciativas:</strong> Migrar de ações isoladas para pilotos que testam e constroem evidências.</span>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="card animate-on-scroll" style="background: linear-gradient(135deg, var(--color-bg-tertiary), var(--color-bg-primary));">
+                <h3 style="color: var(--divercidade-primary); margin-bottom: 16px;"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/><path d="M12 5 9.04 7.96a2.17 2.17 0 0 0 0 3.08v0c.82.82 2.13.85 3 .07l2.07-1.9a2.82 2.82 0 0 1 3.79 0l2.96 2.66"/><path d="m18 15-2-2"/><path d="m15 18-2-2"/></svg> Abordagem DiverCidade Hub</h3>
+                <p style="color: var(--color-text-secondary); font-size: 14px; margin-bottom: 12px;">
+                    Combinamos <strong>advisory estratégico</strong> com <strong>implementação prática</strong>.
+                </p>
+                <p style="color: var(--color-text-secondary); font-size: 14px;">
+                    Nos conectamos ao time da Campari para alavancar seu próprio conhecimento enquanto trazemos melhores práticas, frameworks e facilitação.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 2: Strategic Fronts -->
+    <section class="section" id="frentes">
+        <div class="section-header">
+            <span class="section-number">2</span>
+            <h2 class="section-title">Frentes Estratégicas</h2>
+            <p class="section-subtitle">Três dimensões críticas de atuação simultânea</p>
+        </div>
+
+        <div class="grid grid-3">
+            <div class="card animate-on-scroll" style="border-top: 4px solid var(--divercidade-blue);">
+                <div class="kpi-icon" style="background: var(--divercidade-blue);">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 11 18-5v12L3 14v-3z"/><path d="M11.6 16.8a3 3 0 1 1-5.8-1.6"/></svg>
+                </div>
+                <h3 style="text-align: center; margin-bottom: 16px; font-size: 18px;">Atração & Marca</h3>
+                <p style="font-size: 13px; color: var(--color-text-secondary); margin-bottom: 16px;">
+                    Expandir alcance em comunidades historicamente sub-representadas.
+                </p>
+                <ul style="font-size: 13px; color: var(--color-text-secondary); list-style: none;">
+                    <li style="margin-bottom: 8px;"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="color: var(--divercidade-blue); margin-right: 6px; display: inline-block; vertical-align: middle; margin-top: -2px;"><path d="M20 6 9 17l-5-5"/></svg>Revisão de JD</li>
+                    <li style="margin-bottom: 8px;"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="color: var(--divercidade-blue); margin-right: 6px; display: inline-block; vertical-align: middle; margin-top: -2px;"><path d="M20 6 9 17l-5-5"/></svg>Sourcing Inclusivo</li>
+                    <li><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="color: var(--divercidade-blue); margin-right: 6px; display: inline-block; vertical-align: middle; margin-top: -2px;"><path d="M20 6 9 17l-5-5"/></svg>Marca Empregadora</li>
+                </ul>
+            </div>
+
+            <div class="card animate-on-scroll" style="border-top: 4px solid var(--divercidade-primary);">
+                <div class="kpi-icon" style="background: var(--divercidade-primary);">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 21a8 8 0 0 1 13.292-6"/><circle cx="10" cy="8" r="5"/><path d="m16 19 2 2 4-4"/></svg>
+                </div>
+                <h3 style="text-align: center; margin-bottom: 16px; font-size: 18px;">Liderança Inclusiva</h3>
+                <p style="font-size: 13px; color: var(--color-text-secondary); margin-bottom: 16px;">
+                    Líderes que identificam preconceitos e constroem equipes seguras.
+                </p>
+                <ul style="font-size: 13px; color: var(--color-text-secondary); list-style: none;">
+                    <li style="margin-bottom: 8px;"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="color: var(--divercidade-primary); margin-right: 6px; display: inline-block; vertical-align: middle; margin-top: -2px;"><path d="M20 6 9 17l-5-5"/></svg>Workshops & Coaching</li>
+                    <li style="margin-bottom: 8px;"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="color: var(--divercidade-primary); margin-right: 6px; display: inline-block; vertical-align: middle; margin-top: -2px;"><path d="M20 6 9 17l-5-5"/></svg>Dinâmicas de Equipe</li>
+                    <li><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="color: var(--divercidade-primary); margin-right: 6px; display: inline-block; vertical-align: middle; margin-top: -2px;"><path d="M20 6 9 17l-5-5"/></svg>Mentoria</li>
+                </ul>
+            </div>
+
+            <div class="card animate-on-scroll" style="border-top: 4px solid var(--divercidade-purple);">
+                <div class="kpi-icon" style="background: var(--divercidade-purple);">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                </div>
+                <h3 style="text-align: center; margin-bottom: 16px; font-size: 18px;">Cultura Organizacional</h3>
+                <p style="font-size: 13px; color: var(--color-text-secondary); margin-bottom: 16px;">
+                    Cultura onde inclusão é inerente, com equidade de oportunidades.
+                </p>
+                <ul style="font-size: 13px; color: var(--color-text-secondary); list-style: none;">
+                    <li style="margin-bottom: 8px;"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="color: var(--divercidade-purple); margin-right: 6px; display: inline-block; vertical-align: middle; margin-top: -2px;"><path d="M20 6 9 17l-5-5"/></svg>Facilitação de Conversas</li>
+                    <li style="margin-bottom: 8px;"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="color: var(--divercidade-purple); margin-right: 6px; display: inline-block; vertical-align: middle; margin-top: -2px;"><path d="M20 6 9 17l-5-5"/></svg>Fortalecimento de ERGs</li>
+                    <li><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="color: var(--divercidade-purple); margin-right: 6px; display: inline-block; vertical-align: middle; margin-top: -2px;"><path d="M20 6 9 17l-5-5"/></svg>Rituais de Pertencimento</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 3: Comparison & Risks -->
+    <section class="section" id="comparativo">
+        <div class="section-header">
+            <span class="section-number">3</span>
+            <h2 class="section-title">Por que DiverCidade Hub?</h2>
+            <p class="section-subtitle">Análise comparativa e riscos de não agir</p>
+        </div>
+
+        <div class="tab-container">
+            <div class="tabs">
+                <div class="tab active" onclick="openTab(event, 'tabComparativo')">Comparativo de Mercado</div>
+                <div class="tab" onclick="openTab(event, 'tabRiscos')">Riscos de Não Agir</div>
+            </div>
+
+            <div id="tabComparativo" class="tab-content active animate-on-scroll">
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Modelo</th>
+                                <th>Custo Estimado</th>
+                                <th>Prós/Contras</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Big 4 (Consultorias Globais)</strong></td>
+                                <td>R$ 480k - 960k / ano</td>
+                                <td>Alto custo, lentidão (6+ meses diagn.), risco de falta de implementação prática.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>RH Interno</strong></td>
+                                <td>Custo FTE</td>
+                                <td>Limitado a 1-2 pessoas, isolamento sem benchmark, risco de acúmulo de funções.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Boutiques D&I</strong></td>
+                                <td>Baixo</td>
+                                <td>Foco em eventos pontuais, baixo alinhamento estratégico com metas de negócio.</td>
+                            </tr>
+                            <tr style="background: rgba(233, 30, 140, 0.05); border-left: 4px solid var(--divercidade-primary);">
+                                <td><strong>DiverCidade Hub</strong></td>
+                                <td><strong>R$ 132k / ano</strong></td>
+                                <td><strong>Equilíbrio ideal. Alta profundidade, execução ágil e custo eficiente.</strong></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div id="tabRiscos" class="tab-content">
+                <div class="grid grid-3">
+                    <div class="card" style="border-left: 4px solid var(--color-danger);">
+                        <h4 style="color: var(--color-danger); margin-bottom: 8px;">Posicionamento</h4>
+                        <p style="font-size: 13px; color: var(--color-text-secondary);">Ambev, Diageo e Bacardi já investem estrategicamente. Atrasos fecham a janela de inovação.</p>
+                    </div>
+                    <div class="card" style="border-left: 4px solid var(--divercidade-orange);">
+                        <h4 style="color: var(--divercidade-orange); margin-bottom: 8px;">Talentos</h4>
+                        <p style="font-size: 13px; color: var(--color-text-secondary);">Talentos (Millennials/Gen Z) exigem consistência. Falta de evolução gera alta rotatividade onerosa.</p>
+                    </div>
+                    <div class="card" style="border-left: 4px solid var(--divercidade-blue);">
+                        <h4 style="color: var(--divercidade-blue); margin-bottom: 8px;">Compliance ESG</h4>
+                        <p style="font-size: 13px; color: var(--color-text-secondary);">Proatividade isenta e previne organizações frente às novas exigências sistêmicas brasileiras.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 4: Methodology & RACI -->
+    <section class="section" id="metodologia">
+        <div class="section-header">
+            <span class="section-number">4</span>
+            <h2 class="section-title">Metodologia & Entregáveis</h2>
+            <p class="section-subtitle">Operação em 3 frentes com pilotos de estabilização</p>
+        </div>
+
+        <div class="grid grid-2">
+            <!-- Deliverables -->
+            <div class="card animate-on-scroll">
+                <h3 style="margin-bottom: 24px;">Entregáveis Principais</h3>
+                <div class="table-container">
+                    <table style="font-size: 12px;">
+                        <thead>
+                            <tr>
+                                <th>Fase</th>
+                                <th>Entregável</th>
+                                <th>Critério de Aceitação</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Mês 1</td>
+                                <td><strong>Relatório de Maturidade</strong></td>
+                                <td>KPIs atuais e gaps sugeridos.</td>
+                            </tr>
+                            <tr>
+                                <td>Mês 2</td>
+                                <td><strong>Roadmap 12 Meses</strong></td>
+                                <td>Validado pela alta gerência.</td>
+                            </tr>
+                            <tr>
+                                <td>Recrut.</td>
+                                <td><strong>Guia de Sourcing</strong></td>
+                                <td>Guias táticos para Talent Acquisition.</td>
+                            </tr>
+                            <tr>
+                                <td>Liderança</td>
+                                <td><strong>Sessões Dinâmicas</strong></td>
+                                <td>Satisfação >80% e atas.</td>
+                            </tr>
+                            <tr>
+                                <td>PMO</td>
+                                <td><strong>Relatórios ROI</strong></td>
+                                <td>Mensal com métricas balizadoras.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- RACI & Gap Matrix Tabs -->
+            <div class="card animate-on-scroll">
+                 <div class="tabs" style="margin-top: 0; margin-bottom: 16px;">
+                    <div class="tab active" onclick="openTab(event, 'tabRaciReal')">RACI Operacional</div>
+                    <div class="tab" onclick="openTab(event, 'tabGap')">Matriz de Gap</div>
+                </div>
+
+                <div id="tabRaciReal" class="tab-content active">
+                    <p style="font-size: 13px; margin-bottom: 16px; color: var(--color-text-secondary);">
+                        <strong>Legenda:</strong> R (Responsável), A (Aprovador), C (Consultado), I (Informado).
+                    </p>
+                    <ul style="list-style: none; font-size: 13px;">
+                        <li style="padding: 8px 0; border-bottom: 1px solid var(--color-border);">
+                            <strong>Aprovação Documentos e PII:</strong><br>
+                            DiverCidade (C) | Head RH/Sponsor (A/R) | Legal/TI (I/C)
+                        </li>
+                        <li style="padding: 8px 0; border-bottom: 1px solid var(--color-border);">
+                            <strong>Maturidade e Workshops:</strong><br>
+                            DiverCidade (R/A) | Head RH/Sponsor (C/I)
+                        </li>
+                    </ul>
+                </div>
+
+                <div id="tabGap" class="tab-content">
+                     <ul style="list-style: none; font-size: 13px;">
+                        <li style="padding: 8px 0; border-bottom: 1px solid var(--color-border);">
+                            <strong style="color: var(--divercidade-orange);">Objetivos sem target:</strong><br>
+                            Imposição de formato SMART com percentuais alvo.
+                        </li>
+                        <li style="padding: 8px 0; border-bottom: 1px solid var(--color-border);">
+                            <strong style="color: var(--divercidade-orange);">Risco orçamentário:</strong><br>
+                            Fixação com buffer explícito na precificação.
+                        </li>
+                         <li style="padding: 8px 0;">
+                            <strong style="color: var(--divercidade-orange);">Normas Sensíveis / PII:</strong><br>
+                            Delete protocolar em 30 dias e anonimato garantido.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 5: ROI Impact -->
+    <section class="section" id="roi">
+        <div class="section-header">
+            <span class="section-number">5</span>
+            <h2 class="section-title">Impacto Financeiro & ROI</h2>
+            <p class="section-subtitle">Construção de valor financeiro concreto focado em 4 vetores</p>
+        </div>
+
+        <div class="grid grid-2">
+             <div class="card animate-on-scroll" style="height: 400px; display: flex; flex-direction: column; justify-content: center;">
+                <canvas id="roiChart"></canvas>
+            </div>
+
+            <div class="grid grid-2">
+                <div class="kpi-card animate-on-scroll">
+                    <div class="kpi-value">R$ 195k</div>
+                    <div class="kpi-label">Retenção Melhorada</div>
+                </div>
+                <div class="kpi-card animate-on-scroll">
+                    <div class="kpi-value">R$ 102k</div>
+                    <div class="kpi-label">Recrutamento Otimizado</div>
+                </div>
+                <div class="kpi-card animate-on-scroll">
+                    <div class="kpi-value">R$ 120k</div>
+                    <div class="kpi-label">Produtividade</div>
+                </div>
+                <div class="kpi-card animate-on-scroll">
+                    <div class="kpi-value">R$ 225k</div>
+                    <div class="kpi-label">Marca Empregadora</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="highlight-box animate-on-scroll" style="background: rgba(0, 201, 167, 0.08); border-color: var(--divercidade-green);">
+            <div class="highlight-title" style="color: var(--divercidade-green);">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg> ROI Projetado: 7.3x
+            </div>
+            <p style="font-size: 14px;">
+                Expectativa de resultado total anual de <strong>~R$ 642.500</strong>. O ciclo se liquida organicamente em 2 a 4 meses.
+            </p>
+        </div>
+    </section>
+
+    <!-- Section 6: Budget & Investment -->
+    <section class="section" id="orcamento">
+        <div class="section-header">
+            <span class="section-number">6</span>
+            <h2 class="section-title">Modelos Comerciais</h2>
+            <p class="section-subtitle">Opções de alocação de capital com previsibilidade</p>
+        </div>
+
+        <div class="calculator-grid">
+            <div class="calculator-main">
+                <h3 style="margin-bottom: 24px;">Opção A: Pacotes Estratégicos (Mensalidade)</h3>
+                
+                <div class="module-card">
+                    <div class="module-info">
+                        <h4>Pacote Essencial</h4>
+                        <small style="color: var(--color-text-secondary);">Semestre Único | Foco em 1 pilar + Diagnóstico</small>
+                    </div>
+                    <div style="font-weight: 700;">R$ 8.500 <span style="font-size: 12px; font-weight: 400;">/mês</span></div>
+                </div>
+
+                <div class="module-card selected">
+                    <div class="module-info">
+                        <h4 style="color: var(--divercidade-primary); display: flex; align-items: center; gap: 8px;">
+                            Pacote Estratégico <span style="background: var(--divercidade-primary); color: white; padding: 2px 8px; border-radius: 4px; font-size: 10px;">RECOMENDADO</span>
+                        </h4>
+                        <small style="color: var(--color-text-secondary);">12 Meses | Transversal nos 3 pilares | Maior ROI</small>
+                    </div>
+                    <div style="font-weight: 700; color: var(--divercidade-primary);">R$ 11.000 <span style="font-size: 12px; font-weight: 400; color: var(--color-text-secondary);">/mês</span></div>
+                </div>
+
+                <div class="module-card">
+                    <div class="module-info">
+                        <h4>Transformação Integral</h4>
+                        <small style="color: var(--color-text-secondary);">Prazo Expandido | Foco denso até Governança</small>
+                    </div>
+                    <div style="font-weight: 700;">R$ 15.000 <span style="font-size: 12px; font-weight: 400;">/mês</span></div>
+                </div>
+
+                <h3 style="margin: 32px 0 16px;">Opção B: Modelo Flexível (Pay-as-you-go)</h3>
+                <div class="card" style="padding: 24px;">
+                    <ul style="font-size: 14px; list-style: none;">
+                        <li style="margin-bottom: 12px; display: flex; justify-content: space-between;">
+                            <span>Módulo I (Abertura/Consultoria Base)</span>
+                            <strong>R$ 7.500 (Fixo)</strong>
+                        </li>
+                        <li style="margin-bottom: 12px; display: flex; justify-content: space-between;">
+                            <span>Fee de Status e PMO</span>
+                            <strong>R$ 1.500 /mês</strong>
+                        </li>
+                        <li style="margin-bottom: 12px; display: flex; justify-content: space-between;">
+                            <span>Suporte e Dinâmicas (Banco de Horas)</span>
+                            <strong>R$ 300,00 /hora</strong>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Summary Sidebar -->
+            <div class="calculator-sidebar">
+                <div class="card summary-card">
+                    <h4 style="margin-bottom: 16px;">Próximos Passos</h4>
+                    
+                    <div class="timeline" style="margin-left: 10px;">
+                        <div class="timeline-item" style="padding-bottom: 24px;">
+                            <div class="timeline-date">Passo 1</div>
+                            <div class="timeline-title" style="font-size: 14px;">Reunião de Equalização</div>
+                            <p style="font-size: 12px; color: var(--color-text-secondary);">Alinhamento para depurar volumetrias reais.</p>
+                        </div>
+                        <div class="timeline-item" style="padding-bottom: 24px;">
+                            <div class="timeline-date">Passo 2</div>
+                            <div class="timeline-title" style="font-size: 14px;">Seleção & Assinatura</div>
+                            <p style="font-size: 12px; color: var(--color-text-secondary);">Escolha do modelo ideal.</p>
+                        </div>
+                        <div class="timeline-item" style="padding-bottom: 0;">
+                            <div class="timeline-date">Passo 3</div>
+                            <div class="timeline-title" style="font-size: 14px;">Launch Kick-off</div>
+                            <p style="font-size: 12px; color: var(--color-text-secondary);">Deflagração dos roadmaps.</p>
+                        </div>
+                    </div>
+                    
+                    <div style="margin-top: 24px;">
+                        <button class="btn btn-primary" style="width: 100%; margin-bottom: 8px;" onclick="window.print()">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M10 9H8"/><path d="M16 13H8"/><path d="M16 17H8"/></svg> Salvar Proposta
+                        </button>
+                        <a href="mailto:contato@divercidade.com.br" class="btn btn-outline" style="width: 100%; color: var(--divercidade-primary); border-color: var(--divercidade-primary);">
+                            Agendar Reunião
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contract Terms Section -->
+    <section class="section" style="padding-top: 0;">
+        <div class="card">
+            <h4 style="margin-bottom: 16px;"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 19.5c0 .8-.4 1.5-1 1.5H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5.586a1 1 0 0 1 .707.293l5.414 5.414a1 1 0 0 1 .293.707V19.5Z"/><path d="M15.354 17.646a.5.5 0 0 1-.708 0l-6.354-6.354a.5.5 0 0 1 0-.708l.708-.708a.5.5 0 0 1 .708 0l6.354 6.354a.5.5 0 0 1 0 .708l-.708.708Z"/></svg> Termos Regulatórios & LGPD</h4>
+            <div class="grid grid-2" style="font-size: 13px; color: var(--color-text-secondary);">
+                <ul>
+                    <li style="margin-bottom: 8px;"><strong>Compensações:</strong> Faturamento postecipado (D+30), sem cobrança adiantada.</li>
+                    <li style="margin-bottom: 8px;"><strong>Exclusividade e IP:</strong> Metodologia DiverCidade. Subprodutos finais são da Campari.</li>
+                    <li style="margin-bottom: 8px;"><strong>Validade Proposta:</strong> Até 05/04/2026.</li>
+                </ul>
+                <ul>
+                    <li style="margin-bottom: 8px;"><strong>Confidencialidade e Dados:</strong> Protocolo mandatório de expurgo de dados sensíveis em 30 dias. Abstração aglutinada sem intercepção massiva de dados diretos.</li>
+                    <li style="margin-bottom: 8px;"><strong>Change Management:</strong> Mudanças de escopo via CR formal.</li>
+                    <li style="margin-bottom: 8px;"><strong>Rescisão:</strong> Pré-aviso de 30 dias.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer style="background: linear-gradient(135deg, #0a0e27 0%, #1a1f3a 100%); padding: 40px var(--spacing-xl) 30px; margin-top: 40px; border-top: 2px solid var(--divercidade-primary); color: #d0d0d0; position: relative; overflow: hidden;">
+        <!-- Background accent elements -->
+        <div style="position: absolute; top: -50px; right: -100px; width: 300px; height: 300px; background: radial-gradient(circle, rgba(233,30,140,0.08), transparent); border-radius: 50%;"></div>
+        <div style="position: absolute; bottom: 100px; left: -80px; width: 250px; height: 250px; background: radial-gradient(circle, rgba(255,107,53,0.06), transparent); border-radius: 50%;"></div>
+
+        <div style="max-width: 1400px; margin: 0 auto; position: relative; z-index: 1;">
+            <!-- Main Footer Content -->
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 32px; margin-bottom: 30px;">
+                <!-- Brand Section -->
+                <div>
+                    <a href="https://www.divercidade.net" target="_blank" style="display: block; margin-bottom: 24px;">
+                        <img src="./assets/images/logo-short-white.png" alt="DiverCidade HUB Logo" style="height: 60px; width: auto; object-fit: contain;">
+                    </a>
+                    <p style="font-size: 14px; line-height: 1.7; color: #b0b0b0; margin-bottom: 28px;">
+                        Pessoas de verdade em ambientes corporativos potentes e sustentáveis. Consultoria especializada em diversidade, equidade e inclusão.
+                    </p>
+                    <!-- Social Media Links -->
+                    <div style="display: flex; gap: 16px; margin-bottom: 24px;">
+                        <a href="https://instagram.com/divercidade_hub" target="_blank" title="Instagram" style="display: flex; align-items: center; justify-content: center; width: 40px; height: 40px; background: rgba(233,30,140,0.15); border: 1px solid rgba(233,30,140,0.3); border-radius: 8px; color: var(--divercidade-primary); transition: all 0.3s ease; text-decoration: none;">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+                        </a>
+                        <a href="https://linkedin.com/company/divercidade" target="_blank" title="LinkedIn" style="display: flex; align-items: center; justify-content: center; width: 40px; height: 40px; background: rgba(255,107,53,0.15); border: 1px solid rgba(255,107,53,0.3); border-radius: 8px; color: var(--divercidade-orange); transition: all 0.3s ease; text-decoration: none;">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Contact Section -->
+                <div>
+                    <h4 style="color: white; font-size: 16px; font-weight: 700; margin-bottom: 28px; display: flex; align-items: center; gap: 8px;">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: var(--divercidade-primary);"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg> Contato
+                    </h4>
+                    <div style="display: flex; flex-direction: column; gap: 12px; font-size: 14px;">
+                        <a href="mailto:contato@divercidade.com.br" style="text-decoration: none; color: #d0d0d0; transition: color 0.3s ease; display: flex; align-items: center; gap: 8px;">
+                            <span style="color: var(--divercidade-primary);">›</span> contato@divercidade.com.br
+                        </a>
+                        <a href="https://www.divercidade.net" target="_blank" style="text-decoration: none; color: #d0d0d0; transition: color 0.3s ease; display: flex; align-items: center; gap: 8px;">
+                            <span style="color: var(--divercidade-primary);">›</span> www.divercidade.net
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Divider -->
+            <div style="height: 1px; background: linear-gradient(90deg, transparent, rgba(233,30,140,0.3), transparent); margin-bottom: 20px;"></div>
+
+            <!-- Footer Bottom -->
+            <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 24px; font-size: 13px;">
+                <p style="color: #909090;">&copy; 2026 DiverCidade HUB. Todos os direitos reservados.</p>
+                <div style="display: flex; gap: 24px; color: #909090;">
+                    <span><strong>Cliente:</strong> Campari</span>
+                    <span><strong>Validade:</strong> 05/04/2026</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        // --- Theme Toggle ---
+        const themeBtn = document.getElementById('themeToggle');
+        const body = document.body;
+
+        if (localStorage.getItem('theme') === 'dark') {
+            body.classList.add('dark');
+        }
+
+        themeBtn.addEventListener('click', () => {
+            body.classList.toggle('dark');
+            localStorage.setItem('theme', body.classList.contains('dark') ? 'dark' : 'light');
+            updateChartsTheme();
+        });
+
+        // --- Mobile Nav ---
+        document.getElementById('navToggle').addEventListener('click', () => {
+            document.querySelector('.nav-menu').classList.toggle('active');
+        });
+
+        // --- Tabs Logic ---
+        function openTab(evt, tabName) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tab-content");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+                tabcontent[i].classList.remove("active");
+            }
+            tablinks = document.getElementsByClassName("tab");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+            document.getElementById(tabName).style.display = "block";
+            document.getElementById(tabName).classList.add("active");
+            evt.currentTarget.className += " active";
+        }
+
+        // --- Animations ---
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.classList.add('visible');
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.animate-on-scroll').forEach(el => observer.observe(el));
+
+        // --- Charts ---
+        const chartColor = () => body.classList.contains('dark') ? '#FFFFFF' : '#212121';
+
+        const ctxRoi = document.getElementById('roiChart').getContext('2d');
+        let roiChart = new Chart(ctxRoi, {
+            type: 'bar',
+            data: {
+                labels: ['Retenção', 'Recrutamento', 'Produtividade', 'Marca Empregadora'],
+                datasets: [{
+                    label: 'Impacto Anual Estimado (R$)',
+                    data: [195000, 102500, 120000, 225000], 
+                    backgroundColor: ['#7B2CBF', '#E91E8C', '#FF6B35', '#00C9A7'],
+                    borderRadius: 4
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: { 
+                    legend: { display: false },
+                    tooltip: {
+                        callbacks: {
+                            label: function(context) {
+                                let label = context.dataset.label || '';
+                                if (label) {
+                                    label += ': ';
+                                }
+                                if (context.parsed.y !== null) {
+                                    label += new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(context.parsed.y);
+                                }
+                                return label;
+                            }
+                        }
+                    }
+                },
+                scales: {
+                    x: { ticks: { color: chartColor() } },
+                    y: { 
+                        ticks: { color: chartColor() }, 
+                        title: { display: true, text: 'Valor Estimado (R$)' } 
+                    }
+                }
+            }
+        });
+
+        function updateChartsTheme() {
+            const color = chartColor();
+            roiChart.options.scales.x.ticks.color = color;
+            roiChart.options.scales.y.ticks.color = color;
+            roiChart.update();
+        }
+    </script>
+</body>
+</html>
