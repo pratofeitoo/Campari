@@ -814,7 +814,7 @@
     </style>
 </head>
 
-<body>
+<body class="dark">
     <!-- Scroll Progress Bar -->
     <div id="scroll-progress"></div>
 
@@ -1480,7 +1480,10 @@
         const themeBtn = document.getElementById('themeToggle');
         const body = document.body;
 
-        if (localStorage.getItem('theme') === 'dark') {
+        // Default to dark mode if no theme is stored
+        if (localStorage.getItem('theme') === 'light') {
+            body.classList.remove('dark');
+        } else {
             body.classList.add('dark');
         }
 
@@ -1608,6 +1611,11 @@
                     entry.target.classList.add('visible');
                     // Also trigger counters for KPI cards specifically
                     entry.target.querySelectorAll('.kpi-value').forEach(animateCounter);
+                    // Special case: ROI Chart animation
+                    if (entry.target.querySelector('#roiChart') && !window.roiChartAnimated) {
+                        setTimeout(() => animateROIChart(), 300);
+                        window.roiChartAnimated = true;
+                    }
                 }
             });
         }, { threshold: 0.12 });
@@ -1617,23 +1625,35 @@
         const chartColor = () => body.classList.contains('dark') ? '#FFFFFF' : '#212121';
 
         const ctxRoi = document.getElementById('roiChart').getContext('2d');
+        const roiRealData = [195000, 102500, 120000, 225000];
+        
         let roiChart = new Chart(ctxRoi, {
             type: 'bar',
             data: {
                 labels: ['Retenção', 'Recrutamento', 'Produtividade', 'Marca'],
                 datasets: [{
                     label: 'Impacto Anual Estimado (R$)',
-                    data: [195000, 102500, 120000, 225000], 
+                    data: [0, 0, 0, 0], // Start at zero for animation
                     backgroundColor: ['#7B2CBF', '#E91E8C', '#FF6B35', '#00C9A7'],
-                    borderRadius: 4
+                    borderRadius: 6
                 }]
             },
             options: {
                 responsive: true,
                 maintainAspectRatio: false,
+                animation: {
+                    duration: 1500,
+                    easing: 'easeOutQuart'
+                },
                 plugins: { 
                     legend: { display: false },
                     tooltip: {
+                        enabled: true,
+                        backgroundColor: 'rgba(255, 255, 255, 0.9)',
+                        titleColor: '#000',
+                        bodyColor: '#000',
+                        padding: 12,
+                        cornerRadius: 8,
                         callbacks: {
                             label: function(context) {
                                 let label = context.dataset.label || '';
@@ -1649,14 +1669,22 @@
                     }
                 },
                 scales: {
-                    x: { ticks: { color: chartColor() } },
+                    x: { ticks: { color: chartColor() }, grid: { display: false } },
                     y: { 
-                        ticks: { color: chartColor() }, 
-                        title: { display: true, text: 'Valor Estimado (R$)' } 
+                        ticks: { 
+                            color: chartColor(),
+                            callback: function(value) { return 'R$ ' + (value / 1000) + 'k'; }
+                        }, 
+                        grid: { color: () => body.classList.contains('dark') ? 'rgba(255,255,255,0.05)' : 'rgba(0,0,0,0.05)' }
                     }
                 }
             }
         });
+
+        function animateROIChart() {
+            roiChart.data.datasets[0].data = roiRealData;
+            roiChart.update();
+        }
 
         function updateChartsTheme() {
             const color = chartColor();
