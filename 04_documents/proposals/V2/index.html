@@ -1,0 +1,1456 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proposta Comercial Campari | DiverCidade HUB</title>
+    <meta name="description" content="Parceria Estratégica em Diversidade, Equidade e Inclusão - Campari">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        :root {
+            /* Elegant Vibrant Identity */
+            --divercidade-primary: #E91E8C; /* Pink */
+            --divercidade-orange: #FF6B35; /* Orange */
+            --divercidade-yellow: #FFD23F; /* Yellow */
+            --divercidade-green: #00C9A7; /* Emerald */
+            --divercidade-blue: #4361EE; /* Royal Blue */
+            --divercidade-purple: #7B2CBF; /* Deep Purple */
+
+            /* Mappings */
+            --color-primary-dark: #c31575;
+            --color-danger: #d32f2f;
+
+            /* Light Theme Defaults (Glassmorphism Context) */
+            --color-text-primary: #1E293B;
+            --color-text-secondary: #475569;
+            --color-text-light: #FFFFFF;
+            
+            /* Glass Colors */
+            --glass-bg: rgba(255, 255, 255, 0.65);
+            --glass-border: rgba(255, 255, 255, 0.4);
+            --glass-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.07);
+            --glass-hover-bg: rgba(255, 255, 255, 0.85);
+
+            --color-bg-primary: #FFFFFF;
+            --color-bg-secondary: #F8FAFC;
+            --color-bg-tertiary: rgba(255, 255, 255, 0.4);
+            --color-border: rgba(30, 41, 59, 0.1);
+
+            /* Spacing & UI */
+            --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.06);
+            --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.08);
+            --shadow-lg: 0 10px 20px rgba(0, 0, 0, 0.12);
+            --radius-md: 8px;
+            --radius-lg: 12px;
+            --spacing-sm: 8px;
+            --spacing-md: 16px;
+            --spacing-lg: 24px;
+            --spacing-xl: 32px;
+            --spacing-xxl: 48px;
+
+            --transition-normal: 0.28s ease;
+        }
+
+        /* Dark Mode Overrides */
+        body.dark {
+            --color-bg-primary: #0F172A;
+            --color-bg-secondary: #020617;
+            --color-bg-tertiary: rgba(0, 0, 0, 0.2);
+            --color-text-primary: #F8FAFC;
+            --color-text-secondary: #CBD5E1;
+            --color-border: rgba(255, 255, 255, 0.1);
+            --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.6);
+            --shadow-md: 0 6px 18px rgba(0, 0, 0, 0.6);
+            --glass-bg: rgba(15, 23, 42, 0.65);
+            --glass-border: rgba(255, 255, 255, 0.08);
+            --glass-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+            --glass-hover-bg: rgba(15, 23, 42, 0.85);
+        }
+
+        /* Global Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :focus-visible {
+            outline: 2px solid var(--divercidade-primary);
+            outline-offset: 4px;
+            border-radius: 2px;
+        }
+
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            font-size: 16px;
+            line-height: 1.6;
+            color: var(--color-text-primary);
+            /* Elegant Aurora Gradient Base */
+            background-color: #F8FAFC;
+            background-image: 
+                radial-gradient(at 0% 0%, rgba(233, 30, 140, 0.08) 0px, transparent 50%),
+                radial-gradient(at 100% 0%, rgba(255, 107, 53, 0.08) 0px, transparent 50%),
+                radial-gradient(at 100% 100%, rgba(123, 44, 191, 0.08) 0px, transparent 50%);
+            background-attachment: fixed;
+            transition: background-color var(--transition-normal), color var(--transition-normal);
+        }
+        
+        body.dark {
+            background-color: #020617;
+            background-image: 
+                radial-gradient(at 0% 0%, rgba(233, 30, 140, 0.12) 0px, transparent 50%),
+                radial-gradient(at 100% 0%, rgba(255, 107, 53, 0.12) 0px, transparent 50%),
+                radial-gradient(at 100% 100%, rgba(123, 44, 191, 0.12) 0px, transparent 50%);
+        }
+
+        h1, h2, h3, h4, h5, h6, .hero-title, .section-title, .nav-logo {
+            font-family: 'Playfair Display', serif;
+            letter-spacing: -0.01em;
+        }
+
+        .nav {
+            position: fixed;
+            top: 16px;
+            left: 16px;
+            right: 16px;
+            background: var(--glass-bg);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            box-shadow: var(--glass-shadow);
+            z-index: 1000;
+            transition: var(--transition-normal);
+            border-radius: 16px;
+            border: 1px solid var(--glass-border);
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .nav-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: var(--spacing-md) var(--spacing-xl);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-logo {
+            font-weight: 700;
+            font-size: 20px;
+            color: var(--divercidade-primary);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .nav-menu {
+            display: flex;
+            gap: var(--spacing-lg);
+            list-style: none;
+        }
+
+        .nav-link {
+            text-decoration: none;
+            color: var(--color-text-secondary);
+            font-weight: 500;
+            font-size: 14px;
+            padding: 8px 12px;
+            border-radius: 6px;
+            transition: 0.2s;
+        }
+
+        .nav-link:hover,
+        .nav-link.active {
+            color: var(--divercidade-primary);
+            background: rgba(233, 30, 140, 0.08);
+        }
+
+        /* Mobile Nav */
+        .nav-toggle {
+            display: none;
+            flex-direction: column;
+            gap: 4px;
+            cursor: pointer;
+        }
+
+        .nav-toggle span {
+            width: 24px;
+            height: 2px;
+            background: var(--color-text-primary);
+        }
+
+        body.dark .nav-link {
+            color: #E0E0E0;
+        }
+
+        body.dark .nav-link:hover {
+            color: #FF80AB;
+        }
+
+        /* Theme Toggle */
+        .theme-toggle {
+            background: transparent;
+            border: 1px solid var(--color-border);
+            padding: 8px;
+            border-radius: 8px;
+            cursor: pointer;
+            color: var(--color-text-primary);
+            margin-left: 16px;
+        }
+
+        .theme-toggle .fa-moon {
+            display: none;
+        }
+
+        body.dark .theme-toggle .fa-moon {
+            display: inline-block;
+        }
+
+        body.dark .theme-toggle .fa-sun {
+            display: none;
+        }
+
+        /* Hero */
+        .hero {
+            background: linear-gradient(135deg, rgba(233, 30, 140, 0.9) 0%, rgba(255, 107, 53, 0.9) 100%);
+            color: white;
+            padding: 160px var(--spacing-xl) var(--spacing-xxl);
+            position: relative;
+            overflow: hidden;
+            border-bottom: 1px solid rgba(255,255,255,0.2);
+        }
+        
+        /* Subtle mesh overlay on hero */
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0; right: 0; bottom: 0; left: 0;
+            background: radial-gradient(circle at 80% 20%, rgba(255,255,255,0.3) 0%, transparent 40%);
+            z-index: 0;
+        }
+
+        body.dark .hero {
+            background: linear-gradient(135deg, rgba(233, 30, 140, 0.25) 0%, rgba(123, 44, 191, 0.3) 100%);
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+        }
+
+        .hero-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-badge {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 4px 12px;
+            border-radius: 50px;
+            font-size: 14px;
+            font-weight: 600;
+            display: inline-block;
+            margin-bottom: 24px;
+        }
+
+        .hero-title {
+            font-size: 48px;
+            font-weight: 700;
+            margin-bottom: 16px;
+            line-height: 1.2;
+        }
+
+        .hero-subtitle {
+            font-size: 20px;
+            opacity: 0.95;
+            max-width: 800px;
+            margin-bottom: 32px;
+        }
+
+        .hero-stats {
+            display: flex;
+            gap: 40px;
+            margin-top: 48px;
+            flex-wrap: wrap;
+        }
+
+        .hero-stat-value {
+            font-size: 36px;
+            font-weight: 700;
+        }
+
+        .hero-stat-label {
+            font-size: 14px;
+            opacity: 0.9;
+        }
+
+        /* Sections & Grid */
+        .section {
+            padding: 80px var(--spacing-xl);
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .section-header {
+            margin-bottom: 40px;
+        }
+
+        .section-number {
+            color: var(--divercidade-primary);
+            background: rgba(233, 30, 140, 0.1);
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 16px;
+            margin-right: 12px;
+            border: 1px solid rgba(233, 30, 140, 0.2);
+        }
+
+        .section-title {
+            font-size: 32px;
+            font-weight: 700;
+            color: var(--color-text-primary);
+        }
+
+        .section-subtitle {
+            font-size: 18px;
+            color: var(--color-text-secondary);
+            margin-top: 8px;
+        }
+
+        .grid {
+            display: grid;
+            gap: 24px;
+        }
+
+        .grid-2 {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        .grid-3 {
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        .grid-4 {
+            grid-template-columns: repeat(4, 1fr);
+        }
+
+        /* Cards (Glassmorphism) */
+        .card {
+            background: var(--glass-bg);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border-radius: var(--radius-lg);
+            padding: 32px;
+            box-shadow: var(--glass-shadow);
+            border: 1px solid var(--glass-border);
+            transition: var(--transition-normal);
+            cursor: pointer;
+        }
+
+        .card:hover {
+            transform: translateY(-4px);
+            background: var(--glass-hover-bg);
+            box-shadow: 0 12px 40px rgba(0,0,0,0.1);
+            border-color: rgba(255,255,255,0.6);
+        }
+
+        /* KPI Cards */
+        .kpi-card {
+            background: var(--glass-bg);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-radius: var(--radius-lg);
+            padding: 24px;
+            border: 1px solid var(--glass-border);
+            box-shadow: var(--glass-shadow);
+            text-align: center;
+            transition: var(--transition-normal);
+            cursor: pointer;
+        }
+
+        .kpi-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-md);
+            border-color: var(--divercidade-primary);
+        }
+
+        .kpi-icon {
+            width: 56px;
+            height: 56px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 16px;
+            color: white;
+            font-size: 24px;
+            transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        .kpi-card:hover .kpi-icon {
+            transform: scale(1.1);
+        }
+
+
+        .kpi-value {
+            font-size: 28px;
+            font-weight: 700;
+            color: var(--color-text-primary);
+            margin-bottom: 4px;
+        }
+
+        .kpi-label {
+            font-size: 14px;
+            color: var(--color-text-secondary);
+        }
+
+        /* Tables & Tabs */
+        .table-container {
+            overflow-x: auto;
+            background: var(--glass-bg);
+            border-radius: var(--radius-lg);
+            box-shadow: var(--glass-shadow);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 14px;
+            min-width: 600px;
+        }
+
+        th {
+            background: var(--color-bg-tertiary);
+            padding: 16px;
+            text-align: left;
+            color: var(--color-text-primary);
+        }
+
+        td {
+            padding: 16px;
+            border-bottom: 1px solid var(--color-border);
+            color: var(--color-text-secondary);
+        }
+
+        body.dark th {
+            background: #2A2A3E;
+            color: white;
+        }
+
+        .tab-container {
+            margin-top: 24px;
+        }
+
+        .tabs {
+            display: flex;
+            gap: 8px;
+            border-bottom: 1px solid var(--color-border);
+            margin-bottom: 24px;
+            flex-wrap: wrap;
+        }
+
+        .tab {
+            padding: 12px 24px;
+            cursor: pointer;
+            border-bottom: 2px solid transparent;
+            font-weight: 500;
+            color: var(--color-text-secondary);
+        }
+
+        .tab.active {
+            border-color: var(--divercidade-primary);
+            color: var(--divercidade-primary);
+        }
+
+        .tab-content {
+            display: none;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        /* Timeline */
+        .timeline {
+            position: relative;
+            padding-left: 40px;
+            border-left: 2px solid var(--color-border);
+            margin-left: 16px;
+        }
+
+        .timeline-item {
+            position: relative;
+            padding-bottom: 40px;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -49px;
+            top: 0;
+            width: 16px;
+            height: 16px;
+            background: var(--divercidade-primary);
+            border-radius: 50%;
+            border: 4px solid var(--color-bg-primary);
+        }
+
+        .timeline-date {
+            color: var(--divercidade-primary);
+            font-weight: 700;
+            font-size: 14px;
+            margin-bottom: 4px;
+        }
+
+        .timeline-title {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: var(--color-text-primary);
+        }
+
+        /* Calculator/Pricing Styles */
+        .calculator-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 32px;
+        }
+
+        .module-card {
+            background: var(--glass-bg);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid var(--glass-border);
+            box-shadow: var(--glass-shadow);
+            border-radius: 12px;
+            padding: 16px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 16px;
+            transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+            cursor: pointer;
+        }
+        
+        .module-card:hover {
+            border-color: var(--divercidade-primary);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .module-card.selected {
+            border-color: var(--divercidade-primary);
+            background: rgba(233, 30, 140, 0.08);
+            box-shadow: 0 0 0 1px var(--divercidade-primary), var(--glass-shadow);
+        }
+
+
+        .module-info h4 {
+            font-size: 16px;
+            margin-bottom: 4px;
+            color: var(--color-text-primary);
+        }
+
+        .summary-card {
+            position: sticky;
+            top: 100px;
+        }
+
+        .summary-total {
+            background: linear-gradient(135deg, var(--divercidade-primary), var(--divercidade-orange));
+            color: white;
+            padding: 24px;
+            border-radius: 12px;
+            text-align: center;
+            margin: 24px 0;
+            border-bottom: 2px solid rgba(255,255,255,0.2);
+        }
+
+        .summary-total span {
+            display: block;
+        }
+
+        .total-value {
+            font-size: 32px;
+            font-weight: 900;
+            margin-top: 8px;
+        }
+
+        /* Buttons */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-weight: 600;
+            text-decoration: none;
+            border: none;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+
+        .btn-primary {
+            background: var(--divercidade-primary);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: var(--color-primary-dark);
+        }
+
+        .btn-outline {
+            border: 1px solid var(--color-border);
+            color: var(--color-text-primary);
+            background: transparent;
+        }
+
+        .hero .btn-outline {
+            border-color: rgba(255,255,255,0.4);
+            color: white;
+        }
+
+        .btn-outline:hover {
+            background: var(--color-bg-tertiary);
+        }
+        
+        .hero .btn-outline:hover {
+            background: rgba(255,255,255,0.1);
+        }
+
+        /* Highlight Box (LGPD/Risk) */
+        .highlight-box {
+            background: rgba(233, 30, 140, 0.06);
+            border-left: 4px solid var(--divercidade-primary);
+            padding: 24px;
+            border-radius: 8px;
+            margin-top: 24px;
+        }
+
+        .highlight-title {
+            color: var(--divercidade-orange);
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 12px;
+        }
+
+        /* Responsive */
+        @media (max-width: 900px) {
+            .grid-2,
+            .grid-3,
+            .grid-4,
+            .calculator-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-title {
+                font-size: 32px;
+            }
+
+            .nav-menu {
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: var(--glass-bg);
+                backdrop-filter: blur(16px);
+                -webkit-backdrop-filter: blur(16px);
+                border: 1px solid var(--glass-border);
+                flex-direction: column;
+                padding: 16px;
+                box-shadow: var(--glass-shadow);
+                display: none;
+                border-radius: 0 0 16px 16px;
+            }
+
+            .nav-menu.active {
+                display: flex;
+            }
+
+            .nav-toggle {
+                display: flex;
+            }
+
+            footer div[style*="grid-template-columns: repeat(4, 1fr)"] {
+                grid-template-columns: 1fr !important;
+                gap: 32px !important;
+            }
+        }
+
+
+        /* Animation Classes */
+        @media (prefers-reduced-motion: no-preference) {
+            .animate-on-scroll {
+                opacity: 0;
+                transform: translateY(20px);
+                transition: 0.6s cubic-bezier(0.2, 0.8, 0.2, 1);
+            }
+            .animate-on-scroll.visible {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        @media (prefers-reduced-motion: reduce) {
+            .animate-on-scroll {
+                opacity: 1;
+                transform: none;
+                transition: none;
+            }
+            .animate-on-scroll.visible {
+                opacity: 1;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav-container">
+            <a href="#" class="nav-logo">
+                <img src="../../../../../assets/images/logo-header.png" alt="DiverCidade HUB Logo" style="height: 60px; width: auto; object-fit: contain;">
+                <span style="margin-left: 10px;">DiverCidade</span>
+            </a>
+
+            <div style="display: flex; align-items: center; gap: 16px;">
+                <ul class="nav-menu">
+                    <li><a href="#objetivos" class="nav-link">Objetivos</a></li>
+                    <li><a href="#contexto" class="nav-link">Contexto</a></li>
+                    <li><a href="#frentes" class="nav-link">Frentes</a></li>
+                    <li><a href="#roi" class="nav-link">Impacto ROI</a></li>
+                    <li><a href="#investimento" class="nav-link">Preços</a></li>
+                    <li><a href="#proximos-passos" class="nav-link">Próximos Passos</a></li>
+                </ul>
+
+                <button id="themeToggle" class="theme-toggle" aria-label="Alternar tema" style="margin-left: 0;">
+                    <i class="fas fa-sun"></i>
+                    <i class="fas fa-moon"></i>
+                </button>
+
+                <div class="nav-toggle" id="navToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="hero-content">
+            <div class="hero-badge">Proposta Comercial Revisada (Março 2026)</div>
+            <h1 class="hero-title">CAMPARI: Parceria Estratégica em Diversidade e Inclusão</h1>
+            <p class="hero-subtitle">
+                Uma agenda coesiva conectada aos objetivos de negócio, maximizando atração e retenção de talentos diversos.
+            </p>
+            <div style="display: flex; gap: 16px;">
+                <a href="#investimento" class="btn btn-primary">Ver Modelos de Investimento</a>
+                <a href="#roi" class="btn btn-outline">Ver ROI (7.3x)</a>
+            </div>
+
+            <div class="hero-stats">
+                <div class="hero-stat">
+                    <div class="hero-stat-value">12 Meses</div>
+                    <div class="hero-stat-label">Duração Sugerida</div>
+                </div>
+                <div class="hero-stat">
+                    <div class="hero-stat-value">4</div>
+                    <div class="hero-stat-label">Objetivos SMART</div>
+                </div>
+                <div class="hero-stat">
+                    <div class="hero-stat-value">R$ 642k</div>
+                    <div class="hero-stat-label">Impacto Estimado Y1</div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Section 1: Objectives (SMART) -->
+    <section class="section" id="objetivos">
+        <div class="section-header">
+            <span class="section-number">1</span>
+            <h2 class="section-title">Objetivos Estratégicos (SMART)</h2>
+            <p class="section-subtitle">Metas claras para garantir a rastreabilidade e o sucesso da parceria</p>
+        </div>
+
+        <div class="card animate-on-scroll">
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Objetivo</th>
+                            <th>Resultado Esperado</th>
+                            <th>Baseline</th>
+                            <th>Meta (Mês 12)</th>
+                            <th>Responsável</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Reduzir Turnover</strong></td>
+                            <td>Retenção de talentos diversos</td>
+                            <td>20,0%</td>
+                            <td><strong>≤ 14,0%</strong></td>
+                            <td>RH Campari / DiverCidade</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Qualidade de Contratação</strong></td>
+                            <td>Redução de falhas por viés</td>
+                            <td>85%</td>
+                            <td><strong>≥ 92%</strong></td>
+                            <td>RH Campari / DiverCidade</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Cultura Inclusiva</strong></td>
+                            <td>Elevação do score de pertencimento</td>
+                            <td>3.2 / 5.0</td>
+                            <td><strong>≥ 3.8 / 5.0</strong></td>
+                            <td>Amanda (Campari)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Liderança Ativa</strong></td>
+                            <td>Líderes capacitados</td>
+                            <td>N/A</td>
+                            <td><strong>≥ 90%</strong></td>
+                            <td>Amanda (Campari)</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 2: Context & Opportunities -->
+    <section class="section" id="contexto">
+        <div class="section-header">
+            <span class="section-number">2</span>
+            <h2 class="section-title">Contexto & Oportunidades</h2>
+            <p class="section-subtitle">Onde Campari está hoje e como avançar</p>
+        </div>
+
+        <div class="grid grid-2">
+            <div class="card animate-on-scroll">
+                <h3 style="color: var(--divercidade-orange); margin-bottom: 24px;"><i class="fas fa-search-location"></i> Onde Campari Está Hoje</h3>
+                
+                <div style="margin-bottom: 24px;">
+                    <h4 style="font-size: 16px; margin-bottom: 8px;">1. Recrutamento & Marca</h4>
+                    <p style="font-size: 13px; color: var(--color-text-secondary);">Oportunidade de formalizar a estratégia de diversidade, expandir capacidades de recrutamento e fortalecer a marca empregadora para atrair pools de talentos subutilizados.</p>
+                </div>
+
+                <div style="margin-bottom: 24px;">
+                    <h4 style="font-size: 16px; margin-bottom: 8px;">2. Liderança & Cultura</h4>
+                    <p style="font-size: 13px; color: var(--color-text-secondary);">Necessidade de desenvolver competências de liderança inclusiva (consciência sobre viés) e fortalecer a cultura (ERGs, revisão de políticas) para criar ambientes seguros.</p>
+                </div>
+
+                <div>
+                    <h4 style="font-size: 16px; margin-bottom: 8px;">3. Iniciativas Piloto</h4>
+                    <p style="font-size: 13px; color: var(--color-text-secondary);">Valor claro em iniciativas piloto que testam abordagens, permitem aprendizado contextualizado e constroem evidência de impacto.</p>
+                </div>
+            </div>
+
+            <div class="card animate-on-scroll" style="border-color: var(--divercidade-primary);">
+                <h3 style="color: var(--divercidade-primary); margin-bottom: 16px;"><i class="fas fa-hand-holding-heart"></i> Abordagem DiverCidade Hub</h3>
+                <p style="color: var(--color-text-secondary); margin-bottom: 16px;">
+                    Combinamos <strong>advisory estratégico</strong> com <strong>implementação prática</strong>.
+                </p>
+                <p style="color: var(--color-text-secondary); margin-bottom: 16px;">
+                    Não impomos soluções externas; nos conectamos ao time da Campari para alavancar seu próprio conhecimento enquanto trazemos best practices, frameworks e facilitação.
+                </p>
+                <div class="highlight-box" style="border-left-color: var(--divercidade-primary); margin-top: 24px;">
+                    <p style="font-size: 14px; font-weight: 600;">Princípio Fundador:</p>
+                    <p style="font-size: 13px; margin: 0;">Diversidade e inclusão sustentável requer alinhamento simultâneo de objetivos de negócio, sistemas organizacionais, capacidades de liderança e cultura.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 3: Strategic Fronts -->
+    <section class="section" id="frentes">
+        <div class="section-header">
+            <span class="section-number">3</span>
+            <h2 class="section-title">Frentes Estratégicas</h2>
+            <p class="section-subtitle">Três pilares interconectados para a transformação</p>
+        </div>
+
+        <div class="grid grid-3">
+            <!-- Frente 1 -->
+            <div class="card animate-on-scroll" style="border-top: 4px solid var(--divercidade-blue);">
+                <div class="kpi-icon" style="background: var(--divercidade-blue);">
+                    <i class="fas fa-bullhorn"></i>
+                </div>
+                <h3 style="text-align: center; margin-bottom: 16px; font-size: 18px;">Atração & Marca</h3>
+                <p style="font-size: 13px; color: var(--color-text-secondary); margin-bottom: 16px;">
+                    Expandir alcance em comunidades historicamente sub-representadas.
+                </p>
+                <ul style="font-size: 13px; color: var(--color-text-secondary); list-style: none;">
+                    <li style="margin-bottom: 8px;"><i class="fas fa-check" style="color: var(--divercidade-blue); margin-right: 6px;"></i>Revisão de JDs (sem viés)</li>
+                    <li style="margin-bottom: 8px;"><i class="fas fa-check" style="color: var(--divercidade-blue); margin-right: 6px;"></i>Sourcing Inclusivo</li>
+                    <li><i class="fas fa-check" style="color: var(--divercidade-blue); margin-right: 6px;"></i>Parcerias com redes diversas</li>
+                </ul>
+            </div>
+
+            <!-- Frente 2 -->
+            <div class="card animate-on-scroll" style="border-top: 4px solid var(--divercidade-primary);">
+                <div class="kpi-icon" style="background: var(--divercidade-primary);">
+                    <i class="fas fa-user-tie"></i>
+                </div>
+                <h3 style="text-align: center; margin-bottom: 16px; font-size: 18px;">Liderança Inclusiva</h3>
+                <p style="font-size: 13px; color: var(--color-text-secondary); margin-bottom: 16px;">
+                    Líderes que identificam preconceitos e constroem equipes seguras.
+                </p>
+                <ul style="font-size: 13px; color: var(--color-text-secondary); list-style: none;">
+                    <li style="margin-bottom: 8px;"><i class="fas fa-check" style="color: var(--divercidade-primary); margin-right: 6px;"></i>Workshops Viés Inconsciente</li>
+                    <li style="margin-bottom: 8px;"><i class="fas fa-check" style="color: var(--divercidade-primary); margin-right: 6px;"></i>Coaching Individual</li>
+                    <li><i class="fas fa-check" style="color: var(--divercidade-primary); margin-right: 6px;"></i>Mentoria Estruturada</li>
+                </ul>
+            </div>
+
+            <!-- Frente 3 -->
+            <div class="card animate-on-scroll" style="border-top: 4px solid var(--divercidade-purple);">
+                <div class="kpi-icon" style="background: var(--divercidade-purple);">
+                    <i class="fas fa-users"></i>
+                </div>
+                <h3 style="text-align: center; margin-bottom: 16px; font-size: 18px;">Cultura Organizacional</h3>
+                <p style="font-size: 13px; color: var(--color-text-secondary); margin-bottom: 16px;">
+                    Cultura onde inclusão é inerente, com equidade de oportunidades.
+                </p>
+                <ul style="font-size: 13px; color: var(--color-text-secondary); list-style: none;">
+                    <li style="margin-bottom: 8px;"><i class="fas fa-check" style="color: var(--divercidade-purple); margin-right: 6px;"></i>Facilitação de Conversas</li>
+                    <li style="margin-bottom: 8px;"><i class="fas fa-check" style="color: var(--divercidade-purple); margin-right: 6px;"></i>Fortalecimento de ERGs</li>
+                    <li><i class="fas fa-check" style="color: var(--divercidade-purple); margin-right: 6px;"></i>Comunicação Inclusiva</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 4: Methodology & QA -->
+    <section class="section" id="metodologia">
+        <div class="section-header">
+            <span class="section-number">4</span>
+            <h2 class="section-title">Metodologia & Entregáveis</h2>
+            <p class="section-subtitle">Garantia de qualidade e escopo definido</p>
+        </div>
+
+        <div class="grid grid-2">
+            <div class="card animate-on-scroll">
+                <h3 style="margin-bottom: 24px;">Entregáveis e Critérios</h3>
+                <div class="table-container">
+                    <table style="font-size: 12px;">
+                        <thead>
+                            <tr>
+                                <th>Frente</th>
+                                <th>Entregável</th>
+                                <th>Critério</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Diagnóstico</td>
+                                <td><strong>Relatório Maturidade</strong></td>
+                                <td>Entrevista ≥ 80% liderança</td>
+                            </tr>
+                            <tr>
+                                <td>Recrutamento</td>
+                                <td><strong>Guia Sourcing</strong></td>
+                                <td>100% revisão JDs</td>
+                            </tr>
+                            <tr>
+                                <td>Liderança</td>
+                                <td><strong>Workshops</strong></td>
+                                <td>NPS ≥ 70</td>
+                            </tr>
+                            <tr>
+                                <td>Cultura</td>
+                                <td><strong>Governança ERGs</strong></td>
+                                <td>Aprovada + 2 grupos lançados</td>
+                            </tr>
+                            <tr>
+                                <td>Progresso</td>
+                                <td><strong>Relatórios Mensais</strong></td>
+                                <td>Atualização KPIs</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="card animate-on-scroll">
+                <div class="tabs">
+                    <div class="tab active" onclick="openTab(event, 'tabQA')">Garantia de Qualidade</div>
+                    <div class="tab" onclick="openTab(event, 'tabEscopo')">Escopo & Exclusões</div>
+                </div>
+
+                <div id="tabQA" class="tab-content active">
+                    <ul style="list-style: none; font-size: 14px;">
+                        <li style="margin-bottom: 16px;">
+                            <strong>1. Revisão por Pares:</strong><br>
+                            Todos os documentos estratégicos passam por dupla revisão interna antes da entrega.
+                        </li>
+                        <li style="margin-bottom: 16px;">
+                            <strong>2. Feedback em Tempo Real:</strong><br>
+                            Pesquisas rápidas de satisfação após cada interação (workshop/coaching).
+                        </li>
+                        <li>
+                            <strong>3. Checkpoints Quinzenais:</strong><br>
+                            Reuniões rápidas (15-30 min) para ajuste de rota e alinhamento de expectativas.
+                        </li>
+                    </ul>
+                </div>
+
+                <div id="tabEscopo" class="tab-content">
+                    <div style="font-size: 14px;">
+                        <p style="margin-bottom: 8px;"><strong>Incluído:</strong> Advisory, materiais pedagógicos, mentoria RH, auditoria processos.</p>
+                        <p style="color: var(--color-text-secondary); border-top: 1px solid var(--color-border); padding-top: 8px; margin-top: 8px;">
+                            <strong>Exclusões (Out of Scope):</strong><br>
+                            - Obras físicas.<br>
+                            - Taxas de headhunters externos.<br>
+                            - Licenciamento de softwares.<br>
+                            - Eventos de grande porte não previstos.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 5: Impact & ROI -->
+    <section class="section" id="roi">
+        <div class="section-header">
+            <span class="section-number">5</span>
+            <h2 class="section-title">Impacto Financeiro & ROI</h2>
+            <p class="section-subtitle">Diversidade cria valor em múltiplos vetores (Estimativas Y1)</p>
+        </div>
+
+        <div class="grid grid-2">
+            <div class="card animate-on-scroll" style="height: 400px; display: flex; flex-direction: column; justify-content: center;">
+                <canvas id="roiChart"></canvas>
+            </div>
+
+            <div class="grid grid-2">
+                <div class="kpi-card animate-on-scroll">
+                    <div class="kpi-value">R$ 195k</div>
+                    <div class="kpi-label">Retenção (Turnover)</div>
+                </div>
+                <div class="kpi-card animate-on-scroll">
+                    <div class="kpi-value">R$ 102.5k</div>
+                    <div class="kpi-label">Qualidade Recrutamento</div>
+                </div>
+                <div class="kpi-card animate-on-scroll">
+                    <div class="kpi-value">R$ 120k</div>
+                    <div class="kpi-label">Produtividade</div>
+                </div>
+                <div class="kpi-card animate-on-scroll">
+                    <div class="kpi-value">R$ 225k</div>
+                    <div class="kpi-label">Marca Empregadora</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="highlight-box animate-on-scroll" style="background: rgba(0, 201, 167, 0.08); border-color: var(--divercidade-green);">
+            <div class="highlight-title" style="color: var(--divercidade-green);">
+                <i class="fas fa-chart-line"></i> ROI Projetado: 7.3x
+            </div>
+            <p style="font-size: 14px;">
+                Impacto total estimado Y1: <strong>R$ 642.500</strong>. Payback period: 1-2 meses.
+            </p>
+        </div>
+
+        <!-- Breakdown Table hidden in toggle or just displayed -->
+        <div class="card animate-on-scroll" style="margin-top: 24px;">
+            <h4 style="margin-bottom: 16px;">Breakdown do Investimento (Cenário Recomendado)</h4>
+            <div class="table-container">
+                <table>
+                    <tbody>
+                        <tr>
+                            <td>Diagnóstico de Maturidade</td>
+                            <td style="text-align: right;">R$ 7.500</td>
+                        </tr>
+                        <tr>
+                            <td>Horas de Consultoria (200h)</td>
+                            <td style="text-align: right;">R$ 60.000</td>
+                        </tr>
+                        <tr>
+                            <td>Documentação / Roadmap</td>
+                            <td style="text-align: right;">R$ 2.500</td>
+                        </tr>
+                        <tr>
+                            <td>Relatórios Mensais (12)</td>
+                            <td style="text-align: right;">R$ 18.000</td>
+                        </tr>
+                        <tr style="font-weight: bold; background: var(--color-bg-tertiary);">
+                            <td>TOTAL INVESTIMENTO (Estimado)</td>
+                            <td style="text-align: right;">R$ 88.000 - 96.800</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 6: Pricing / Investment -->
+    <section class="section" id="investimento">
+        <div class="section-header">
+            <span class="section-number">6</span>
+            <h2 class="section-title">Modelo de Precificação</h2>
+            <p class="section-subtitle">Transparência Total: Pague Apenas pelo que Usa</p>
+        </div>
+
+        <div class="calculator-grid">
+            <div class="calculator-main">
+                <p style="margin-bottom: 24px; color: var(--color-text-secondary);">
+                    Operamos com modelo de precificação por horas, sem retainer mínimo mensal. Você paga apenas pelas horas efetivamente utilizadas.
+                </p>
+
+                <div class="card" style="margin-bottom: 24px;">
+                    <h4 style="margin-bottom: 16px;">Tabela de Preços</h4>
+                    <div style="display: flex; flex-direction: column; gap: 12px; font-size: 14px;">
+                        <div style="display: flex; justify-content: space-between; border-bottom: 1px solid var(--color-border); padding-bottom: 8px;">
+                            <span>Diagnóstico de Maturidade (Fixo)</span>
+                            <strong>R$ 7.500</strong>
+                        </div>
+                        <div style="display: flex; justify-content: space-between; border-bottom: 1px solid var(--color-border); padding-bottom: 8px;">
+                            <span>Relatório Mensal (Fixo)</span>
+                            <strong>R$ 1.500 /mês</strong>
+                        </div>
+                        <div style="display: flex; justify-content: space-between; border-bottom: 1px solid var(--color-border); padding-bottom: 8px;">
+                            <span>Documentação Final (Fixo)</span>
+                            <strong>R$ 2.500</strong>
+                        </div>
+                        <div style="display: flex; justify-content: space-between; color: var(--divercidade-primary);">
+                            <span><strong>Hora de Consultoria</strong></span>
+                            <strong>R$ 300 /hora</strong>
+                        </div>
+                    </div>
+                </div>
+
+                <h4 style="margin-bottom: 16px;">Cenários de Investimento</h4>
+                
+                <div class="module-card" onclick="selectModule(this)">
+                    <div class="module-info">
+                        <h4>Projeto Pequeno</h4>
+                        <small style="color: var(--color-text-secondary);">6 Meses | 1 Frente | ~100h</small>
+                    </div>
+                    <div style="font-weight: 700;">~ R$ 49.000</div>
+                </div>
+
+                <div class="module-card selected" onclick="selectModule(this)">
+                    <div class="module-info">
+                        <h4 style="color: var(--divercidade-primary);">Projeto Médio (Recomendado)</h4>
+                        <small style="color: var(--color-text-secondary);">12 Meses | 2-3 Frentes | ~200h</small>
+                    </div>
+                    <div style="font-weight: 700; color: var(--divercidade-primary);">~ R$ 88.000</div>
+                </div>
+
+                <div class="module-card" onclick="selectModule(this)">
+                    <div class="module-info">
+                        <h4>Projeto Grande</h4>
+                        <small style="color: var(--color-text-secondary);">12-18 Meses | Transformação Completa | ~400h</small>
+                    </div>
+                    <div style="font-weight: 700;">~ R$ 157.000</div>
+                </div>
+            </div>
+
+            <!-- Sidebar -->
+            <div class="calculator-sidebar">
+                <div class="card summary-card">
+                    <h4 style="margin-bottom: 16px;">Exemplo Mês Típico</h4>
+                    <div style="background: var(--color-bg-secondary); padding: 12px; border-radius: 8px; margin-bottom: 16px; font-size: 13px;">
+                        <p style="margin-bottom: 8px;"><strong>Mês Intensivo (80h):</strong></p>
+                        <ul style="padding-left: 20px; margin-bottom: 8px; color: var(--color-text-secondary);">
+                            <li>Diagnóstico/Workshops (20h)</li>
+                            <li>Coaching Liderança (20h)</li>
+                            <li>Planejamento Recrut. (24h)</li>
+                            <li>Análise/Relatório (16h)</li>
+                        </ul>
+                        <div style="border-top: 1px solid var(--color-border); padding-top: 8px; font-weight: 700;">
+                            Custo Mês: R$ 25.500
+                        </div>
+                    </div>
+                    <p style="font-size: 12px; color: var(--color-text-secondary); margin-bottom: 16px;">
+                        *Meses de menor atividade podem ter 10-40h, reduzindo o custo proporcionalmente.
+                    </p>
+                    <button class="btn btn-primary" style="width: 100%; margin-bottom: 8px;" onclick="window.print()">
+                        <i class="fas fa-file-pdf"></i> Salvar Proposta
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 7: Next Steps & Legal -->
+    <section class="section" id="proximos-passos">
+        <div class="section-header">
+            <span class="section-number">7</span>
+            <h2 class="section-title">Próximos Passos & Termos</h2>
+        </div>
+
+        <div class="grid grid-2">
+            <div class="card animate-on-scroll">
+                <h3 style="margin-bottom: 16px;">Encontro de Alinhamento</h3>
+                <p style="margin-bottom: 24px; color: var(--color-text-secondary);">
+                    Encontro de 1 hora, <strong>sem custo</strong>, para validar números, customizar a proposta e definir alocação.
+                </p>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-date">Semanas 1-2</div>
+                        <div class="timeline-title">Alinhamento & Assinatura</div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">Semanas 3-6</div>
+                        <div class="timeline-title">Diagnóstico & Planejamento</div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">Semanas 7-20</div>
+                        <div class="timeline-title">Execução - Recrutamento</div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">Mês 12+</div>
+                        <div class="timeline-title">ROI Realizado</div>
+                    </div>
+                </div>
+                <div style="margin-top: 24px;">
+                    <a href="mailto:contato@divercidade.com.br" class="btn btn-primary">Agendar Encontro</a>
+                </div>
+            </div>
+
+            <div class="card animate-on-scroll">
+                <h3 style="margin-bottom: 16px;">Conformidade & Contrato</h3>
+                <ul style="list-style: none; font-size: 14px; color: var(--color-text-secondary);">
+                    <li style="margin-bottom: 16px;">
+                        <strong style="color: var(--color-text-primary);"><i class="fas fa-shield-alt"></i> LGPD & Dados:</strong><br>
+                        Anonimização total de dados brutos. Retenção máx. 90 dias. NDA mandatório.
+                    </li>
+                    <li style="margin-bottom: 16px;">
+                        <strong style="color: var(--color-text-primary);"><i class="fas fa-copyright"></i> Propriedade Intelectual:</strong><br>
+                        Materiais customizados (Playbooks) são da Campari. Metodologia base é da DiverCidade (licença perpétua).
+                    </li>
+                    <li style="margin-bottom: 16px;">
+                        <strong style="color: var(--color-text-primary);"><i class="fas fa-file-signature"></i> Rescisão:</strong><br>
+                        Aviso prévio de 30 dias.
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer style="background: linear-gradient(135deg, #020617 0%, #0F172A 100%); padding: 60px var(--spacing-xl) 30px; margin-top: 40px; border-top: 2px solid var(--divercidade-yellow); color: #CBD5E1; position: relative; overflow: hidden;">
+        <!-- Background accent elements -->
+        <div style="position: absolute; top: -50px; right: -100px; width: 300px; height: 300px; background: radial-gradient(circle, rgba(212,175,55,0.05), transparent); border-radius: 50%;"></div>
+        <div style="position: absolute; bottom: 100px; left: -80px; width: 250px; height: 250px; background: radial-gradient(circle, rgba(185,28,28,0.04), transparent); border-radius: 50%;"></div>
+
+        <div style="max-width: 1400px; margin: 0 auto; position: relative; z-index: 1;">
+            <!-- Main Footer Content -->
+            <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 48px; margin-bottom: 48px;">
+                <!-- Brand & Social Section -->
+                <div>
+                    <a href="https://www.divercidade.net" target="_blank" style="display: block; margin-bottom: 20px;">
+                        <img src="../../../../../assets/images/logo-short-white.png" alt="DiverCidade HUB Logo" style="height: 50px; width: auto; object-fit: contain;">
+                    </a>
+                    <p style="font-size: 13px; line-height: 1.6; color: #b0b0b0; margin-bottom: 24px;">
+                        Pessoas de verdade em ambientes corporativos potentes e sustentáveis.
+                    </p>
+                    <div style="display: flex; gap: 12px;">
+                        <a href="https://instagram.com/divercidade_hub" target="_blank" style="color: var(--divercidade-primary); font-size: 18px; width: 36px; height: 36px; background: rgba(255,255,255,0.05); display: flex; align-items: center; justify-content: center; border-radius: 50%; transition: 0.3s;"><i class="fab fa-instagram"></i></a>
+                        <a href="https://linkedin.com/company/divercidade" target="_blank" style="color: var(--divercidade-orange); font-size: 18px; width: 36px; height: 36px; background: rgba(255,255,255,0.05); display: flex; align-items: center; justify-content: center; border-radius: 50%; transition: 0.3s;"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://www.divercidade.net" target="_blank" style="color: var(--divercidade-green); font-size: 18px; width: 36px; height: 36px; background: rgba(255,255,255,0.05); display: flex; align-items: center; justify-content: center; border-radius: 50%; transition: 0.3s;"><i class="fas fa-globe"></i></a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h4 style="color: white; font-size: 14px; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 24px;">Navegação</h4>
+                    <ul style="list-style: none; padding: 0; display: flex; flex-direction: column; gap: 12px; font-size: 13px;">
+                        <li><a href="#objetivos" style="text-decoration: none; color: #b0b0b0; transition: 0.2s;">Objetivos SMART</a></li>
+                        <li><a href="#frentes" style="text-decoration: none; color: #b0b0b0; transition: 0.2s;">Frentes Estratégicas</a></li>
+                        <li><a href="#roi" style="text-decoration: none; color: #b0b0b0; transition: 0.2s;">Impacto ROI</a></li>
+                        <li><a href="#investimento" style="text-decoration: none; color: #b0b0b0; transition: 0.2s;">Modelo Comercial</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Info -->
+                <div>
+                    <h4 style="color: white; font-size: 14px; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 24px;">Comunicação</h4>
+                    <div style="display: flex; flex-direction: column; gap: 12px; font-size: 13px; color: #b0b0b0;">
+                        <a href="mailto:contato@divercidade.net" style="text-decoration: none; color: inherit; display: flex; align-items: center; gap: 10px;">
+                            <i class="fas fa-envelope" style="color: var(--divercidade-primary); width: 14px;"></i> contato@divercidade.net
+                        </a>
+                        <div style="display: flex; flex-direction: column; gap: 4px; margin-top: 4px;">
+                            <span style="font-size: 11px; text-transform: uppercase; opacity: 0.6;">Dúvidas Técnicas:</span>
+                            <a href="mailto:tamara@divercidade.net" style="text-decoration: none; color: inherit;">tamara@divercidade.net</a>
+                            <a href="mailto:pedro@divercidade.net" style="text-decoration: none; color: inherit;">pedro@divercidade.net</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Team Support -->
+                <div>
+                    <h4 style="color: white; font-size: 14px; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 24px;">Atendimento</h4>
+                    <div style="display: flex; flex-direction: column; gap: 12px; font-size: 13px; color: #b0b0b0;">
+                        <div style="display: flex; align-items: flex-start; gap: 10px;">
+                            <i class="fas fa-phone-alt" style="color: var(--divercidade-orange); width: 14px; margin-top: 3px;"></i>
+                            <div style="display: flex; flex-direction: column; gap: 4px;">
+                                <span>+55 19 92001-0580</span>
+                                <span>+55 19 98979-7970</span>
+                                <span>+55 19 99883-7282</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer Bottom -->
+            <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 24px; font-size: 13px; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px;">
+                <p style="color: #909090;">&copy; 2026 DiverCidade HUB. Todos os direitos reservados.</p>
+                <div style="display: flex; gap: 24px; color: #909090;">
+                    <span><strong>Cliente:</strong> Campari</span>
+                    <span><strong>Validade:</strong> 05/04/2026</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        // --- Theme Toggle ---
+        const themeBtn = document.getElementById('themeToggle');
+        const body = document.body;
+
+        if (localStorage.getItem('theme') === 'dark') {
+            body.classList.add('dark');
+        }
+
+        themeBtn.addEventListener('click', () => {
+            body.classList.toggle('dark');
+            localStorage.setItem('theme', body.classList.contains('dark') ? 'dark' : 'light');
+            updateChartsTheme();
+        });
+
+        // --- Mobile Nav ---
+        document.getElementById('navToggle').addEventListener('click', () => {
+            document.querySelector('.nav-menu').classList.toggle('active');
+        });
+
+        // --- Tabs Logic ---
+        function openTab(evt, tabName) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tab-content");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+                tabcontent[i].classList.remove("active");
+            }
+            tablinks = document.getElementsByClassName("tab");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+            document.getElementById(tabName).style.display = "block";
+            document.getElementById(tabName).classList.add("active");
+            evt.currentTarget.className += " active";
+        }
+
+        // --- Animations ---
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.classList.add('visible');
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.animate-on-scroll').forEach(el => observer.observe(el));
+
+        // --- Charts ---
+        const chartColor = () => body.classList.contains('dark') ? '#FFFFFF' : '#212121';
+
+        const ctxRoi = document.getElementById('roiChart').getContext('2d');
+        let roiChart = new Chart(ctxRoi, {
+            type: 'bar',
+            data: {
+                labels: ['Retenção', 'Recrutamento', 'Produtividade', 'Marca'],
+                datasets: [{
+                    label: 'Impacto Anual Estimado (R$)',
+                    data: [195000, 102500, 120000, 225000], 
+                    backgroundColor: ['#7B2CBF', '#E91E8C', '#FF6B35', '#00C9A7'],
+                    borderRadius: 4
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: { 
+                    legend: { display: false },
+                    tooltip: {
+                        callbacks: {
+                            label: function(context) {
+                                let label = context.dataset.label || '';
+                                if (label) {
+                                    label += ': ';
+                                }
+                                if (context.parsed.y !== null) {
+                                    label += new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(context.parsed.y);
+                                }
+                                return label;
+                            }
+                        }
+                    }
+                },
+                scales: {
+                    x: { ticks: { color: chartColor() } },
+                    y: { 
+                        ticks: { color: chartColor() }, 
+                        title: { display: true, text: 'Valor Estimado (R$)' } 
+                    }
+                }
+            }
+        });
+
+        function updateChartsTheme() {
+            const color = chartColor();
+            roiChart.options.scales.x.ticks.color = color;
+            roiChart.options.scales.y.ticks.color = color;
+            roiChart.update();
+        }
+
+        // --- Module Selection ---
+        function selectModule(element) {
+            // Remove selection logically and visually from all cards
+            const cards = document.querySelectorAll('.module-card');
+            cards.forEach(card => {
+                card.classList.remove('selected');
+                card.querySelector('h4').style.color = 'var(--color-text-primary)';
+                card.querySelector('div:last-child').style.color = 'var(--color-text-primary)';
+            });
+            
+            // Add to clicked
+            element.classList.add('selected');
+            element.querySelector('h4').style.color = 'var(--divercidade-orange)';
+            element.querySelector('div:last-child').style.color = 'var(--divercidade-orange)';
+        }
+    </script>
+</body>
+</html>
