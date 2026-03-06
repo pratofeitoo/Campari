@@ -1,0 +1,145 @@
+<section id="simulador-investimento">
+
+<h2>Simulador de Investimento</h2>
+
+<p>
+Monte o escopo do projeto combinando horas de consultoria estratégica com iniciativas de desenvolvimento e sensibilização.
+O investimento total é calculado automaticamente com base nas referências abaixo.
+</p>
+
+<h3>Referência de Investimento</h3>
+
+<table border="1" cellpadding="10">
+  <thead>
+    <tr>
+      <th>Componente</th>
+      <th>Descrição</th>
+      <th>Unidade</th>
+      <th>Investimento</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Consultoria Estratégica</td>
+      <td>Apoio na estruturação e implementação da agenda de diversidade, equidade e inclusão. Pode incluir estratégia, governança, recrutamento diverso, cultura inclusiva e employer branding.</td>
+      <td>Hora de consultoria</td>
+      <td>R$ 350</td>
+    </tr>
+    <tr>
+      <td>Treinamento</td>
+      <td>Sessões estruturadas de desenvolvimento voltadas para lideranças, equipes de RH ou times operacionais.</td>
+      <td>Por treinamento</td>
+      <td>R$ 10.600</td>
+    </tr>
+    <tr>
+      <td>Workshop</td>
+      <td>Sessões práticas e interativas voltadas para aprofundamento de temas ou construção de soluções internas.</td>
+      <td>Por workshop</td>
+      <td>R$ 12.000</td>
+    </tr>
+    <tr>
+      <td>Palestra</td>
+      <td>Sessões de sensibilização e inspiração sobre diversidade e inclusão para eventos internos ou semanas temáticas.</td>
+      <td>Por palestra</td>
+      <td>R$ 8.800</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3>Blocos de Atuação da Consultoria</h3>
+
+<table border="1" cellpadding="10">
+  <thead>
+    <tr>
+      <th>Bloco de atuação</th>
+      <th>Exemplos de atividades</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Estratégia e Governança</td>
+      <td>Diagnóstico de maturidade, definição de pilares estratégicos, construção de roadmap e indicadores.</td>
+    </tr>
+    <tr>
+      <td>Talent Acquisition Diverso</td>
+      <td>Revisão de processos seletivos, estratégias de atração de talentos diversos e construção de pipelines.</td>
+    </tr>
+    <tr>
+      <td>Cultura e Liderança Inclusiva</td>
+      <td>Desenvolvimento de lideranças, programas internos e iniciativas de cultura organizacional.</td>
+    </tr>
+    <tr>
+      <td>Comunicação e Employer Branding</td>
+      <td>Apoio em comunicação interna, posicionamento institucional e fortalecimento da marca empregadora.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3>Monte seu Projeto</h3>
+
+<label for="consultoria">Horas de Consultoria</label><br>
+<select id="consultoria">
+  <option value="0">Selecionar</option>
+  <option value="20">20 horas</option>
+  <option value="40">40 horas</option>
+  <option value="60">60 horas</option>
+  <option value="80">80 horas</option>
+  <option value="120">120 horas</option>
+</select>
+
+<br><br>
+
+<label for="treinamentos">Treinamentos</label><br>
+<select id="treinamentos">
+  <option value="0">0</option>
+  <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+</select>
+
+<br><br>
+
+<label for="workshops">Workshops</label><br>
+<select id="workshops">
+  <option value="0">0</option>
+  <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+</select>
+
+<br><br>
+
+<label for="palestras">Palestras</label><br>
+<select id="palestras">
+  <option value="0">0</option>
+  <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+</select>
+
+<br><br>
+
+<button onclick="calcular()">Calcular investimento</button>
+
+<h2 id="resultado"></h2>
+
+</section>
+
+<script>
+function calcular() {
+  let horas = document.getElementById("consultoria").value;
+  let treinamentos = document.getElementById("treinamentos").value;
+  let workshops = document.getElementById("workshops").value;
+  let palestras = document.getElementById("palestras").value;
+
+  let totalConsultoria = horas * 350;
+  let totalTreinamentos = treinamentos * 10600;
+  let totalWorkshops = workshops * 12000;
+  let totalPalestras = palestras * 8800;
+
+  let total = Number(totalConsultoria) + Number(totalTreinamentos) + Number(totalWorkshops) + Number(totalPalestras);
+
+  document.getElementById("resultado").innerHTML =
+    "Investimento estimado:<br><strong>R$ " + total.toLocaleString('pt-BR') + "</strong>";
+}
+</script>

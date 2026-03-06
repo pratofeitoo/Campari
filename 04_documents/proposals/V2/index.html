@@ -1204,6 +1204,141 @@
         </div>
     </section>
 
+    <!-- Section 6.5: Simulador de Investimento -->
+    <section class="section" id="simulador">
+        <div class="section-header">
+            <span class="section-number">6.5</span>
+            <h2 class="section-title">Simulador de Investimento</h2>
+            <p class="section-subtitle">Monte o escopo do projeto e calcule o investimento em tempo real</p>
+        </div>
+
+        <div class="grid grid-2">
+            <!-- Left: Inputs -->
+            <div class="card animate-on-scroll">
+                <h4 style="margin-bottom: 20px;"><i class="fas fa-sliders-h" style="color: var(--divercidade-primary); margin-right: 8px;"></i>Configure seu Projeto</h4>
+                
+                <div style="display: flex; flex-direction: column; gap: 20px; font-size: 14px;">
+                    
+                    <div>
+                        <label for="sim-consultoria" style="display: block; font-weight: 600; margin-bottom: 8px; color: var(--color-text-primary);">Horas de Consultoria Estratégica</label>
+                        <p style="font-size: 12px; color: var(--color-text-secondary); margin-bottom: 8px;">Estratégia, governança, recrutamento diverso, cultura e employer branding.</p>
+                        <select id="sim-consultoria" onchange="calcularSimulador()" style="width: 100%; padding: 10px 14px; border-radius: 8px; border: 1px solid var(--color-border); background: var(--glass-bg); backdrop-filter: blur(8px); color: var(--color-text-primary); font-size: 14px; cursor: pointer;">
+                            <option value="0">0 horas</option>
+                            <option value="20">20 horas — R$ 7.000</option>
+                            <option value="40">40 horas — R$ 14.000</option>
+                            <option value="60">60 horas — R$ 21.000</option>
+                            <option value="80">80 horas — R$ 28.000</option>
+                            <option value="120">120 horas — R$ 42.000</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label for="sim-treinamentos" style="display: block; font-weight: 600; margin-bottom: 8px; color: var(--color-text-primary);">Treinamentos</label>
+                        <p style="font-size: 12px; color: var(--color-text-secondary); margin-bottom: 8px;">Sessões estruturadas para lideranças, RH ou times operacionais — R$ 10.600 cada.</p>
+                        <select id="sim-treinamentos" onchange="calcularSimulador()" style="width: 100%; padding: 10px 14px; border-radius: 8px; border: 1px solid var(--color-border); background: var(--glass-bg); backdrop-filter: blur(8px); color: var(--color-text-primary); font-size: 14px; cursor: pointer;">
+                            <option value="0">0</option>
+                            <option value="1">1 — R$ 10.600</option>
+                            <option value="2">2 — R$ 21.200</option>
+                            <option value="3">3 — R$ 31.800</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label for="sim-workshops" style="display: block; font-weight: 600; margin-bottom: 8px; color: var(--color-text-primary);">Workshops</label>
+                        <p style="font-size: 12px; color: var(--color-text-secondary); margin-bottom: 8px;">Sessões práticas e interativas para aprofundamento de temas — R$ 12.000 cada.</p>
+                        <select id="sim-workshops" onchange="calcularSimulador()" style="width: 100%; padding: 10px 14px; border-radius: 8px; border: 1px solid var(--color-border); background: var(--glass-bg); backdrop-filter: blur(8px); color: var(--color-text-primary); font-size: 14px; cursor: pointer;">
+                            <option value="0">0</option>
+                            <option value="1">1 — R$ 12.000</option>
+                            <option value="2">2 — R$ 24.000</option>
+                            <option value="3">3 — R$ 36.000</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label for="sim-palestras" style="display: block; font-weight: 600; margin-bottom: 8px; color: var(--color-text-primary);">Palestras</label>
+                        <p style="font-size: 12px; color: var(--color-text-secondary); margin-bottom: 8px;">Sessões de sensibilização para eventos internos ou semanas temáticas — R$ 8.800 cada.</p>
+                        <select id="sim-palestras" onchange="calcularSimulador()" style="width: 100%; padding: 10px 14px; border-radius: 8px; border: 1px solid var(--color-border); background: var(--glass-bg); backdrop-filter: blur(8px); color: var(--color-text-primary); font-size: 14px; cursor: pointer;">
+                            <option value="0">0</option>
+                            <option value="1">1 — R$ 8.800</option>
+                            <option value="2">2 — R$ 17.600</option>
+                            <option value="3">3 — R$ 26.400</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right: Result -->
+            <div class="card animate-on-scroll" id="sim-resultado-card" style="display: flex; flex-direction: column; justify-content: space-between;">
+                <div>
+                    <h4 style="margin-bottom: 24px;"><i class="fas fa-calculator" style="color: var(--divercidade-primary); margin-right: 8px;"></i>Resumo do Investimento</h4>
+
+                    <div style="display: flex; flex-direction: column; gap: 12px; font-size: 14px; margin-bottom: 24px;" id="sim-breakdown">
+                        <div style="display: flex; justify-content: space-between; padding: 10px 0; border-bottom: 1px solid var(--color-border);">
+                            <span style="color: var(--color-text-secondary);">Consultoria</span>
+                            <strong id="res-consultoria">R$ 0</strong>
+                        </div>
+                        <div style="display: flex; justify-content: space-between; padding: 10px 0; border-bottom: 1px solid var(--color-border);">
+                            <span style="color: var(--color-text-secondary);">Treinamentos</span>
+                            <strong id="res-treinamentos">R$ 0</strong>
+                        </div>
+                        <div style="display: flex; justify-content: space-between; padding: 10px 0; border-bottom: 1px solid var(--color-border);">
+                            <span style="color: var(--color-text-secondary);">Workshops</span>
+                            <strong id="res-workshops">R$ 0</strong>
+                        </div>
+                        <div style="display: flex; justify-content: space-between; padding: 10px 0; border-bottom: 1px solid var(--color-border);">
+                            <span style="color: var(--color-text-secondary);">Palestras</span>
+                            <strong id="res-palestras">R$ 0</strong>
+                        </div>
+                    </div>
+
+                    <div class="summary-total" id="sim-total-box" style="margin: 0;">
+                        <span style="font-size: 13px; opacity: 0.85;">Investimento Total Estimado</span>
+                        <span class="total-value" id="sim-total">R$ 0</span>
+                    </div>
+
+                    <p style="font-size: 12px; color: var(--color-text-secondary); margin-top: 16px; text-align: center;">*Valores estimados. Proposta formal mediante alinhamento.</p>
+                </div>
+
+                <button class="btn btn-primary" style="width: 100%; margin-top: 24px;" onclick="window.print()">
+                    <i class="fas fa-file-pdf"></i> Salvar Simulação
+                </button>
+            </div>
+        </div>
+
+        <!-- Blocos de atuação -->
+        <div class="card animate-on-scroll" style="margin-top: 24px;">
+            <h4 style="margin-bottom: 20px;"><i class="fas fa-layer-group" style="color: var(--divercidade-primary); margin-right: 8px;"></i>Blocos de Atuação da Consultoria</h4>
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Bloco de Atuação</th>
+                            <th>Exemplos de Atividades</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Estratégia e Governança</strong></td>
+                            <td>Diagnóstico de maturidade, definição de pilares estratégicos, construção de roadmap e indicadores.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Talent Acquisition Diverso</strong></td>
+                            <td>Revisão de processos seletivos, estratégias de atração de talentos diversos e construção de pipelines.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Cultura e Liderança Inclusiva</strong></td>
+                            <td>Desenvolvimento de lideranças, programas internos e iniciativas de cultura organizacional.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Comunicação e Employer Branding</strong></td>
+                            <td>Apoio em comunicação interna, posicionamento institucional e fortalecimento da marca empregadora.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
     <!-- Section 7: Next Steps & Legal -->
     <section class="section" id="proximos-passos">
         <div class="section-header">
@@ -1435,6 +1570,30 @@
             roiChart.options.scales.y.ticks.color = color;
             roiChart.update();
         }
+
+        // --- Simulador de Investimento ---
+        function calcularSimulador() {
+            const fmt = (n) => 'R$ ' + Number(n).toLocaleString('pt-BR');
+
+            const horas       = Number(document.getElementById('sim-consultoria').value);
+            const treinamentos = Number(document.getElementById('sim-treinamentos').value);
+            const workshops   = Number(document.getElementById('sim-workshops').value);
+            const palestras   = Number(document.getElementById('sim-palestras').value);
+
+            const tConsultoria  = horas * 350;
+            const tTreinamentos = treinamentos * 10600;
+            const tWorkshops    = workshops * 12000;
+            const tPalestras    = palestras * 8800;
+            const total         = tConsultoria + tTreinamentos + tWorkshops + tPalestras;
+
+            document.getElementById('res-consultoria').textContent  = fmt(tConsultoria);
+            document.getElementById('res-treinamentos').textContent = fmt(tTreinamentos);
+            document.getElementById('res-workshops').textContent    = fmt(tWorkshops);
+            document.getElementById('res-palestras').textContent    = fmt(tPalestras);
+            document.getElementById('sim-total').textContent        = fmt(total);
+        }
+        // Inicializa o simulador na carga
+        calcularSimulador();
 
         // --- Module Selection ---
         function selectModule(element) {
