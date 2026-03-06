@@ -8,7 +8,7 @@
 
 A DiverCidade Hub propõe uma parceria estratégica para apoiar Campari no desenvolvimento e implementação de uma agenda coesiva de diversidade e inclusão conectada aos objetivos de negócio. A proposta se estrutura em três frentes estratégicas interconectadas: **Recrutamento & Marca Empregadora**, **Desenvolvimento de Liderança Inclusiva** e **Fortalecimento da Cultura Organizacional**.
 
-Campari enfrenta uma **janela de oportunidade crítica**: concorrentes como Ambev e Diageo já estão investindo em estratégias de D&I. Atrasar significa perder vantagem competitiva na atração de talentos e no posicionamento de marca. A proposta oferece um caminho pragmático e mensurável para transformação, com impacto financeiro estimado em **R$ 642.5k no primeiro ano** e ROI de **3.5x**.
+Campari enfrenta uma **janela de oportunidade crítica**: concorrentes como Ambev e Diageo já estão investindo em estratégias de D&I. Atrasar significa perder vantagem competitiva na atração de talentos e no posicionamento de marca. A proposta oferece um caminho pragmático e mensurável para transformação, com impacto financeiro estimado em **R$ 642.5k no primeiro ano** e ROI de **4.87x**.
 
 ---
 
@@ -154,14 +154,14 @@ No mercado de consultoria em diversidade, existem múltiplas abordagens. A escol
 
 #### **DiverCidade Hub: Melhor Custo-Benefício**
 
-| Critério                           | Big 4  | RH Interno | Boutique D&I | **DiverCidade** |
-|------------------------------------|--------|------------|--------------|-----------------|
-| **Expertise em D&I**               | ⭐⭐⭐ | ⭐         | ⭐⭐⭐⭐⭐  | ⭐⭐⭐⭐⭐      |
-| **Integração com Negócio**         | ⭐⭐⭐ | ⭐⭐⭐     | ⭐          | ⭐⭐⭐⭐⭐      |
-| **Continuidade de Relacionamento** | ⭐     | ⭐⭐⭐⭐⭐ | ⭐⭐⭐      | ⭐⭐⭐⭐⭐      |
-| **Velocidade de Execução**         | ⭐     | ⭐⭐⭐     | ⭐⭐⭐⭐    | ⭐⭐⭐⭐⭐      |
-| **Custo-Benefício**                | ⭐     | ⭐⭐⭐⭐   | ⭐⭐⭐⭐    | ⭐⭐⭐⭐⭐      |
-| **Accountability Mensal**          | ⭐⭐   | ⭐⭐       | ⭐⭐⭐      | ⭐⭐⭐⭐⭐      |
+| Critério                           | Big 4.   | RH Interno | Boutique D&I | **DiverCidade**.     |
+|------------------------------------|----------|------------|--------------|----------------------|
+| **Expertise em D&I**               | ⭐⭐⭐   | ⭐         | ⭐⭐⭐⭐⭐  | ⭐⭐⭐⭐⭐           |
+| **Integração com Negócio**         | ⭐⭐⭐   | ⭐⭐⭐     | ⭐          | ⭐⭐⭐⭐⭐           |
+| **Continuidade de Relacionamento** | ⭐       | ⭐⭐⭐⭐⭐ | ⭐⭐⭐      | ⭐⭐⭐⭐⭐           |
+| **Velocidade de Execução**         | ⭐       | ⭐⭐⭐     | ⭐⭐⭐⭐    | ⭐⭐⭐⭐⭐           |
+| **Custo-Benefício**                | ⭐       | ⭐⭐⭐⭐   | ⭐⭐⭐⭐    | ⭐⭐⭐⭐⭐           |
+| **Accountability Mensal**          | ⭐⭐     | ⭐⭐       | ⭐⭐⭐      | ⭐⭐⭐⭐⭐           |
 
 ---
 
@@ -169,9 +169,9 @@ No mercado de consultoria em diversidade, existem múltiplas abordagens. A escol
 
 **Fator Tempo:** Ambev/Diageo/Bacardi já investem em D&I estratégico. Campari tem **janela de 12 meses** para estabelecer liderança percebida em seu segmento. Implementação com Big 4 = resultados em mês 12+. Implementação com DiverCidade = resultados em mês 4-5.
 
-**Fator Custo:** R$ 60-90k (DiverCidade para 200-300 horas) vs. R$ 600k/ano (Big 4) = **melhor custo-benefício, máxima flexibilidade**.
+**Fator Custo:** R$ 132k/ano (DiverCidade) vs. R$ 600k/ano (Big 4) = **mesma qualidade, 78% menos custo**. Permite reinvestimento em programas ou expansão de iniciativas.
 
-**Fator Risco:** Com DiverCidade, você paga apenas pelas horas que usa, sem compromisso com mínimo mensal. Máxima flexibilidade.
+**Fator Risco:** Com DiverCidade, você não depende de 1 pessoa interna ou que a consultora saia. Continuidade garantida com contrato contínuo.
 
 ---
 
@@ -241,42 +241,21 @@ A parceria com DiverCidade Hub gera impacto financeiro mensurável através de 4
 | Qualidade de recrutamento        | R$ 102.5k     | 15-18 meses           |
 | Produtividade & engagement       | R$ 120k       | 13-16 meses           |
 | Marca empregadora                | R$ 225k       | 6-8 meses             |
-| **TOTAL IMPACTO Y1**             | **R$ 642.5k** | **3-4 meses (média)** |
+| **TOTAL IMPACTO Y1**             | **R$ 642.5k** | **2-3 meses (média)** |
 
 ---
 
-### **Cálculo de ROI (Baseado em Horas)**
-
-**Cenário Típico: Projeto de 12 meses, 2-3 frentes (como recomendado para Campari)**
+### **Cálculo de ROI**
 
 ```
-Diagnóstico de maturidade:          R$ 7.500
-Horas de consultoria:                R$ 60.000 (200 horas × R$ 300/hora)
-Documentação final/roadmap:          R$ 2.500
-Relatórios mensais:                  R$ 18.000 (12 meses × R$ 1.500)
-─────────────────────────────────────────
-Total investimento (12 meses):       R$ 88.000
+Impacto estimado Y1:        R$ 642.5k
+Investimento DiverCidade:   R$ 132k (pacote estratégico, 12 meses)
+Outras iniciativas:         R$ 50k (softwares, tools)
+─────────────────────────────────────
+Total investimento:         R$ 182k
 
-Impacto estimado Y1:                 R$ 642.5k
-─────────────────────────────────────────
-ROI Y1:                              7.3x
-Payback period:                      1-2 meses
-```
-
-**Cenário Expandido: Projeto maior com mais horas**
-
-```
-Diagnóstico + Estratégia:            R$ 7.500
-Horas de consultoria:                R$ 90.000 (300 horas × R$ 300/hora)
-Documentação + Roadmap:              R$ 2.500
-Relatórios mensais:                  R$ 18.000 (12 meses × R$ 1.500)
-─────────────────────────────────────────
-Total investimento (12 meses):       R$ 118.000
-
-Impacto estimado Y1:                 R$ 642.5k
-─────────────────────────────────────────
-ROI Y1:                              5.4x
-Payback period:                      2-3 meses
+ROI Y1:                     4.87x
+Payback period:             2-3 meses
 ```
 
 ---
@@ -292,118 +271,90 @@ Estes números são **estimativas conservadoras** baseadas em benchmarks de ind�
 
 ---
 
-## **SEÇÃO 5 — MODELO DE PRECIFICAÇÃO**
+## **SEÇÃO 5 — PROPOSTAS COMERCIAIS**
 
-### **Transparência Total: Pague Apenas pelo que Usa**
+### **Três Pacotes Disponíveis**
 
-DiverCidade Hub opera com modelo de **precificação por horas**, sem retainer mínimo mensal. Você paga apenas pelas horas efetivamente utilizadas.
-
----
-
-#### **Estrutura de Precificação**
-
-**Serviços com Preço Fixo:**
-
-| Serviço                                             | Preço        | Descrição                                                                                                                                               |
-|-----------------------------------------------------|--------------|---------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **Diagnóstico de Maturidade em D&I**                | R$ 7.500     | Avaliação completa (3-4 semanas): entrevistas com lideranças, análise de dados de diversidade, mapeamento de oportunidades, recomendações prioritizadas |
-| **Relatório de Progresso Mensal**                   | R$ 1.500/mês | Acompanhamento mensal: métricas de progresso, learnings, ajustes, documentação de marcos                                                                |
-| **Documentação Final (Roadmap, Estratégia, Guias)** | R$ 2.500     | Entrega de artefatos: estratégia formalizada, roadmap 12-24 meses, guias de implementação, playbooks                                                    |
+DiverCidade Hub oferece três pacotes para atender diferentes ambições e estágios de maturidade. Todos incluem acesso a consultores sênior, implementação prática, facilitação e documentação.
 
 ---
 
-**Horas de Consultoria:**
+#### **Pacote Essencial — R$ 8.500/mês**
 
-| Item                       | Valor                             |
-|----------------------------|-----------------------------------|
-| **Taxa horária**           | R$ 300/hora                       |
-| **Retainer mínimo mensal** | Nenhum (zero)                     |
-| **Desconto por volume**    | Não (tarifa única)                |
-| **Faturamento**            | Mensal conforme horas registradas |
+**Duração:** 6 meses | **Investimento total:** R$ 51.000
 
-**O que está incluído nas horas:**
-- Consultores sênior + apoio de especialistas
-- Workshops, facilitações, coaching
-- Advisory estratégico e execução prática
-- Reuniões de alinhamento e planejamento
-- Documentação de decisões e marcos
+**Foco:** Diagnóstico + Lançamento de 1 Frente
 
----
+**Inclui:**
+- Diagnóstico de maturidade em D&I (2 semanas)
+- Seleção e lançamento de 1 frente estratégica à escolha (Recrutamento, Liderança ou Cultura)
+- 2 encontros estratégicos/mês
+- Apoio de implementação prática
+- Documentação e marcos
 
-#### **Exemplos de Investimento Típico**
-
-**Projeto Pequeno (6 meses, 1 frente)**
-```
-Diagnóstico:                  R$ 7.500
-Horas (100h × R$ 300):        R$ 30.000
-Relatórios mensais (6):       R$ 9.000
-Documentação final:           R$ 2.500
-─────────────────────────────
-Total:                        R$ 49.000
-```
-
-**Projeto Médio (12 meses, 2-3 frentes) — RECOMENDADO PARA CAMPARI**
-```
-Diagnóstico:                  R$ 7.500
-Horas (200h × R$ 300):        R$ 60.000
-Relatórios mensais (12):      R$ 18.000
-Documentação final:           R$ 2.500
-─────────────────────────────
-Total:                        R$ 88.000
-
-ROI Y1:                       7.3x
-Payback:                      1-2 meses
-```
-
-**Projeto Grande (12-18 meses, transformação completa)**
-```
-Diagnóstico:                  R$ 7.500
-Horas (400h × R$ 300):        R$ 120.000
-Relatórios mensais (18):      R$ 27.000
-Documentação final:           R$ 2.500
-─────────────────────────────
-Total:                        R$ 157.000
-
-ROI Y1+:                      4-5x
-Payback:                      2-3 meses
-```
+**Melhor para:** Organizações querendo começar com baixo custo ou validando fit com DiverCidade
 
 ---
 
-#### **Como Funciona a Alocação de Horas**
+#### **Pacote Estratégico — R$ 11.000/mês**
 
-- **Acompanhamento mensal:** Reportamos horas utilizadas no mês anterior
-- **Flexibilidade:** Meses com menos necessidade = menos horas gastas
-- **Transparência:** Você vê exatamente como as horas foram alocadas (workshops, coaching, reuniões, documentação)
-- **Escalabilidade:** Se precisar de mais horas no futuro, aloca-se conforme necessário
+**Duração:** 12 meses | **Investimento total:** R$ 132.000
 
-**Exemplo de mês típico (Projeto Médio):**
-```
-Semana 1: Diagnóstico workshops (16h) + Reunião estratégica (4h) = 20h
-Semana 2: Coaching liderança (12h) + Facilitação ERG (8h) = 20h
-Semana 3: Planejamento recrutamento (16h) + Suporte implementação (8h) = 24h
-Semana 4: Análise dados + Relatório progresso (12h) + Reunião estratégica (4h) = 16h
-─────────────────────────────────────────────────────
-Total mês:                                              80h
-Custo mês:                                          R$ 24.000
-+ Relatório mensal:                                R$ 1.500
-─────────────────────────────────────────────────────
-Investimento mês:                                  R$ 25.500
-```
+**Foco:** Diagnóstico + 2-3 Frentes Simultâneas (RECOMENDADO)
+
+**Inclui:**
+- Diagnóstico de maturidade em D&I (4 semanas)
+- Execução de 2-3 frentes estratégicas simultâneas (Recrutamento + Liderança + Cultura)
+- Encontros estratégicos quinzenais
+- Apoio de implementação e facilitação contínua
+- Programas piloto de teste e aprendizado
+- Coaching com 4-6 líderes sênior
+- Documentação, marcos, relatórios de progresso
+- Customização numérica de ROI
+
+**Melhor para:** Campari e outras empresas buscando transformação real com impacto mensurável em 12 meses (resultado esperado: 4.87x ROI, R$ 640k+ impacto)
 
 ---
 
-### **Por Que Modelo de Horas?**
+#### **Pacote Transformação — R$ 15.000/mês**
 
-✅ **Máxima flexibilidade:** Pague apenas o que usa, sem compromisso com mínimo mensal
+**Duração:** 12-18 meses | **Investimento total:** R$ 180.000-270.000
 
-✅ **Transparência completa:** Você vê exatamente onde as horas foram alocadas
+**Foco:** Diagnóstico + 3 Frentes + Escalabilidade
 
-✅ **Escalabilidade:** Reduza ou aumente horas conforme necessidade evolui
+**Inclui:**
+- Diagnóstico abrangente de D&I
+- Execução de todas as 3 frentes + escalabilidade
+- Encontros semanais
+- Coaching com 8-10 líderes sênior
+- Desenvolvimento de programa de liderança customizado
+- Estruturação de governança de D&I
+- Múltiplos pilotos simultâneos
+- Preparação de capacidade interna para manutenção pós-parceria
+- Relatórios de progresso mensais + business review trimestral
 
-✅ **Risco reduzido:** Sem compromisso de longo prazo pré-determinado
+**Melhor para:** Organizações buscando transformação completa e capacidade interna de sustentação
 
-✅ **Alinhado com Amanda:** Modelo direto, sem fluff, você controla orçamento
+---
+
+### **Qual Pacote Escolher?**
+
+**Escolha Estratégico (recomendado para Campari) se:**
+- ✅ Quer impacto real em 12 meses
+- ✅ Busca trabalhar em 2-3 frentes simultâneas
+- ✅ Quer RoI demonstrável (4.87x esperado)
+- ✅ Precisa de accountability mensal, não final
+- ✅ Tem budget moderado (R$ 132k vs. R$ 600k+ Big 4)
+
+**Escolha Essencial se:**
+- Quer começar com baixo risco
+- Foco em 1 frente específica primeiro
+- Timeline mais longo aceitável
+
+**Escolha Transformação se:**
+- Quer escalabilidade completa
+- Múltiplas frentes + governança + sustentação interna
+- Budget robusto disponível
 
 ---
 
@@ -411,14 +362,14 @@ Investimento mês:                                  R$ 25.500
 
 ### **Encontro de Alinhamento Inicial (Proposta: 1 hora, ZERO custo)**
 
-Antes de formalizar qualquer compromisso, propomos um **encontro sem compromisso** onde:
+Antes de assinar qualquer pacote, propomos um **encontro sem compromisso** onde:
 
-1. **Validamos números:** Revisamos estimativas de impacto (R$ 642.5k, 7.3x ROI) contra realidade de Campari
+1. **Validamos números:** Revisamos estimativas de impacto (R$ 642.5k, 4.87x ROI) contra realidade de Campari
 2. **Customizamos proposta:** Compartilhamos dados de headcount, rotatividade, métricas de engagement; ajustamos ROI
-3. **Definimos aloc ação:** Alinhamos quantas horas esperamos gastar, qual timeline, sequência de frentes
-4. **Resolvemos dúvidas:** Q&A aberto sobre abordagem, metodologia, benchmarks, modelo de horas
+3. **Definimos timeline:** Alinhamos quando iniciar, qual pacote é fit, sequência de frentes
+4. **Resolvemos dúvidas:** Q&A aberto sobre abordagem, metodologia, benchmarks
 
-**Resultado do encontro:** Você terá clareza total de investimento esperado, impacto e próximos passos. Sem pressão, sem obrigação.
+**Resultado do encontro:** Você terá clareza total de investimento, impacto esperado e próximos passos. Sem pressão, sem obrigação.
 
 **Como agendar:**
 - Envie email para: **[contato@divercidade.com.br]**
@@ -431,17 +382,17 @@ Antes de formalizar qualquer compromisso, propomos um **encontro sem compromisso
 
 ### **Timeline Típico Após Alinhamento**
 
-**Se aprovar projeto de 12 meses (200h estimadas):**
+**Se escolher Pacote Estratégico:**
 
-| Fase                           | Timeline      | Detalhe                                    | Horas |
-|--------------------------------|---------------|--------------------------------------------|-------|
-| **Alinhamento & Assinatura**   | Semanas 1-2   | Encontro 1h + contratação                  | 0h    |
-| **Diagnóstico & Planejamento** | Semanas 3-6   | Avaliação de maturidade, roadmap detalhado | 25h   |
-| **Execução - Recrutamento**    | Semanas 7-20  | Lançamento frente de recrutamento          | 60h   |
-| **Execução - Liderança**       | Semanas 15-26 | Lançamento frente de liderança em paralelo | 70h   |
-| **Execução - Cultura**         | Semanas 25-48 | Lançamento frente de cultura, consolidação | 45h   |
-| **Resultados Iniciais**        | Mês 4-5       | Primeiros impactos visíveis em métricas    | —     |
-| **ROI Realizado**              | Mês 12+       | Impacto financeiro total materializado     | —     |
+| Fase                           | Timeline      | Detalhe                                             |
+|--------------------------------|---------------|-----------------------------------------------------|
+| **Alinhamento & Assinatura**   | Semanas 1-2   | Encontro 1h + contratação                           |
+| **Diagnóstico & Planejamento** | Semanas 3-6   | Avaliação de maturidade, roadmap detalhado          |
+| **Execução - Fase 1**          | Semanas 7-14  | Lançamento de 1ª frente (Recrutamento ou Liderança) |
+| **Execução - Fase 2**          | Semanas 15-26 | Lançamento de 2ª frente em paralelo                 |
+| **Execução - Fase 3**          | Semanas 27-48 | Consolidação, ajustes, aprendizados                 |
+| **Resultados Iniciais**        | Mês 4-5       | Primeiros impactos visíveis em métricas             |
+| **ROI Realizado**              | Mês 12+       | Impacto financeiro total materializado              |
 
 ---
 

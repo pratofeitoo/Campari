@@ -1,0 +1,107 @@
+╔════════════════════════════════════════════════════════════════════════════════════╗
+║                    AUDITORIA FINANCEIRA - RESUMO EXECUTIVO                         ║
+║                    Campari Proposta Comercial V1 vs V2                             ║
+╚════════════════════════════════════════════════════════════════════════════════════╝
+
+┌─ DISCREPÂNCIAS ENCONTRADAS ──────────────────────────────────────────────────────┐
+│                                                                                    │
+│  🔴 CRÍTICA #1: ROI V1                                                            │
+│     Cálculo:   R$ 642.5k ÷ R$ 132k = 4.87x                                       │
+│     Declarado: 3.5x                                                               │
+│     Erro:      39.1% SUBESTIMADO                                                  │
+│     Ação:      CORRIGIR ou justificar conservadorismo                             │
+│                                                                                    │
+│  🔴 CRÍTICA #2: Payback V1                                                        │
+│     Cálculo:   R$ 132k ÷ R$ 53.5k/mês = 2.5 meses                                │
+│     Declarado: 3-4 meses                                                          │
+│     Erro:      FORA DO RANGE (20-38% MELHOR)                                     │
+│     Ação:      CORRIGIR para 2-3 meses                                            │
+│                                                                                    │
+│  🔴 CRÍTICA #3: Horas V2                                                          │
+│     Overview:  "200h estimadas" = R$ 60.000                                       │
+│     Descrição: "80h/mês" = R$ 24.000/mês = 960h/ano                              │
+│     Erro:      INCONSISTÊNCIA DE 4.8x (200h vs 960h)                             │
+│     Ação:      CLARIFICAR modelo de horas                                         │
+│                                                                                    │
+│  ⚠️  INVESTIGAÇÃO #1: Vetor 1 (Retenção)                                          │
+│     Cálculo:   12 pessoas retidas × R$ 65k = R$ 780.000                          │
+│     Declarado: R$ 195.000                                                         │
+│     Discrepância: 74.5% ABAIXO DO ESPERADO                                       │
+│     Questão:   É conservadorismo ou erro de cálculo?                              │
+│     Ação:      VALIDAR com Campari durante alinhamento                            │
+│                                                                                    │
+└────────────────────────────────────────────────────────────────────────────────────┘
+
+┌─ VALIDAÇÕES ─────────────────────────────────────────────────────────────────────┐
+│                                                                                    │
+│  ✅ IMPACTO Y1 CONSOLIDADO: R$ 642.5k                                            │
+│     Soma: 195k + 102.5k + 120k + 225k = 642.5k ✓                                 │
+│                                                                                    │
+│  ✅ ROI V2: 7.3x                                                                  │
+│     Cálculo: 642.5k ÷ 88k = 7.30x ✓                                              │
+│                                                                                    │
+│  ✅ Payback V2: 1-2 meses                                                         │
+│     Cálculo: 88k ÷ 53.5k/mês = 1.6 meses ✓                                       │
+│                                                                                    │
+│  ✅ Precificação V1: Pacotes corretos                                             │
+│     Essencial: 8.5k × 6 = 51k ✓                                                  │
+│     Estratégico: 11k × 12 = 132k ✓                                               │
+│     Transformação: 15k × 12-18 = 180-270k ✓                                      │
+│                                                                                    │
+│  ✅ Precificação V2: Cenários corretos                                            │
+│     Pequeno: 100h + fixos = 49k ✓                                                │
+│     Médio: 200h + fixos = 88k ✓                                                  │
+│     Grande: 400h + fixos = 157k ✓                                                │
+│                                                                                    │
+└────────────────────────────────────────────────────────────────────────────────────┘
+
+┌─ COMPARAÇÃO V1 vs V2 ─────────────────────────────────────────────────────────--───┐
+│                                                                                    │
+│                          V1 (Pacotes)      V2 (Horas)      Melhor                  │
+│  ─────────────────────────────────────────────────────────────────────────────     │
+│  Investimento             R$ 132.000       R$ 88.000       V2 (-33%)               │
+│  Impacto Y1               R$ 642.500       R$ 642.500      Igual                   │
+│  ROI                      3.5x (4.87x?)    7.3x            V2 (2.1x melhor)        │
+│  Payback                  3-4m (2.5m?)     1-2m            V2 (melhor)             │
+│  Modelo                   Fixo             Flexível        V2                      │
+│  Transparência            Black box        White box ($/h) V2                      │
+│                                                                                    │
+│  ➜ RECOMENDAÇÃO: Apresentar V2 como opção principal                                │
+│                  Mencionar V1 como backup "estruturado"                            │
+│                                                                                    │
+└────────────────────────────────────────────────────────────────────────────────────┘
+
+┌─ AÇÕES NECESSÁRIAS ───────────────────────────────────────────────────────────--───┐
+│                                                                                    │
+│  ANTES DE ENVIAR PARA AMANDA:                                                      │
+│                                                                                    │
+│  [ ] CORRIGIR V1 ROI:    3.5x → 4.87x                        (5 minutos)           │
+│  [ ] CORRIGIR V1 Payback: 3-4m → 2-3m                        (5 minutos)           │
+│  [ ] CLARIFICAR V2 Horas: Resolver 200h vs 80h/mês           (15 minutos)          │
+│  [ ] VALIDAR Vetor 1:    R$ 195k vs R$ 780k                  (30 minutos)          │
+│  [ ] REVISÃO FINAL:      Prova de leitura completa           (30 minutos)          │
+│                                                                                    │
+│  DURANTE ALINHAMENTO COM AMANDA:                                                   │
+│                                                                                    │
+│  [ ] Confirmar impacto R$ 642.5k é realista                                        │
+│  [ ] Esclarecer redução de rotatividade esperada (20% → ?)                         │
+│  [ ] Validar horas necessárias (200h suficiente?)                                  │
+│  [ ] Discutir flexibilidade (horas adicionais, como?                               │
+│  [ ] Escolher estrutura (V1 ou V2)                                                 │
+│                                                                                    │
+└────────────────────────────────────────────────────────────────────────────────────┘
+
+┌─ CRONOGRAMA ────────────────────────────────────────────────────────────────────-─┐
+│                                                                                   │
+│  ⏱️  Correções:                    ~2 horas  (próximas 2 horas)                   │
+│  ⏱️  Revisão:                      ~1 hora   (última 1 hora)                      │
+│  ⏱️  Envio para Amanda:            AMANHÃ    (com contexto claro)                 │
+│  ⏱️  Alinhamento com Amanda:       PRÓX. 7 DIAS (agendar ao enviar)               │
+│                                                                                   │
+└───────────────────────────────────────────────────────────────────────────────────┘
+
+CONCLUSÃO: Documentos têm potencial excelente mas precisam correções de credibilidade.
+           Após ajustes, estarão prontos para apresentação de CEO.
+
+           Recomendação: V2 é mais forte (preço + ROI + flexibilidade).
+
