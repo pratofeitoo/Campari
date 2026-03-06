@@ -706,13 +706,18 @@
         @media (prefers-reduced-motion: no-preference) {
             .animate-on-scroll {
                 opacity: 0;
-                transform: translateY(20px);
-                transition: 0.6s cubic-bezier(0.2, 0.8, 0.2, 1);
+                transform: translateY(24px);
+                transition: opacity 0.65s cubic-bezier(0.2, 0.8, 0.2, 1), transform 0.65s cubic-bezier(0.2, 0.8, 0.2, 1);
             }
             .animate-on-scroll.visible {
                 opacity: 1;
                 transform: translateY(0);
             }
+            /* Stagger delays for grid children */
+            .grid .animate-on-scroll:nth-child(1), .grid-3 .card:nth-child(1) { transition-delay: 0ms; }
+            .grid .animate-on-scroll:nth-child(2), .grid-3 .card:nth-child(2) { transition-delay: 100ms; }
+            .grid .animate-on-scroll:nth-child(3), .grid-3 .card:nth-child(3) { transition-delay: 200ms; }
+            .grid .animate-on-scroll:nth-child(4), .grid-3 .card:nth-child(4) { transition-delay: 300ms; }
         }
         @media (prefers-reduced-motion: reduce) {
             .animate-on-scroll {
@@ -720,15 +725,98 @@
                 transform: none;
                 transition: none;
             }
-            .animate-on-scroll.visible {
-                opacity: 1;
-            }
+        }
+
+        /* Scroll Progress Bar */
+        #scroll-progress {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 3px;
+            width: 0%;
+            background: linear-gradient(90deg, var(--divercidade-primary), var(--divercidade-orange));
+            z-index: 2000;
+            transition: width 0.1s linear;
+        }
+
+        /* Ripple */
+        .ripple-container { position: relative; overflow: hidden; }
+        .ripple-wave {
+            position: absolute;
+            border-radius: 50%;
+            transform: scale(0);
+            background: rgba(255, 255, 255, 0.3);
+            animation: rippleAnim 0.6s linear;
+            pointer-events: none;
+        }
+        @keyframes rippleAnim {
+            to { transform: scale(4); opacity: 0; }
+        }
+
+        /* Nav active link indicator */
+        .nav-link.scroll-active {
+            color: var(--divercidade-primary);
+            background: rgba(233, 30, 140, 0.08);
+        }
+
+        /* Hero orbs (floating parallax) */
+        .hero-orb {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(60px);
+            opacity: 0.3;
+            pointer-events: none;
+        }
+        .hero-orb-1 {
+            width: 400px; height: 400px;
+            background: rgba(255,255,255,0.4);
+            top: -100px; right: -80px;
+        }
+        .hero-orb-2 {
+            width: 250px; height: 250px;
+            background: rgba(255,107,53,0.5);
+            bottom: -60px; left: -40px;
+        }
+
+        /* Counter animation */
+        .kpi-value[data-target] {
+            display: inline-block;
+        }
+
+        /* Table row hover */
+        tbody tr {
+            transition: background 0.2s;
+        }
+        tbody tr:hover {
+            background: rgba(233, 30, 140, 0.04);
+        }
+
+        /* Section title underline draw */
+        .section-title {
+            position: relative;
+            display: inline-block;
+        }
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -6px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(90deg, var(--divercidade-primary), var(--divercidade-orange));
+            border-radius: 99px;
+            transition: width 0.6s cubic-bezier(0.2, 0.8, 0.2, 1) 0.3s;
+        }
+        .section-header.visible .section-title::after {
+            width: 100%;
         }
 
     </style>
 </head>
 
 <body>
+    <!-- Scroll Progress Bar -->
+    <div id="scroll-progress"></div>
 
     <!-- Navigation -->
     <nav class="nav">
@@ -744,7 +832,7 @@
                     <li><a href="#contexto" class="nav-link">Contexto</a></li>
                     <li><a href="#frentes" class="nav-link">Frentes</a></li>
                     <li><a href="#roi" class="nav-link">Impacto ROI</a></li>
-                    <li><a href="#investimento" class="nav-link">Preços</a></li>
+                    <li><a href="#simulador" class="nav-link">Preços</a></li>
                     <li><a href="#proximos-passos" class="nav-link">Próximos Passos</a></li>
                 </ul>
 
@@ -764,6 +852,9 @@
 
     <!-- Hero Section -->
     <header class="hero">
+        <!-- Floating orbs for parallax -->
+        <div class="hero-orb hero-orb-1" id="heroOrb1"></div>
+        <div class="hero-orb hero-orb-2" id="heroOrb2"></div>
         <div class="hero-content">
             <div class="hero-badge">Proposta Comercial Revisada (Março 2026)</div>
             <h1 class="hero-title">CAMPARI: Parceria Estratégica em Diversidade e Inclusão</h1>
@@ -1114,100 +1205,11 @@
         </div>
     </section>
 
-    <!-- Section 6: Pricing / Investment -->
-    <section class="section" id="investimento">
-        <div class="section-header">
-            <span class="section-number">6</span>
-            <h2 class="section-title">Modelo de Precificação</h2>
-            <p class="section-subtitle">Transparência Total: Pague Apenas pelo que Usa</p>
-        </div>
 
-        <div class="calculator-grid">
-            <div class="calculator-main">
-                <p style="margin-bottom: 24px; color: var(--color-text-secondary);">
-                    Operamos com modelo de precificação por horas, sem retainer mínimo mensal. Você paga apenas pelas horas efetivamente utilizadas.
-                </p>
-
-                <div class="card" style="margin-bottom: 24px;">
-                    <h4 style="margin-bottom: 16px;">Tabela de Preços</h4>
-                    <div style="display: flex; flex-direction: column; gap: 12px; font-size: 14px;">
-                        <div style="display: flex; justify-content: space-between; border-bottom: 1px solid var(--color-border); padding-bottom: 8px;">
-                            <span>Diagnóstico de Maturidade (Fixo)</span>
-                            <strong>R$ 7.500</strong>
-                        </div>
-                        <div style="display: flex; justify-content: space-between; border-bottom: 1px solid var(--color-border); padding-bottom: 8px;">
-                            <span>Relatório Mensal (Fixo)</span>
-                            <strong>R$ 1.500 /mês</strong>
-                        </div>
-                        <div style="display: flex; justify-content: space-between; border-bottom: 1px solid var(--color-border); padding-bottom: 8px;">
-                            <span>Documentação Final (Fixo)</span>
-                            <strong>R$ 2.500</strong>
-                        </div>
-                        <div style="display: flex; justify-content: space-between; color: var(--divercidade-primary);">
-                            <span><strong>Hora de Consultoria</strong></span>
-                            <strong>R$ 300 /hora</strong>
-                        </div>
-                    </div>
-                </div>
-
-                <h4 style="margin-bottom: 16px;">Cenários de Investimento</h4>
-                
-                <div class="module-card" onclick="selectModule(this)">
-                    <div class="module-info">
-                        <h4>Projeto Pequeno</h4>
-                        <small style="color: var(--color-text-secondary);">6 Meses | 1 Frente | ~100h</small>
-                    </div>
-                    <div style="font-weight: 700;">~ R$ 49.000</div>
-                </div>
-
-                <div class="module-card selected" onclick="selectModule(this)">
-                    <div class="module-info">
-                        <h4 style="color: var(--divercidade-primary);">Projeto Médio (Recomendado)</h4>
-                        <small style="color: var(--color-text-secondary);">12 Meses | 2-3 Frentes | ~200h</small>
-                    </div>
-                    <div style="font-weight: 700; color: var(--divercidade-primary);">~ R$ 88.000</div>
-                </div>
-
-                <div class="module-card" onclick="selectModule(this)">
-                    <div class="module-info">
-                        <h4>Projeto Grande</h4>
-                        <small style="color: var(--color-text-secondary);">12-18 Meses | Transformação Completa | ~400h</small>
-                    </div>
-                    <div style="font-weight: 700;">~ R$ 157.000</div>
-                </div>
-            </div>
-
-            <!-- Sidebar -->
-            <div class="calculator-sidebar">
-                <div class="card summary-card">
-                    <h4 style="margin-bottom: 16px;">Exemplo Mês Típico</h4>
-                    <div style="background: var(--color-bg-secondary); padding: 12px; border-radius: 8px; margin-bottom: 16px; font-size: 13px;">
-                        <p style="margin-bottom: 8px;"><strong>Mês Intensivo (80h):</strong></p>
-                        <ul style="padding-left: 20px; margin-bottom: 8px; color: var(--color-text-secondary);">
-                            <li>Diagnóstico/Workshops (20h)</li>
-                            <li>Coaching Liderança (20h)</li>
-                            <li>Planejamento Recrut. (24h)</li>
-                            <li>Análise/Relatório (16h)</li>
-                        </ul>
-                        <div style="border-top: 1px solid var(--color-border); padding-top: 8px; font-weight: 700;">
-                            Custo Mês: R$ 25.500
-                        </div>
-                    </div>
-                    <p style="font-size: 12px; color: var(--color-text-secondary); margin-bottom: 16px;">
-                        *Meses de menor atividade podem ter 10-40h, reduzindo o custo proporcionalmente.
-                    </p>
-                    <button class="btn btn-primary" style="width: 100%; margin-bottom: 8px;" onclick="window.print()">
-                        <i class="fas fa-file-pdf"></i> Salvar Proposta
-                    </button>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Section 6.5: Simulador de Investimento -->
+    <!-- Section 6: Simulador de Investimento -->
     <section class="section" id="simulador">
         <div class="section-header">
-            <span class="section-number">6.5</span>
+            <span class="section-number">6</span>
             <h2 class="section-title">Simulador de Investimento</h2>
             <p class="section-subtitle">Monte o escopo do projeto e calcule o investimento em tempo real</p>
         </div>
@@ -1510,13 +1512,105 @@
             evt.currentTarget.className += " active";
         }
 
-        // --- Animations ---
+        // --- Scroll Progress Bar ---
+        const progressBar = document.getElementById('scroll-progress');
+        window.addEventListener('scroll', () => {
+            const scrollTop = window.scrollY;
+            const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+            progressBar.style.width = (scrollTop / docHeight * 100) + '%';
+        }, { passive: true });
+
+        // --- Parallax Hero Orbs ---
+        const orb1 = document.getElementById('heroOrb1');
+        const orb2 = document.getElementById('heroOrb2');
+        window.addEventListener('scroll', () => {
+            const y = window.scrollY;
+            if (orb1) orb1.style.transform = `translateY(${y * 0.15}px)`;
+            if (orb2) orb2.style.transform = `translateY(${y * -0.1}px)`;
+        }, { passive: true });
+
+        // --- Ripple Effect ---
+        function addRipple(el) {
+            el.classList.add('ripple-container');
+            el.addEventListener('click', function(e) {
+                const ripple = document.createElement('span');
+                ripple.className = 'ripple-wave';
+                const rect = this.getBoundingClientRect();
+                const size = Math.max(rect.width, rect.height);
+                ripple.style.width = ripple.style.height = size + 'px';
+                ripple.style.left = (e.clientX - rect.left - size / 2) + 'px';
+                ripple.style.top  = (e.clientY - rect.top  - size / 2) + 'px';
+                this.appendChild(ripple);
+                ripple.addEventListener('animationend', () => ripple.remove());
+            });
+        }
+        document.querySelectorAll('.btn, .card, .kpi-card, .module-card').forEach(addRipple);
+
+        // --- Active Nav Highlight on Scroll ---
+        const sections = document.querySelectorAll('section[id], header[id]');
+        const navLinks = document.querySelectorAll('.nav-link');
+        const activateNav = () => {
+            let current = '';
+            sections.forEach(sec => {
+                if (window.scrollY >= sec.offsetTop - 120) current = sec.id;
+            });
+            navLinks.forEach(link => {
+                link.classList.remove('scroll-active');
+                if (link.getAttribute('href') === '#' + current) link.classList.add('scroll-active');
+            });
+        };
+        window.addEventListener('scroll', activateNav, { passive: true });
+
+        // --- Animated Number Counters ---
+        function animateCounter(el) {
+            const raw = el.textContent.trim();
+            // Extract number from strings like 'R$ 195k', '7.3x', '12 Meses'
+            const match = raw.match(/([\d.]+)/);
+            if (!match) return;
+            const target = parseFloat(match[1]);
+            const isK = raw.includes('k');
+            const prefix = raw.slice(0, raw.search(/[\d]/));
+            const suffix = raw.slice(raw.search(/[\d]/) + match[1].length);
+            let start = 0;
+            const duration = 1200;
+            const step = (timestamp) => {
+                if (!start) start = timestamp;
+                const progress = Math.min((timestamp - start) / duration, 1);
+                const eased = 1 - Math.pow(1 - progress, 3);
+                const current = eased * target;
+                const display = isK
+                    ? Math.floor(current) + 'k'
+                    : Number.isInteger(target) ? Math.round(current) : current.toFixed(1);
+                el.textContent = prefix + display + suffix.replace(/[\d.k]+/, '');
+                if (progress < 1) requestAnimationFrame(step);
+                else el.textContent = raw; // restore exact original
+            };
+            requestAnimationFrame(step);
+        }
+
+        // --- Section Header underline + Counter trigger ---
+        const sectionObs = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    // Trigger counters inside KPI cards in view
+                    entry.target.querySelectorAll('.kpi-value, .hero-stat-value').forEach(animateCounter);
+                    sectionObs.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.2 });
+        document.querySelectorAll('.section-header').forEach(el => sectionObs.observe(el));
+
+        // --- Scroll Reveal ---
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
-                if (entry.isIntersecting) entry.target.classList.add('visible');
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    // Also trigger counters for KPI cards specifically
+                    entry.target.querySelectorAll('.kpi-value').forEach(animateCounter);
+                }
             });
-        }, { threshold: 0.1 });
-
+        }, { threshold: 0.12 });
         document.querySelectorAll('.animate-on-scroll').forEach(el => observer.observe(el));
 
         // --- Charts ---
